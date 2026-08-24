@@ -1,0 +1,69 @@
+# --- Instructor-only, never published to students ---
+# This repo is PUBLIC and read by enrolled students. CLAUDE.md is an instructor
+# process file (repo conventions, publish workflow, what must never be shipped).
+# It stays local; the sibling student repo elhamod/IS834_Fall_2026 carries none
+# either. The authoritative copy of this guidance lives in IS883_instructor.
+CLAUDE.md
+
+# --- Course repo .gitignore template ---
+# Copy this, then add repo-specific exclusions at the top WITH a comment saying
+# what the directory is, how big it is, and where the surviving copy lives.
+# An uncommented exclusion of a large folder is indistinguishable from a mistake.
+#
+# Example of a repo-specific entry:
+#
+#   # Pristine read-only Dropbox source mirror (172 MB, incl. 103 MB of .mp4).
+#   # Lives in Dropbox; copy material out of it, never edit in place.
+#   _source_dropbox/
+
+# --- Cloud-sync artifacts (OneDrive / Dropbox) ---
+# fuse_hidden files are left behind when a synced file is deleted while open.
+*fuse_hidden*
+desktop.ini
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.dropbox
+.dropbox.attr
+
+# --- Sync conflict copies ---
+# These are duplicates the sync client creates when the same file is edited in
+# two places. Ignoring them keeps them out of commits, but they still need to be
+# resolved by hand -- one of them holds work that the other does not.
+*conflicted copy*
+*Conflicted Copy*
+*-DESKTOP-*
+*-LAPTOP-*
+
+# --- Office lock files ---
+# Created while a document is open; vanish on close. Never content.
+~$*
+*.tmp
+*.~vsd*
+
+# --- Python / Jupyter ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.virtual_documents/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- Notebook and analysis scratch ---
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# --- Editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- Common heavy media ---
+# Uncomment only if the survey shows video dominating the repo AND another copy
+# exists. Git stores these badly and they dominate clone time.
+# *.mp4
+# *.mov
+# *.avi
