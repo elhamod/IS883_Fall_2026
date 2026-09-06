@@ -10,10 +10,10 @@ Mondays 2:30 – 5:15 PM, HAR 419 (two sessions meet Friday evenings — see the
 | Path | What it holds |
 | --- | --- |
 | `syllabus.md` | The course syllabus |
-| `Week NN/Required/` | That session's required preparation, when it is a file rather than a link. **Review it before class.** |
-| `Week NN/Optional/` | Supplementary material for going further. Never assumed in class, never assessed. |
+| `Session NN/Required/` | That session's required preparation, when it is a file rather than a link. **Review it before class.** |
+| `Session NN/Optional/` | Supplementary material for going further. Never assumed in class, never assessed. |
 
-Notebooks and demos are added to each week's folder as the term progresses, so most folders are empty until shortly before that session. The instructor reserves the right to update this repo — click **Watch** to be notified of changes.
+Notebooks and demos are added to each session's folder as the term progresses, so most folders are empty until shortly before that session. The instructor reserves the right to update this repo — click **Watch** to be notified of changes.
 
 ## Where to go for what
 
