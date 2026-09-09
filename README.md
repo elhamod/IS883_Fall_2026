@@ -7,9 +7,9 @@
 
 ## Course Administrative Details
 
-- **Instructor:** [Mohannad Elhamod](https://www.linkedin.com/in/mohannadelhamod/) (Contact exclusively through [Piazza](https://piazza.com/class/msf7c46jyov4tm/))
+- **Instructor:** [Mohannad Elhamod](https://www.linkedin.com/in/mohannadelhamod/) (Contact exclusively through [Piazza](https://piazza.com/bu/fall2026/is883/home))
 - **Office hours:** **By appointment only** — request an appointment through Piazza (see the Office Hours policy below)
-- **TAs:** TBD (Contact exclusively through [Piazza](https://piazza.com/class/msf7c46jyov4tm/)); TA office hours are also **by appointment only**, requested through Piazza
+- **TAs:** TBD (Contact exclusively through [Piazza](https://piazza.com/bu/fall2026/is883/home)); TA office hours are also **by appointment only**, requested through Piazza
 - **Class time and place:** Monday 2:30 – 5:15 PM / HAR 419
 - **Term:** September 2 – December 10, 2026
 - **First class meeting:** Monday, September 14, 2026
@@ -95,7 +95,7 @@ This course necessitates the use of a few digital services. For each of these, a
 
 **Piazza is the only channel for course communication.** All questions, discussion, and private messages to the instructor and the TAs go through Piazza. Messages sent by email or through Blackboard will most likely not receive attention.
 
-Join the course Piazza site at **<https://piazza.com/class/msf7c46jyov4tm/>** **before the first class**, and do two things straight away:
+Join the course Piazza site at **<https://piazza.com/bu/fall2026/is883/home>** **before the first class**, and do two things straight away:
 
 1. **Use your formal name as it appears on Blackboard**, so your posts and participation can be matched to you.
 2. **Turn on at least a daily email digest**, so you do not miss announcements. Click the **gear icon** in Piazza, choose **Account/Email Settings**, then under **Class & Email Settings** click **Edit Email Notifications** for this course, select **Daily Digest**, and click **Save**. ([step-by-step instructions](https://support.piazza.com/support/solutions/articles/48000574383-student-email-notification-settings))
