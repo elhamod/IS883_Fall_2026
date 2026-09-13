@@ -12,13 +12,14 @@
 | --- | --- | --- |
 | **Mon Sep 21** (Session 2) | Teams formed in class | — |
 | **Fri Sep 25, 11:59 PM** | **Team registered on Blackboard**, with a **primary idea and a backup idea** (§4.1) | Ungraded — **late penalty applies (§10)** |
-| **\~Tue Sep 30** | **Idea verdict posted on Piazza and Blackboard** — go / shrink it / switch to your backup | — |
+| **\~Tue Sep 29** | **Idea verdict posted on Piazza and Blackboard** — go / shrink it / switch to your backup | — |
 | **Mon Oct 5** (Session 4) | **Proposal due** (1 page, PDF, one per team) — includes your **repo link** (§4.2) | **Graded — 10% of the project grade (§8.1)** · late penalty applies (§10) |
 | **By Tue Oct 13** (Session 5) | Written feedback returned on every proposal | — |
 | **Mon Oct 19** (Session 6) | **Presentation-slot poll opens on Piazza** (§7) | — |
-| **Fri Oct 23** (Session 7) | **Project workshop**, 6:30 – 9:15 PM, HAR 419. **You write your success metric down in this session** (§5.5) | — |
+| **Thu Oct 22, 11:59 PM** | **Workshop checkpoint due** — written into your repository's `README.md`, whether or not you attend the workshop. **Your success metric is fixed here** (§4.3, §5.5) | **Graded — 10% of the project grade (§8.1)** · late penalty applies (§10) |
+| **Fri Oct 23** (Session 7) | **Project workshop**, 6:30 – 9:15 PM, HAR 419 — the instructor visits each team, working from its checkpoint | — |
 | **Fri Oct 23, 11:59 PM** | **Poll closes** — no response means you are placed wherever there is room | — |
-| **11:59 PM, night before your slot** | **Slides + recorded demo fallback due** — final; **cannot be changed after you present** | Graded (§8.2) |
+| **11:59 PM, night before your slot** | **Slides + recorded demo fallback due** — final; **cannot be changed after you present** | Not graded separately — graded as part of the presentation and live demo (§8.2, items 6 and 7) · late penalty applies (§10) |
 | **Before you walk up to present** | **Repo tagged** `presentation` — that tag is the graded code (§6.4) | Graded (§8.2) |
 | **Mon Nov 9 / Mon Nov 16** (Sessions 10, 11) | **Presentations** — 12 min talk + 5 min live demo + 8 min Q&A | Graded (§8.2) |
 | **Mon Nov 30, 11:59 PM** | **Written report due** (Blackboard) | Graded (§8.2) |
@@ -78,9 +79,9 @@ Where you do not have consent, use synthetic data you generate, public instituti
 
 ---
 
-## 4. The two-stage gate
+## 4. Three checkpoints
 
-Your idea is checked twice before you commit six weeks to it. **Stage 1 is ungraded; stage 2 — the proposal — carries 10% of your project grade (§8.1).** Both carry the late penalty (§10). The reason for two stages is simple: the proposal is due Oct 5, and a team that discovers on Oct 13 that its idea cannot work has lost a month. The Sep 25 check is cheap and fast, and it exists to catch that a fortnight earlier.
+Your idea is checked twice before you commit six weeks to it, and your build is checked once on the way. **Stage 1 is ungraded; stage 2 — the proposal — and stage 3 — the workshop checkpoint — each carry 10% of your project grade (§8.1).** All three carry the late penalty (§10). The reason for checking the idea twice is simple: the proposal is due Oct 5, and a team that discovers on Oct 13 that its idea cannot work has lost a month. The Sep 25 check is cheap and fast, and it exists to catch that a fortnight earlier.
 
 ### 4.1 Stage 1 — registration and idea check, due Fri Sep 25, 11:59 PM
 
@@ -106,7 +107,7 @@ Team name:              Members (full names and BU emails):
 
 **The backup needs to be a project you would actually be willing to build** — *"we'd figure something out"* is not a backup, and neither is something you named to fill the box. It may be a narrower version of your primary idea or a different project entirely.
 
-**What comes back, by \~Tue Sep 30, posted on both Piazza and Blackboard:** one of three verdicts per team.
+**What comes back, by \~Tue Sep 29, posted on both Piazza and Blackboard:** one of three verdicts per team.
 
 | Verdict | What it means |
 | --- | --- |
@@ -116,7 +117,7 @@ Team name:              Members (full names and BU emails):
 
 ### 4.2 Stage 2 — the proposal, due Mon Oct 5
 
-**One page, PDF, one per team. Worth 10% of your project grade (§8.1).** Its purpose is to get you written feedback while your direction can still change. **The proposal does not ask you to commit to an implementation** — you may change how you build this, and even what you build, up to the Oct 23 workshop, as long as you say so there.
+**One page, PDF, one per team. Worth 10% of your project grade (§8.1).** Its purpose is to get you written feedback while your direction can still change. **The proposal does not ask you to commit to an implementation** — you may change how you build this, and even what you build, up to your workshop checkpoint (§4.3), as long as you say so in it.
 
 > **It is graded on effort, not on correctness.** You cannot lose a point for an idea that later turns out to be wrong, for a method you end up abandoning, or for writing *"we do not yet know how we will do this."* That candour is what the proposal is for. What loses points is a page that shows nobody spent an hour on it. See §8.1 for the scale — there are only three outcomes.
 
@@ -146,7 +147,7 @@ Team name:              Members (full names):
    Does any of it concern real, identifiable people? If yes, explain:
 
 4. HOW YOU WILL KNOW IT WORKS
-   The one number you intend to report (you refine this on Oct 23):
+   The one number you intend to report (you fix this in your workshop checkpoint, §4.3):
    Where your 20 test inputs will come from:
 
 5. SCOPE
@@ -163,6 +164,63 @@ Team name:              Members (full names):
 **Slot 5 is the one people skip and the one that saves projects.** Deciding in October what you will drop in November is a decision you can make calmly. Deciding it on Nov 8 is not.
 
 **Late proposals** are subject to the project late policy (§10).
+
+### 4.3 Stage 3 — the workshop checkpoint, due Thu Oct 22, 11:59 PM
+
+**Written into your repository's `README.md` — there is nothing to submit. Worth 10% of your project grade (§8.1). Due the night before the workshop, whether or not your team attends.**
+
+**What the workshop is.** On Fri Oct 23 the instructor goes round the room and spends a few minutes with each team: where you are, what your plan is, and the technical problem in your way. A few minutes is enough only if your thinking is already written down and has already been read — **so the checkpoint is prepared before class, not at the workshop.**
+
+**Where it goes.** Add a section headed `## Workshop checkpoint` to the `README.md` at the root of your team's repository and fill in the template below. If your repository is private, the instructor and the TAs must already be collaborators (§4.2). **What is graded is your README as of the last commit before the deadline.** The commit history shows when every line was written, so there is no need to tell us you have finished.
+
+**If your team is not attending the workshop,** the deadline is the same. Say so in slot 0, and you will receive written feedback in a private Piazza note by **Mon Oct 26**.
+
+**Your success metric is fixed here.** The commit timestamp is the record that you chose your metric before you started tuning against it (§5.5). **Do not rewrite the checkpoint afterwards** — if something changes, add a dated note below it and explain the change in your report. You are not expected to know how to measure your metric well yet.
+
+**Your app must be deployed.** The Streamlit URL in slot 0 must load. It does not yet have to do anything — a placeholder that deploys is enough.
+
+```
+## Workshop checkpoint
+Team name:              Members (full names):
+
+0. LOGISTICS
+   Attending the Oct 23 workshop? (yes / no):
+   Project board link (§5.7):
+   Streamlit app URL (must load; it does not yet have to do anything):
+
+1. THE PROJECT, AS IT STANDS TODAY
+   Update these from your proposal — do not copy them across if they have changed.
+   Who the user is:
+   The task, in one sentence:
+   The user's input, and what comes back to the user:
+   Every source the app reads (§3.2):
+
+2. WHAT CHANGED SINCE THE PROPOSAL
+   What you changed in what you build or how you build it, and why (write "none" if nothing):
+   What the proposal feedback asked for, and what you did about it:
+
+3. WHERE THE BUILD STANDS
+   What a user can do on the deployed app today:
+   For each §5.1 capability you plan to use: where it will fire, and whether it is working / in progress / not started:
+   A first sketch of your architecture diagram (§5.2) — a photo of a whiteboard, committed and linked, is fine:
+
+4. SUCCESS METRIC (§5.5)
+   The one number that says whether your app is doing its job:
+   Where your test inputs will come from:
+
+5. PROOF OF CONCEPT — TWO TEST INPUTS
+   For each: the input · the result you expect, written before you run anything ·
+   if your app can already run it, what it returned.
+   Input A — an ordinary input your app should handle:
+   Input B — an input you expect it to get wrong:
+
+6. THE PLAN TO YOUR PRESENTATION
+   What is left to build, and who owns each piece (it should match your board):
+   What you will cut first if you fall behind:
+
+7. WHAT YOU NEED FROM US
+   The one thing blocking you, or the question you want answered at your table:
+```
 
 ---
 
@@ -214,11 +272,11 @@ This is roughly three-quarters of a page in the report (§6.1) and one line in t
 
 ### 5.5 Evaluation — required, and the heaviest item on the rubric
 
-The syllabus commits you to this, and §8.2 gives it 20 points. **You write your success metric down in class on Fri Oct 23, before you change anything, and you are held to it for the rest of the term.**
+The syllabus commits you to this, and §8.2 gives it 20 points. **You fix your success metric in your workshop checkpoint (§4.3), due Thu Oct 22, before you change anything, and you are held to it for the rest of the term.**
 
 The final deliverable must contain all five of these:
 
-1. **A success metric, fixed on Oct 23.** One number that says whether your app is doing its job. If you change it afterwards, say so and say why — a changed metric is defensible; a quietly changed metric is not.
+1. **A success metric, fixed in your workshop checkpoint (§4.3).** One number that says whether your app is doing its job. If you change it afterwards, say so and say why — a changed metric is defensible; a quietly changed metric is not.
 2. **A test set of at least 20 real inputs.** *Real* means inputs a real user would actually give, not twenty variations you wrote because they pass. Include the awkward ones: an empty input, an input outside your app's scope, an input you expect it to get wrong. **Record the expected result before you run anything** — deciding what "correct" was after seeing the output is not a test.
 3. **At least one deterministic check.** Something a program decides, not a human eye and not another model: was the tool called with the right parameter, does the JSON parse, does the answer contain the required citation, is the number inside the valid range. At least one of your checks must be of this kind.
 4. **One measured before-and-after number.** Pick one change you made — a prompt revision, adding retrieval, a different parameter — and report the metric before and after, on the same test set. This is the only evidence you have that any of your work improved anything.
@@ -226,7 +284,7 @@ The final deliverable must contain all five of these:
 
 > **A low number honestly measured beats a high number nobody can believe.** Establishing that your app does not work as well as you hoped — with the evidence, a diagnosis, and what it would take to fix — earns full marks on item 4 of the rubric. Quietly narrowing the test set until the number improves earns none.
 
-This is a short section of the written report and **about one minute of the presentation**.
+This is a short section of the written report and **about two minutes of the presentation**.
 
 ### 5.6 Financial model and cost analysis
 
@@ -250,7 +308,7 @@ Your syllabus commits this course to an **Agile** approach, and the project is w
 - **Create it before the proposal** and link it there (§4.2, slot 0).
 - **Every task carries an owner, a start and end date, a status, and a priority.** A board of untouched cards named "build the app" is not a board.
 - **It must show movement over the weeks**, not a single burst. Its history is the picture of how your team actually worked, and it is one of the three things we compare against your contribution table.
-- **It is checked at the Oct 23 workshop** and linked in the report (§6.1). Screenshot it in the appendix.
+- **It is linked in your workshop checkpoint (§4.3)** and in the report (§6.1). Screenshot it in the appendix.
 
 > The board is not busywork and it is not a separate deliverable to invent in November. It is how a four-person team avoids discovering in week five that two people built the same thing and nobody built the retrieval.
 
@@ -435,14 +493,17 @@ Q&A is not a cross-examination and it is not about typos. It is a professional c
 
 ## 8. Grading
 
-Your project grade has two parts:
+Your project grade has three parts:
 
 |  | Weight |
 | --- | --- |
 | **The proposal** (§4.2) — pass / partial / fail | **10%** |
-| **The final deliverable** — the 100-point rubric in §8.2 | **90%** |
+| **The workshop checkpoint** (§4.3) — pass / partial / fail | **10%** |
+| **The final deliverable** — the 100-point rubric in §8.2 | **80%** |
 
-### 8.1 The proposal — 10%
+### 8.1 The proposal and the workshop checkpoint — 10% each
+
+#### The proposal
 
 **Three outcomes. Nothing in between, and no partial credit inside a slot.**
 
@@ -456,7 +517,19 @@ Your project grade has two parts:
 
 **A late proposal is separately penalized under §10**, and lateness and quality are scored independently: a thin proposal submitted on time still scores 5%, and a strong proposal submitted three days late still scores 10% before the §10 deduction is applied.
 
-### 8.2 The final deliverable — 100 points, 90% of the project grade
+#### The workshop checkpoint
+
+**The same three outcomes, read from your README as of the last commit before the deadline.**
+
+|  |  | What it means |
+| --- | --- | --- |
+| **Pass** | **10%** | Every slot in the template is answered with something specific to *your* project. The app URL loads. The metric in slot 4 is a number something could actually compute, not an aspiration. Both test inputs in slot 5 have their expected result written down. |
+| **Partial** | **5%** | Written, but thin: slots answered in a sentence that would fit any project, an app URL that does not load, a metric such as *"user satisfaction"* that nothing could compute, or test inputs with no expected result. |
+| **Fail** | **0%** | Never written, or written with so little content that there is nothing to discuss at your table. |
+
+**How far the build has got is not scored.** An app that deploys and does nothing yet is a **Pass** if the page shows you did the thinking, and so is a checkpoint that says *"retrieval does not work yet, and here is what we have tried."* What is scored is whether you know where you stand and what you will measure. **A late checkpoint is separately penalized under §10**, independently of its outcome, exactly as for the proposal.
+
+### 8.2 The final deliverable — 100 points, 80% of the project grade
 
 This rubric scores two things: **whether you understood what you were doing**, and **whether the thing you built actually works**.
 
@@ -483,12 +556,12 @@ Note the gap at the bottom: a genuine attempt that misses the point still earns 
 
 | \# | Item | Pts | The question we are actually asking |
 | --- | --- | --- | --- |
-| 1 | **Problem, scope, and the case for an LLM** | 10 | Is there a named user with a task worth doing, and does your app address it? Everyone chose their own project, so **the choice is part of the work**: an idea that survives the three tests in §3.1 scores above one that reads like a category. Two things are scored here alongside it — **scope**, because a project cut sensibly and finished beats an ambitious one that half-runs; and **§5.3's argument that this needs a model at all**, cited against how the problem is solved today. |
+| 1 | **Problem, scope, and the case for an LLM** | 10 | Is there a named user with a task worth doing, and does your app address it? Everyone chose their own project, so **the choice is part of the work**: an idea that survives the four tests in §3.1 scores above one that reads like a category. Two things are scored here alongside it — **scope**, because a project cut sensibly and finished beats an ambitious one that half-runs; and **§5.3's argument that this needs a model at all**, cited against how the problem is solved today. |
 | 2 | **Design choices and architecture** | 12 | Why *these* capabilities (§5.1)? Why a tool rather than a longer prompt, why retrieval rather than a stuffed context window, why this model and these parameters? Your architecture diagram (§5.2) is read here, and **it is read against your code** — a diagram that does not match what you built costs more than no diagram. This item is about the **choice**; whether you then built it correctly is item 3. |
 | 3 | **Build quality and correctness** | 12 | Item 2 asks whether you designed sensibly. **This asks whether you then built it correctly.** Do the capabilities actually fire rather than sit there decoratively? Are the failure paths handled — bad input, unparseable output, API error, cold start? Are keys in secrets and is usage capped (§3.2)? Does the code do what the report says it does? |
-| 4 | **Evaluation — did you measure it, and do you believe your own number?** | 20 | All five elements of §5.5: a metric fixed on Oct 23, 20+ real test inputs with expected results recorded in advance, at least one deterministic check, one honest before-and-after, and one named failure. **This is the heaviest item, because an app nobody measured has not been shown to work.** A low number honestly established scores full marks; a high number from a test set curated after the fact scores near zero. |
+| 4 | **Evaluation — did you measure it, and do you believe your own number?** | 20 | All five elements of §5.5: a metric fixed in your workshop checkpoint, 20+ real test inputs with expected results recorded in advance, at least one deterministic check, one honest before-and-after, and one named failure. **This is the heaviest item, because an app nobody measured has not been shown to work.** A low number honestly established scores full marks; a high number from a test set curated after the fact scores near zero. |
 | 5 | **Financial model and cost analysis** | 10 | All six elements of §5.6: a measured per-interaction cost from your own token counts, a projection at a defensible volume, a break-even or an explicit social case, your assumptions listed, a sensitivity analysis on the assumption that matters most, and the build-versus-buy paragraph. **The assumptions are what we will ask about.** A model that concludes the app cannot pay for itself, and shows why, scores above one that reaches a comfortable ROI on numbers nobody could defend. |
-| 6 | **Live demo** | 5 | Did the app do its job, on a real input, in front of the room, from its deployed URL? A failure costs what it reveals — a team that diagnoses it out loud scores above a team that goes quiet. |
+| 6 | **Live demo** | 5 | Did the app do its job, on a real input, in front of the room, from its deployed URL? A failure costs what it reveals — a team that diagnoses it out loud scores above a team that goes quiet. **The recorded fallback (§6.3) is graded here, not separately:** if the live demo fails, it is what the room sees. |
 | 7 | **Interpretation and communication** | 12 | Do the talk and the report explain the *why*, not just the *what*, to someone who does not know what an embedding is? Did you prioritize the argument over the detail in the 12 minutes you had? Does the report read as a story rather than a checklist? Do the figures carry their finding honestly? |
 | 8 | **Defense, ownership, and contribution** | 14 | In Q&A: can **any** member explain **any** part of the work? Honest uncertainty — *"we don't know, and here's how we'd find out"* — scores above a confident guess; a bluff scores below silence. Scored here too: whether the technical work was genuinely shared, judged across your contribution table, your commit history, and your project board (§5.7). **Significant imbalance is penalized at the individual level.** |
 | 9 | **Deployment and reproducibility** | 5 | Is the app publicly reachable and does it survive a cold start? Does the `presentation` tag contain everything, and could a classmate run it? |
@@ -508,7 +581,8 @@ The full policy is in the syllabus. For this project specifically — and yes, t
 - **Prohibited: having a Generative AI tool write, draft, expand, rewrite, summarise, or "polish" any prose** for the report or the slides — including a paragraph you then edit, and including a bullet list you then turn into sentences. If the sentence started as the model's, it does not belong in your report.
 - **Permitted: light grammatical correction** — spelling, punctuation, agreement, a clumsy clause straightened out. The kind of thing a spell-checker does. The thinking, the structure, the argument, and the wording must be yours.
 - **Permitted: ideation and coding.** You may use Generative AI to think through approaches, to explain a concept back to you, to debug, and to help write code.
-- **If you use Generative AI to assist with code, label every such block and disclose it in the required appendix** — tool and version, how it was used, and links or screenshots of the exchange.
+- **Permitted: spell-checkers.** A spell-checker (such as Word's built-in checker)  needs no disclosure.
+- **Disclose every use — not only code.** Any use of Generative AI on the project — ideation, explaining a concept, debugging, code — goes in the **Generative AI appendix** of the report (§6.1), as the syllabus requires: the tool and version, how you used it, and links or screenshots of the exchange. **Code a model helped write is also labeled where it sits**, with a comment at the top of the block naming the tool.
 - **You are fully responsible for everything you submit.** AI-generated errors and hallucinations are your errors.
 
 > **Why this rule, in this course.** You are being graded on whether you understand what you built. A report written by a model reads fluently and tells us nothing about you, which is exactly the failure mode this course spends thirteen sessions teaching you to recognize in other people's systems. The instructor may ask you to explain any part of your work; **inability to account for your own submission is treated as evidence that the work is not yours**, and is handled under the Academic Conduct Code. That applies to the writing as much as to the code.
@@ -519,11 +593,13 @@ Any violation of the AI policy is treated as a serious honor code violation.
 
 ## 10. Late policy
 
-**10% of the project grade for each midnight that passes after the deadline**, applied to every dated project item — team registration and the idea check, the proposal, the slides, the recorded fallback, and the report.
+**10% of the project grade for each midnight that passes after the deadline**, applied to every dated project item — team registration and the idea check, the proposal, the workshop checkpoint, the slides, the recorded fallback, and the report.
 
-> **Early items — team registration with the two ideas, and the proposal — are capped at a 30% deduction.** The deduction stops growing there, but the item is still expected: one never submitted takes the full 30% *and* forfeits its feedback. **Late items — the slides, the recorded fallback, and the written report — are not capped.** They keep losing 10% of the project grade for every midnight, with no floor, so a deliverable ten days late costs the entire project grade.
+> **Early items — team registration with the two ideas, the proposal, and the workshop checkpoint — are capped at a 30% deduction.** The deduction stops growing there, but the item is still expected: one never submitted takes the full 30% *and* forfeits its feedback. **Late items — the slides, the recorded fallback, and the written report — are not capped.** They keep losing 10% of the project grade for every midnight, with no floor, so a deliverable ten days late costs the entire project grade.
 
 **The proposal carries a grade (§8.1) *and* this capped late deduction, and the two are independent.** The grade asks whether you did the work; the deduction asks whether you did it on time. A strong proposal handed in three days late scores its full 10% and then takes the 30% deduction against your project grade — which is far more expensive than the 10% it earned. Hand it in on Oct 5.
+
+**The workshop checkpoint works the same way**, and because it is not submitted, **the commit timestamp on your README decides whether it was on time.**
 
 Each item's deduction is applied once, to your project grade. For the slides and the recording, "the deadline" means **11:59 PM the night before your own slot**, not the night before the first presentation session.
 
