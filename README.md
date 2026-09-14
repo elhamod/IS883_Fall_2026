@@ -9,7 +9,7 @@
 
 - **Instructor:** [Mohannad Elhamod](https://www.linkedin.com/in/mohannadelhamod/) (Contact exclusively through [Piazza](https://piazza.com/bu/fall2026/is883/home))
 - **Office hours:** **By appointment only** — request an appointment through Piazza (see the Office Hours policy below)
-- **TAs:** TBD (Contact exclusively through [Piazza](https://piazza.com/bu/fall2026/is883/home)); TA office hours are also **by appointment only**, requested through Piazza
+- **TA:** [Samuel Buelvas](https://www.linkedin.com/in/sbuelvasch/) (Contact exclusively through [Piazza](https://piazza.com/bu/fall2026/is883/home)); TA office hours are also **by appointment only**, requested through Piazza
 - **Class time and place:** Monday 2:30 – 5:15 PM / HAR 419
 - **Term:** September 2 – December 10, 2026
 - **First class meeting:** Monday, September 14, 2026
