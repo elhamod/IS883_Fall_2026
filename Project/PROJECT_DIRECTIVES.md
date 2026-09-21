@@ -10,7 +10,7 @@
 
 | When | What | Graded? |
 | --- | --- | --- |
-| **Mon Sep 21** (Session 2) | Teams formed in class | — |
+| **Mon Sep 21** (Session 2) | Teams formed by end of day | — |
 | **Fri Sep 25, 11:59 PM** | **Team registered on Blackboard**, with a **primary idea and a backup idea** (§4.1) | Ungraded — **late penalty applies (§10)** |
 | **\~Tue Sep 29** | **Idea verdict posted on Piazza and Blackboard** — go / shrink it / switch to your backup | — |
 | **Mon Oct 5** (Session 4) | **Proposal due** (1 page, PDF, one per team) — includes your **repo link** (§4.2) | **Graded — 10% of the project grade (§8.1)** · late penalty applies (§10) |
@@ -32,7 +32,7 @@ There is **no weekly homework** in this course. The project takes its place, it 
 
 ## 2. Teams
 
-- **Teams are 3–4 students**, self-selected, formed in class on **Mon Sep 21** (Session 2). Enrollment this term gives **7 teams** — five of four and two of three.
+- **Teams are 3–4 students**, self-selected, formed by the end of the day on **Mon Sep 21** (Session 2). Enrollment this term gives **7 teams** — five of four and two of three.
 - **Register on Blackboard by Fri Sep 25, 11:59 PM.** The registration form is also where your primary and backup ideas go (§4.1), so have the conversation before you register, not after.
 - **Registration is not graded, but it is subject to the project late policy (§10):** a team that registers after the deadline loses **10% of its project grade per midnight, to a maximum of 30%** — the same rule that applies to the proposal. Register on time; it is the cheapest 30% you will ever protect.
 - If you are **not on a registered team** by Sep 25, you will be placed on one. In that case the deduction applies to **your individual project grade**, not to the grade of the team that receives you — a team that registered on time is not penalized for absorbing a latecomer.
