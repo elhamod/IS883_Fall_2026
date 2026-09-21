@@ -1,0 +1,1438 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/elhamod/IS883_Fall_2026/blob/main/Session%2001/IS883_Session01.ipynb%20clear%20output\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "7229f8fa",
+      "metadata": {
+        "id": "7229f8fa"
+      },
+      "source": [
+        "# Language Modeling with N-grams on a Real Book Corpus"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "034368bb",
+      "metadata": {
+        "id": "034368bb"
+      },
+      "source": [
+        "### What you will do in this notebook\n",
+        "\n",
+        "In class we built a tiny n-gram on three toy sentences. Here we scale it up to a **real corpus**: a few hundred thousand words of public-domain children's literature (*Alice in Wonderland*, *Stories to Tell to Children*, *The Adventures of Buster Bear*, and *The Parent's Assistant*), all from Project Gutenberg.\n",
+        "\n",
+        "You will:\n",
+        "\n",
+        "1. Load and inspect a large text corpus.\n",
+        "2. Train n-gram language models on it.\n",
+        "3. See what changes when you change **n**.\n",
+        "4. See that the same model gives **different text every run** (stochasticity).\n",
+        "5. Use the model for **text completion** from different prefixes.\n",
+        "6. Measure model quality with **perplexity**."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "f18c1b2f",
+      "metadata": {
+        "id": "f18c1b2f"
+      },
+      "source": [
+        "# Part 0: Setup"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 43,
+      "id": "0bdea388",
+      "metadata": {
+        "id": "0bdea388"
+      },
+      "outputs": [],
+      "source": [
+        "# Install the one library this notebook needs.\n",
+        "!pip install nltk --quiet"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "944e8cbb",
+      "metadata": {
+        "id": "944e8cbb"
+      },
+      "source": [
+        "Machine learning is generally stochastic, meaning you get different results for different runs. To control that, we \"seed\" the code. Enter your BUID below; it is passed as the seed wherever we want a result you can reproduce. (In Part 5 we deliberately leave the seed out, to show what happens without it.)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 44,
+      "id": "6c7848c6",
+      "metadata": {
+        "id": "6c7848c6"
+      },
+      "outputs": [],
+      "source": [
+        "# Your BUID seeds every random step so your results are reproducible.\n",
+        "BUID = 123456  # enter ONLY the numerical part"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 45,
+      "id": "b0f35881",
+      "metadata": {
+        "id": "b0f35881"
+      },
+      "outputs": [],
+      "source": [
+        "# Bring in Python's random number generator; we hand it BUID as the seed at each random step.\n",
+        "import random"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "962f0aa3",
+      "metadata": {
+        "id": "962f0aa3"
+      },
+      "source": [
+        "# Part 1: Getting a Large Text Corpus"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "7a5b8fc3",
+      "metadata": {
+        "id": "7a5b8fc3"
+      },
+      "source": [
+        "`nltk` ships with a sample of Project Gutenberg books. We download it once and then pick the four books that are children's literature.\n",
+        "\n",
+        "Notice how little code this takes: `gutenberg.sents(book)` hands us the book **already split into sentences and already split into words**. No manual text cleaning needed."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 46,
+      "id": "4fb8f01c",
+      "metadata": {
+        "id": "4fb8f01c",
+        "outputId": "fccbcfdb-56e4-4c55-cd67-4f9885813e64",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Available books: ['austen-emma.txt', 'austen-persuasion.txt', 'austen-sense.txt', 'bible-kjv.txt', 'blake-poems.txt', 'bryant-stories.txt', 'burgess-busterbrown.txt', 'carroll-alice.txt', 'chesterton-ball.txt', 'chesterton-brown.txt', 'chesterton-thursday.txt', 'edgeworth-parents.txt', 'melville-moby_dick.txt', 'milton-paradise.txt', 'shakespeare-caesar.txt', 'shakespeare-hamlet.txt', 'shakespeare-macbeth.txt', 'whitman-leaves.txt']\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "[nltk_data] Downloading package gutenberg to /root/nltk_data...\n",
+            "[nltk_data]   Package gutenberg is already up-to-date!\n",
+            "[nltk_data] Downloading package punkt to /root/nltk_data...\n",
+            "[nltk_data]   Package punkt is already up-to-date!\n",
+            "[nltk_data] Downloading package punkt_tab to /root/nltk_data...\n",
+            "[nltk_data]   Package punkt_tab is already up-to-date!\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Download NLTK's sample of Project Gutenberg books and list what's available.\n",
+        "import nltk\n",
+        "\n",
+        "nltk.download('gutenberg')\n",
+        "nltk.download('punkt')\n",
+        "nltk.download('punkt_tab')\n",
+        "\n",
+        "from nltk.corpus import gutenberg\n",
+        "\n",
+        "print(\"Available books:\", gutenberg.fileids())"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 47,
+      "id": "674218dc",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "674218dc",
+        "outputId": "d17d82bc-37a9-4842-f4ff-7796cbbef664"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "carroll-alice.txt                1703 sentences,   34110 words\n",
+            "bryant-stories.txt               2863 sentences,   55563 words\n",
+            "burgess-busterbrown.txt          1054 sentences,   18963 words\n",
+            "edgeworth-parents.txt           10230 sentences,  210663 words\n",
+            "\n",
+            "TOTAL: 15850 sentences, 319326 words\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Load four children's books and combine them into one list of sentences.\n",
+        "# gutenberg.sents() returns each sentence already split into words.\n",
+        "books = [\n",
+        "    'carroll-alice.txt',          # Alice's Adventures in Wonderland\n",
+        "    'bryant-stories.txt',         # Stories to Tell to Children\n",
+        "    'burgess-busterbrown.txt',    # The Adventures of Buster Bear\n",
+        "    'edgeworth-parents.txt',      # The Parent's Assistant\n",
+        "]\n",
+        "\n",
+        "sentences = []\n",
+        "for book in books:\n",
+        "    # Lower-case every word so \"The\" and \"the\" count as the same word\n",
+        "    book_sentences = [[word.lower() for word in sentence] for sentence in gutenberg.sents(book)]\n",
+        "    sentences = sentences + book_sentences\n",
+        "    print(f\"{book:30s} {len(book_sentences):6d} sentences, {len(gutenberg.words(book)):7d} words\")\n",
+        "\n",
+        "print()\n",
+        "print(\"TOTAL:\", len(sentences), \"sentences,\", sum(len(s) for s in sentences), \"words\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "59c81dda",
+      "metadata": {
+        "id": "59c81dda"
+      },
+      "source": [
+        "Let's look at a few sentences to see what the model will actually be trained on."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 48,
+      "id": "3be8c34b",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3be8c34b",
+        "outputId": "81374061-8595-4a7d-e647-d0110623b93d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[ alice ' s adventures in wonderland by lewis carroll 1865 ]\n",
+            "---\n",
+            "chapter i .\n",
+            "---\n",
+            "down the rabbit - hole\n",
+            "---\n",
+            "alice was beginning to get very tired of sitting by her sister on the bank , and of having nothing to do : once or twice she had peeped into the book her sister was reading , but it had no pictures or conversations in it , ' and what is the use of a book ,' thought alice ' without pictures or conversation ?'\n",
+            "---\n",
+            "so she was considering in her own mind ( as well as she could , for the hot day made her feel very sleepy and stupid ), whether the pleasure of making a daisy - chain would be worth the trouble of getting up and picking the daisies , when suddenly a white rabbit with pink eyes ran close by her .\n",
+            "---\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Peek at the first few sentences to see what the model will train on.\n",
+        "for sentence in sentences[:5]:\n",
+        "    print(' '.join(sentence))\n",
+        "    print('---')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c3e3249e",
+      "metadata": {
+        "id": "c3e3249e"
+      },
+      "source": [
+        "### Train / test split\n",
+        "\n",
+        "We hold out part of the data. The model **only** sees the training sentences. The test sentences are used later to measure how well the model generalizes."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 49,
+      "id": "e0d20657",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e0d20657",
+        "outputId": "6ebb19f5-8f9d-41b1-fbab-cafa9aa4ab22"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "training sentences: 14265\n",
+            "test sentences    : 1585\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Shuffle, then hold out 10% of the sentences as a test set the model never sees.\n",
+        "random.Random(BUID).shuffle(sentences)   # shuffle so the split mixes all four books\n",
+        "\n",
+        "training_split = 0.9\n",
+        "split_point = int(training_split * len(sentences))\n",
+        "train_sentences = sentences[:split_point]\n",
+        "test_sentences = sentences[split_point:]\n",
+        "\n",
+        "print(\"training sentences:\", len(train_sentences))\n",
+        "print(\"test sentences    :\", len(test_sentences))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "a9c9ad1e",
+      "metadata": {
+        "id": "a9c9ad1e"
+      },
+      "source": [
+        "# Part 2: Training an N-gram Language Model"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "9f40f33a",
+      "metadata": {
+        "id": "9f40f33a"
+      },
+      "source": [
+        "`nltk` does the heavy lifting. `padded_everygram_pipeline` adds the `<s>` (start) and `</s>` (end) markers and counts every n-gram. We wrap it in a small function so we can train a model for any `n` with one line.\n",
+        "\n",
+        "**Smoothing.** We train with `Lidstone`, which adds a tiny amount (0.01) to every word count. Without it, a word combination the model never saw in training would have probability exactly zero — and a single zero drags the whole sentence's probability to zero, which breaks the perplexity arithmetic in Part 7. Smoothing keeps unseen combinations merely *unlikely* rather than *impossible*.\n",
+        "\n",
+        "**Three different \"sizes\".** The cell below prints three counts, plus one ratio, and they behave very differently as `n` changes. The **vocabulary** is how many distinct words appear in the books — it belongs to the *corpus*, so it barely moves. The **stored n-grams** are what the model memorized, and the **contexts** are the distinct runs of `n - 1` words it saw right before a word — both belong to the *model*, and they grow quickly as `n` grows. The last line divides one by the other: **continuations per context** is how many different next words the model saw, on average, after each context."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 50,
+      "id": "8f9c13c1",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8f9c13c1",
+        "outputId": "f40fb5ec-1604-4510-ccdd-2367f347d143"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "n = 4\n",
+            "vocabulary size          : 10,135 distinct words\n",
+            "distinct n-grams stored  : 249,587\n",
+            "distinct contexts seen   : 189,417\n",
+            "continuations per context: 1.32\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Train an n-gram model for a given n, then report three different \"sizes\" of the result.\n",
+        "from nltk.lm import Lidstone\n",
+        "from nltk.lm.preprocessing import padded_everygram_pipeline\n",
+        "\n",
+        "def train_ngram_model(n, sentences):\n",
+        "    train_data, vocabulary = padded_everygram_pipeline(n, sentences)   # add <s>/</s> and count n-grams\n",
+        "    model = Lidstone(0.01, n)                                          # 0.01 = the amount added to every count\n",
+        "    model.fit(train_data, vocabulary)\n",
+        "    return model\n",
+        "\n",
+        "my_ngram_model = train_ngram_model(4, train_sentences)\n",
+        "\n",
+        "\n",
+        "def count_ngrams(model):\n",
+        "    \"\"\"How many distinct n-grams the model stored, over how many contexts.\"\"\"\n",
+        "    if model.order == 1:\n",
+        "        return len(model.counts.unigrams), 1     # a unigram model has no context, so count it as one\n",
+        "    contexts = model.counts[model.order]\n",
+        "    return sum(len(next_words) for next_words in contexts.values()), len(contexts)\n",
+        "\n",
+        "\n",
+        "num_ngrams, num_contexts = count_ngrams(my_ngram_model)\n",
+        "\n",
+        "print(\"n =\", my_ngram_model.order)\n",
+        "print(\"vocabulary size          :\", f\"{len(my_ngram_model.vocab):,}\", \"distinct words\")\n",
+        "print(\"distinct n-grams stored  :\", f\"{num_ngrams:,}\")\n",
+        "print(\"distinct contexts seen   :\", f\"{num_contexts:,}\")\n",
+        "print(\"continuations per context:\", f\"{num_ngrams / num_contexts:.2f}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "0ba49cbc",
+      "metadata": {
+        "id": "0ba49cbc"
+      },
+      "source": [
+        "**Experiment.** Re-run the cell above with `n = 2`, then with `n = 5` (change the `4` in `train_ngram_model(4, train_sentences)`). Watch how the numbers move as `n` grows."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "5e20d79c",
+      "metadata": {
+        "id": "5e20d79c"
+      },
+      "source": [
+        "**Question 1.** The cell above prints three different \"sizes\" and one ratio. Which number barely changes as `n` grows, and which one changes sharply? What does a \"continuations per context\" close to 1 tell you the model will do when you ask it to generate text?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c163cff7",
+      "metadata": {
+        "id": "c163cff7"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "1b142cd8",
+      "metadata": {
+        "id": "1b142cd8"
+      },
+      "source": [
+        "### What did the model actually learn?\n",
+        "\n",
+        "An n-gram model is essentially a big lookup table: *given the previous word(s), how often did each word come next?* Let's look up a few phrases. Notice how adding more context affects the number of possibile continuations."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 66,
+      "id": "df113924",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "df113924",
+        "outputId": "d006186c-4eb9-48a5-c6f1-528fc0008a61"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After \"little\" (1233 times in the training text), the most likely next words are:\n",
+            "   joe          probability = 0.079\n",
+            "   jackal       probability = 0.045\n",
+            "   boy          probability = 0.033\n",
+            "   girl         probability = 0.032\n",
+            "   red          probability = 0.028\n",
+            "   fir          probability = 0.019\n",
+            "   half         probability = 0.019\n",
+            "   gingerbread  probability = 0.019\n",
+            "\n",
+            "After \"a little\" (262 times in the training text), the most likely next words are:\n",
+            "   old          probability = 0.046\n",
+            "   way          probability = 0.042\n",
+            "   ,            probability = 0.038\n",
+            "   while        probability = 0.031\n",
+            "   girl         probability = 0.031\n",
+            "   boy          probability = 0.031\n",
+            "   more         probability = 0.019\n",
+            "   farther      probability = 0.019\n",
+            "\n",
+            "After \"was a little\" (26 times in the training text), the most likely next words are:\n",
+            "   way          probability = 0.192\n",
+            "   boy          probability = 0.115\n",
+            "   startled     probability = 0.077\n",
+            "   bruised      probability = 0.038\n",
+            "   sheepish     probability = 0.038\n",
+            "   old          probability = 0.038\n",
+            "   cross        probability = 0.038\n",
+            "   fir          probability = 0.038\n",
+            "\n",
+            "After \"there was a little\" (7 times in the training text), the most likely next words are:\n",
+            "   old          probability = 0.143\n",
+            "   fir          probability = 0.143\n",
+            "   shivering    probability = 0.143\n",
+            "   brown        probability = 0.143\n",
+            "   red          probability = 0.143\n",
+            "   boy          probability = 0.143\n",
+            "   yellow       probability = 0.143\n",
+            "\n",
+            "After \"once upon\" (10 times in the training text), the most likely next words are:\n",
+            "   a            probability = 1.000\n",
+            "\n",
+            "After \"said\" (2155 times in the training text), the most likely next words are:\n",
+            "   the          probability = 0.243\n",
+            "   ,            probability = 0.076\n",
+            "   he           probability = 0.067\n",
+            "   alice        probability = 0.046\n",
+            "   she          probability = 0.046\n",
+            "   to           probability = 0.038\n",
+            "   mr           probability = 0.025\n",
+            "   his          probability = 0.020\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Helper: show the words most likely to follow a given phrase, with their probabilities.\n",
+        "def show_next_words(model, previous_words, how_many=8):\n",
+        "    if isinstance(previous_words, str):\n",
+        "        previous_words = previous_words.split()\n",
+        "\n",
+        "    if len(previous_words) > model.order - 1:    # an n-gram model can only look back n-1 words\n",
+        "        print(f'This model (n = {model.order}) can only look back {model.order - 1} word(s), '\n",
+        "              f'but you gave it {len(previous_words)}. Train a model with n = {len(previous_words) + 1}.\\n')\n",
+        "        return\n",
+        "\n",
+        "    # if the context has been seen before during training, use it. Otherwise, use the unigrams.\n",
+        "    counts = model.counts[previous_words] if len(previous_words) > 0 else model.counts.unigrams\n",
+        "\n",
+        "    total = sum(counts.values())\n",
+        "    phrase = \" \".join(previous_words)\n",
+        "\n",
+        "    if total == 0:\n",
+        "        print(f'\"{phrase}\" never appears in the training text.\\n')\n",
+        "        return\n",
+        "\n",
+        "    print(f'After \"{phrase}\" ({total} times in the training text), the most likely next words are:')\n",
+        "    for word, count in counts.most_common(how_many):\n",
+        "        print(f\"   {word:12s} probability = {count / total:.3f}\")\n",
+        "    print()\n",
+        "\n",
+        "my_ngram_model = train_ngram_model(5, train_sentences)\n",
+        "\n",
+        "show_next_words(my_ngram_model, [\"little\"])\n",
+        "show_next_words(my_ngram_model, [\"a\", \"little\"])\n",
+        "show_next_words(my_ngram_model, [\"was\", \"a\", \"little\"])\n",
+        "show_next_words(my_ngram_model, [\"there\", \"was\", \"a\", \"little\"])\n",
+        "\n",
+        "show_next_words(my_ngram_model, [\"once\", \"upon\"])\n",
+        "show_next_words(my_ngram_model, [\"said\"])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "d01db67b",
+      "metadata": {
+        "id": "d01db67b"
+      },
+      "source": [
+        "**Experiment.** Look up other words of your own by changing the words passed to `show_next_words` above. Can you find a word whose most-likely next words surprise you?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "74700009",
+      "metadata": {
+        "id": "74700009"
+      },
+      "source": [
+        "# Part 3: Generating Text"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "73e05aa3",
+      "metadata": {
+        "id": "73e05aa3"
+      },
+      "source": [
+        "To generate text we repeatedly ask the model: *given the last n-1 words, what word comes next?* We stop when the model produces the end-of-sentence marker `</s>`.\n",
+        "\n",
+        "The `seed` argument makes a run reproducible. If you leave it out, you get a different sample every time (we use that on purpose in Part 5)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 52,
+      "id": "ea090749",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ea090749",
+        "outputId": "04cceaf5-9b92-40fc-84d6-24e1a72fa935"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "once there were four little girls who lived in a country in the far east .\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Generate text one word at a time, stopping at the sentence-end marker.\n",
+        "# Pass a prefix to continue from given words; pass a seed to make a run repeatable.\n",
+        "def generate_text(model, num_words=40, prefix=None, seed=None):\n",
+        "    n = model.order\n",
+        "    random_generator = random.Random(seed) if seed is not None else None\n",
+        "\n",
+        "    context = [\"<s>\"] * (n - 1)          # pretend we are at the start of a sentence\n",
+        "    generated = []\n",
+        "\n",
+        "    if prefix is not None:               # start from words the user gave us\n",
+        "        prefix_words = nltk.word_tokenize(prefix.lower())\n",
+        "        context = context + prefix_words\n",
+        "        generated = list(prefix_words)\n",
+        "\n",
+        "    for _ in range(num_words):\n",
+        "        last_words = context[-(n - 1):] if n > 1 else []\n",
+        "        next_word = model.generate(text_seed=last_words, random_seed=random_generator)\n",
+        "        if next_word == \"</s>\":          # the model decided the sentence is over\n",
+        "            break\n",
+        "        if next_word == \"<s>\":           # skip start markers\n",
+        "            continue\n",
+        "        generated.append(next_word)\n",
+        "        context.append(next_word)\n",
+        "\n",
+        "    return \" \".join(generated)\n",
+        "\n",
+        "\n",
+        "print(generate_text(my_ngram_model, num_words=40, prefix=\"once\", seed=None))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "150a1fdc",
+      "metadata": {
+        "id": "150a1fdc"
+      },
+      "source": [
+        "**Experiment.** Set `seed=BUID` and re-run a few times — the text stays the same. Then change the `prefix` to a phrase of your own and see what the model writes."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "dc1cb532",
+      "metadata": {
+        "id": "dc1cb532"
+      },
+      "source": [
+        "# Part 4: Trying Different Values of n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "62765802",
+      "metadata": {
+        "id": "62765802"
+      },
+      "source": [
+        "`n` controls **how much context** the model is allowed to look at.\n",
+        "\n",
+        "Below we train one model per value of `n` and generate a sentence from each, using the same seed so the comparison is fair.\n",
+        "\n",
+        "**Warning:** this cell trains five models from scratch, so give it up to a minute."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 53,
+      "id": "4b7d68b8",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4b7d68b8",
+        "outputId": "c2834490-b90a-4b5d-b097-2acb4a864d3d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "===== n = 1 =====\n",
+            "  . difference yourselves . suddenly .\" to to hardy ( , of making . which measuring of christmas until . anne he twelve alone other . ineffable you and could make one into evening the be \" rory 1828 why\n",
+            "  . to bright or o believe can very , . with said the that the , plums to ) lazy burnt of t , the am dress .\" you ! please while to that ( officers ! , do .\"\n",
+            "  at sunshine the , of am secret something at hanging a t ; way ?\" the afraid i lucky neither there knife i , , showed in do things papa reckon a stay certain this manner . the about _h_arbour\n",
+            "\n",
+            "===== n = 2 =====\n",
+            "  it must not know in a good sense and green forest , if you to make over , my fireworks and sickness , would not know what do i were cut , and would feel encouraged to live in the\n",
+            "  presently the custom by one took care to him , i ' s no one ; it was looking up a few minutes , divided between yourself , lad who would , \" what we ' t caught all had\n",
+            "  \" party -- it to be as rubbish , and they live !\"\n",
+            "\n",
+            "===== n = 3 =====\n",
+            "  tyrants always tremble when --\" mary ' s house .\n",
+            "  landlord .\n",
+            "  \" how did you shout and sing ?\"\n",
+            "\n",
+            "===== n = 4 =====\n",
+            "  as she finished speaking , another and a louder noise , and the dread of being thought ignorant , they become affected ; and dr . cardamum , the best physician in the world .\n",
+            "  they saw , when they are weeding .\n",
+            "  the advantages of his wealth and station with all who knew them well had no doubt of that .\n",
+            "\n",
+            "===== n = 5 =====\n",
+            "  ( the jury all looked puzzled .)\n",
+            "  what do you think he was , in the old pasture , and never once thought of the time .\n",
+            "  miss somers , however , mindful of what was due to her guest , was anxious to dispatch philip for his piece of sycamore .\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Train one model per value of n and print sample sentences from each.\n",
+        "# The same seed is used across models so the comparison is fair.\n",
+        "models = {}   # save the models so we can reuse them later\n",
+        "\n",
+        "for n in [1, 2, 3, 4, 5]:\n",
+        "    models[n] = train_ngram_model(n, train_sentences)\n",
+        "    print(f\"===== n = {n} =====\")\n",
+        "    for sample in range(3):\n",
+        "        print(\" \", generate_text(models[n], num_words=40, seed=BUID + 101 * n + sample))\n",
+        "    print()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "5f0b64dd",
+      "metadata": {
+        "id": "5f0b64dd"
+      },
+      "source": [
+        "**Question 2.** Describe how the generated text changes as `n` grows. Which value of `n` gives the best-sounding sentences? What starts to go wrong at the high end?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "facf1b9c",
+      "metadata": {
+        "id": "facf1b9c"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "8467d95d",
+      "metadata": {
+        "id": "8467d95d"
+      },
+      "source": [
+        "# Part 5: Stochasticity — Same Model, Different Runs"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "a5d33ffe",
+      "metadata": {
+        "id": "a5d33ffe"
+      },
+      "source": [
+        "An n-gram model does not output *the* next word; it outputs a **probability distribution** over next words, and we sample from it. So the same model, asked the same question, answers differently each time.\n",
+        "\n",
+        "Here we run the same trigram model five times **without** fixing a seed."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 54,
+      "id": "0be783c8",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0be783c8",
+        "outputId": "2ea8cee3-b799-47ec-e8f7-bfa2b3b47a84"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Run 1: \" i have dirtied my hands .\"\n",
+            "---\n",
+            "Run 2: a thought , \" i saw , that she had unkind or dissatisfied thoughts , as the large mouthfuls which barbara sucked up with them .\n",
+            "---\n",
+            "Run 3: for some moments .\n",
+            "---\n",
+            "Run 4: he just chomped them all in good time for your purpose .\"\n",
+            "---\n",
+            "Run 5: \" yes , sir ,\" said he to franklin , the moment lawrence began to work immediately , ladies !\n",
+            "---\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Run the SAME model five times with NO seed -> different text each run.\n",
+        "trigram_model = models[3]\n",
+        "\n",
+        "for run in range(5):\n",
+        "    print(f\"Run {run + 1}: {generate_text(trigram_model, num_words=30)}\")\n",
+        "    print(\"---\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "1566390b",
+      "metadata": {
+        "id": "1566390b"
+      },
+      "source": [
+        "**Experiment.** Change which model the cell above uses (try `models[2]` or `models[5]`) and re-run. Do the five runs differ from each other more, or less?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "81cb1af8",
+      "metadata": {
+        "id": "81cb1af8"
+      },
+      "source": [
+        "**Question 3.** Why do we get different text on every run? And why is being able to fix the seed useful?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "62bc0735",
+      "metadata": {
+        "id": "62bc0735"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "72cd72f1",
+      "metadata": {
+        "id": "72cd72f1"
+      },
+      "source": [
+        "# Part 6: Text Completion with Different Prefixes"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c43f72a4",
+      "metadata": {
+        "id": "c43f72a4"
+      },
+      "source": [
+        "So far we started from an empty sentence. But we can also hand the model a **prefix** and ask it to continue — which is exactly what auto-complete on your phone does, and a simplified version of what ChatGPT does."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 55,
+      "id": "1ce6e97e",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1ce6e97e",
+        "outputId": "b5f64aea-1c78-4306-9c1f-0bf160fb8caf"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "PREFIX: \"once upon a time\"\n",
+            "  -> once upon a time there was a dear little girl , whose lap was full of primroses .\n",
+            "---\n",
+            "PREFIX: \"the little girl\"\n",
+            "  -> the little girl came back out of breath to her work ; but what was her surprise and sorrow to find it spoiled .\n",
+            "---\n",
+            "PREFIX: \"alice was\"\n",
+            "  -> alice was just beginning to understand something that peter rabbit and the other little people of the green forest and some from the green meadows saw him .\n",
+            "---\n",
+            "PREFIX: \"he said to\"\n",
+            "  -> he said to the field mouse .\n",
+            "---\n",
+            "PREFIX: \"the big data analyst\"\n",
+            "  -> the big data analyst suddenly , thump !\n",
+            "---\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Give the model a starting phrase (prefix) and let it finish the sentence.\n",
+        "demo_model = models[5]\n",
+        "\n",
+        "prefixes = [\n",
+        "    \"once upon a time\",\n",
+        "    \"the little girl\",\n",
+        "    \"alice was\",\n",
+        "    \"he said to\",\n",
+        "    \"the big data analyst\",   # a prefix that does NOT belong to children's books\n",
+        "]\n",
+        "\n",
+        "for i, prefix in enumerate(prefixes):\n",
+        "    print(f'PREFIX: \"{prefix}\"')\n",
+        "    print(\"  ->\", generate_text(demo_model, num_words=30, prefix=prefix, seed=BUID + i))\n",
+        "    print(\"---\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "35203491",
+      "metadata": {
+        "id": "35203491"
+      },
+      "source": [
+        "The same prefix through models of different `n`:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 56,
+      "id": "f7e88e83",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f7e88e83",
+        "outputId": "c85927f2-f52d-4c50-e7ba-62a6c3584ed9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "n = 1:\n",
+            "   once upon a time the that ' ; ! ones , away ,\" and how a ' upon faster of every there soul he he their i is that ). take , i ,\n",
+            "After \"\" (287425 times in the training text), the most likely next words are:\n",
+            "   ,            probability = 0.067\n",
+            "   the          probability = 0.042\n",
+            "   .            probability = 0.032\n",
+            "   and          probability = 0.027\n",
+            "   to           probability = 0.024\n",
+            "   '            probability = 0.019\n",
+            "   of           probability = 0.017\n",
+            "   a            probability = 0.016\n",
+            "\n",
+            "---\n",
+            "n = 2:\n",
+            "   once upon a time they used , and , or adopted child , and make an ' then both proud king saul grew more frightened the little joe otter ' t be lonely .\n",
+            "After \"time\" (477 times in the training text), the most likely next words are:\n",
+            "   ,            probability = 0.184\n",
+            "   to           probability = 0.113\n",
+            "   .            probability = 0.088\n",
+            "   he           probability = 0.044\n",
+            "   the          probability = 0.031\n",
+            "   ;            probability = 0.027\n",
+            "   she          probability = 0.025\n",
+            "   of           probability = 0.023\n",
+            "\n",
+            "---\n",
+            "n = 3:\n",
+            "   once upon a time they were , as a receiver of stolen goods , if i ' ve good news for you in her hands on her jointure was nothing on earth , and\n",
+            "After \"a time\" (31 times in the training text), the most likely next words are:\n",
+            "   there        probability = 0.226\n",
+            "   ,            probability = 0.194\n",
+            "   when         probability = 0.161\n",
+            "   a            probability = 0.097\n",
+            "   of           probability = 0.065\n",
+            "   .            probability = 0.032\n",
+            "   every        probability = 0.032\n",
+            "   up           probability = 0.032\n",
+            "\n",
+            "---\n",
+            "n = 4:\n",
+            "   once upon a time there was a dispute going on between the executioner , the king !\"\n",
+            "After \"upon a time\" (11 times in the training text), the most likely next words are:\n",
+            "   there        probability = 0.636\n",
+            "   a            probability = 0.273\n",
+            "   ,            probability = 0.091\n",
+            "\n",
+            "---\n",
+            "n = 5:\n",
+            "   once upon a time there was a dear little girl , whose lap was full of primroses .\n",
+            "After \"once upon a time\" (10 times in the training text), the most likely next words are:\n",
+            "   there        probability = 0.700\n",
+            "   a            probability = 0.200\n",
+            "   ,            probability = 0.100\n",
+            "\n",
+            "---\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Complete the same prefix with each n, and show the next-word options at each step.\n",
+        "prefix = \"once upon a time\"\n",
+        "\n",
+        "for n in [1, 2, 3, 4, 5]:\n",
+        "    prefix_words = prefix.split(\" \")\n",
+        "    last_words = prefix_words[-(n - 1):] if n > 1 else []   # the n-1 words the model looks back at\n",
+        "    print(f\"n = {n}:\")\n",
+        "    print(\"  \", generate_text(models[n], num_words=30, prefix=prefix, seed=BUID))\n",
+        "    show_next_words(models[n], last_words)\n",
+        "    print(\"---\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "b57b77cf",
+      "metadata": {
+        "id": "b57b77cf"
+      },
+      "source": [
+        "And the same prefix, same model, several times — stochasticity again, now in a completion setting:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 57,
+      "id": "05336b76",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "05336b76",
+        "outputId": "6848b6ac-4f00-442e-dc8e-25bacc7861d7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the little girl gave the lace without reply , and the maid charged the child , \" to look as if nothing was the matter .\"\n",
+            "---\n",
+            "the little girl came back out of breath to her work ; but what was her surprise and sorrow to find it spoiled .\n",
+            "---\n",
+            "the little girl came back out of breath to speak , seized hold of him , and , when he was going away , stopped to ask him\n",
+            "---\n",
+            "the little girl gave the lace without reply , and the maid desired her to go about her business , and not to her , so she took\n",
+            "---\n",
+            "the little girl gave the lace without reply , and the maid desired her to go about her business , and not to her , so she took\n",
+            "---\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Same prefix, same model, five times -> stochasticity again, now while completing text.\n",
+        "prefix = \"the little girl\"\n",
+        "\n",
+        "for run in range(5):\n",
+        "    print(generate_text(demo_model, num_words=25, prefix=prefix, seed=BUID + run))\n",
+        "    print(\"---\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c177ae8f",
+      "metadata": {
+        "id": "c177ae8f"
+      },
+      "source": [
+        "**Question 4.** What happened with the prefix `\"the big data analyst\"`? Why?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "b95186e8",
+      "metadata": {
+        "id": "b95186e8"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "42f319b3",
+      "metadata": {
+        "id": "42f319b3"
+      },
+      "source": [
+        "# Part 7: Measuring Quality with Perplexity"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "1a4cc65a",
+      "metadata": {
+        "id": "1a4cc65a"
+      },
+      "source": [
+        "Generated text is fun but subjective. **Perplexity** is the standard numeric score for a language model.\n",
+        "\n",
+        "Intuition: perplexity is roughly *\"on average, how many words was the model surprised with at each step?\"* A perplexity of 10 means the model was about as uncertain as if it had been choosing uniformly among 10 words. **Lower is better.**\n",
+        "\n",
+        "We compute it on text the model has never seen, since scoring the model on its own training text would be like grading a student on the exact questions they memorized."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 58,
+      "id": "W-9IFInft4uo",
+      "metadata": {
+        "id": "W-9IFInft4uo"
+      },
+      "outputs": [],
+      "source": [
+        "# Reuse the bigram (the n = 2 model) trained in Part 4 to demonstrate perplexity.\n",
+        "bigram_model = models[2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 59,
+      "id": "948aca3c",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "948aca3c",
+        "outputId": "a7190e76-4930-45d9-8585-884836e627e4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "perplexity = 24.798436885431716\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Compute the perplexity of a single sentence (lower = the model is less surprised).\n",
+        "from nltk.util import ngrams\n",
+        "from nltk.lm.preprocessing import pad_both_ends\n",
+        "\n",
+        "def sentence_perplexity(model, sentence):\n",
+        "    n = model.order\n",
+        "    tokens = nltk.word_tokenize(sentence.lower())\n",
+        "    tokens = list(pad_both_ends(tokens, n))       # add <s> ... </s>\n",
+        "    tokens = model.vocab.lookup(tokens)           # replace unknown words with <UNK>\n",
+        "    return model.perplexity(list(ngrams(tokens, n)))\n",
+        "\n",
+        "\n",
+        "test_sentence = \"once upon a time there was a little boy.\"\n",
+        "print(\"perplexity =\", sentence_perplexity(bigram_model, test_sentence))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "3cd69a61",
+      "metadata": {
+        "id": "3cd69a61"
+      },
+      "source": [
+        "### Comparing sentences\n",
+        "\n",
+        "Now that perplexity is finite, we can use it to ask: *how surprised is a children's-book model by this sentence?*"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 60,
+      "id": "a2834f19",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a2834f19",
+        "outputId": "39f6ef61-3e23-488e-9488-94a634e4cac4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "      24.8   once upon a time there was a little boy.\n",
+            "      39.5   the little girl said to her mother.\n",
+            "      54.8   alice was beginning to get very tired.\n",
+            "    1718.3   the quarterly earnings report exceeded analyst expectations.\n",
+            "    7176.0   blockchain optimizes shareholder value through synergistic frameworks.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Score several sentences: children's-book style should be far less perplexing than business jargon.\n",
+        "sentences_to_score = [\n",
+        "    \"once upon a time there was a little boy.\",\n",
+        "    \"the little girl said to her mother.\",\n",
+        "    \"alice was beginning to get very tired.\",\n",
+        "    \"the quarterly earnings report exceeded analyst expectations.\",\n",
+        "    \"blockchain optimizes shareholder value through synergistic frameworks.\",\n",
+        "]\n",
+        "\n",
+        "for sentence in sentences_to_score:\n",
+        "    score = sentence_perplexity(bigram_model, sentence)\n",
+        "    print(f\"{score:10.1f}   {sentence}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "43e4dca7",
+      "metadata": {
+        "id": "43e4dca7"
+      },
+      "source": [
+        "### Perplexity vs. n\n",
+        "\n",
+        "We measure perplexity on the **training** sentences and on the **held-out test** sentences, for each value of `n`, reusing the five models trained in Part 4.\n",
+        "\n",
+        "**Warning:** this cell scores every model on both sets, so give it up to a minute."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 61,
+      "id": "fdb2f92e",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fdb2f92e",
+        "outputId": "ce4b9e61-5192-4dbf-93f9-7bcab237129a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "n = 1:  train perplexity =    469.4   test perplexity =    520.8\n",
+            "n = 2:  train perplexity =     67.7   test perplexity =    194.7\n",
+            "n = 3:  train perplexity =     55.0   test perplexity =    636.5\n",
+            "n = 4:  train perplexity =     63.5   test perplexity =   1645.9\n",
+            "n = 5:  train perplexity =     68.9   test perplexity =   2409.9\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Measure perplexity on the training and the held-out test sentences, for each n.\n",
+        "def corpus_perplexity(model, sentences):\n",
+        "    all_ngrams = []\n",
+        "    for sentence in sentences:\n",
+        "        tokens = model.vocab.lookup(list(pad_both_ends(sentence, model.order)))\n",
+        "        all_ngrams.extend(ngrams(tokens, model.order))\n",
+        "    return model.perplexity(all_ngrams)\n",
+        "\n",
+        "\n",
+        "range_of_n = [1, 2, 3, 4, 5]\n",
+        "train_perplexities = []\n",
+        "test_perplexities = []\n",
+        "\n",
+        "for n in range_of_n:\n",
+        "    model = models[n]                     # reuse the models trained in Part 4\n",
+        "    train_perplexities.append(corpus_perplexity(model, train_sentences))\n",
+        "    test_perplexities.append(corpus_perplexity(model, test_sentences))\n",
+        "    print(f\"n = {n}:  train perplexity = {train_perplexities[-1]:8.1f}   test perplexity = {test_perplexities[-1]:8.1f}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 62,
+      "id": "60929680",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 564
+        },
+        "id": "60929680",
+        "outputId": "1592c9fe-6433-41c0-a7b6-e73119f01fa2"
+      },
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<Figure size 1000x600 with 1 Axes>"
+            ],
+            "image/png": "iVBORw0KGgoAAAANSUhEUgAAA1sAAAIjCAYAAAD1OgEdAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlHJYcgAAAAlwSFlzAAAPYQAAD2EBqD+naQAAoxtJREFUeJzs3XdcVfUfx/HXBZkq4ARU3JYjd+XKlQNH5p6ZW8vUNLO0MmdpWmqONFtopaYpablx71HuUam590ZEmff3x/fnLZxcBC7I+/l48PCec88953MvR+XNd1msVqsVERERERERSVROji5ARERERETkSaSwJSIiIiIikgQUtkRERERERJKAwpaIiIiIiEgSUNgSERERERFJAgpbIiIiIiIiSUBhS0REREREJAkobImIiIiIiCQBhS0REREREZEkoLAlIuIgHTp0IG/evAl67ZAhQ7BYLIlbUApz7NgxLBYL06ZNc3QpTxSLxcKQIUOS7Pxp4d4UEYkvhS0RkbtYLJZ4fa1Zs8bRpaZ5efPmjdf3KrEC24gRI5g/f368jr0TFu98OTs7kzt3bho3bsyuXbsSpZ7Uwp7PTUTkSWKxWq1WRxchIpKS/Pjjj3G2v//+e0JCQvjhhx/i7K9Vqxa+vr4Jvk5UVBSxsbG4ubnZ/dro6Giio6Nxd3dP8PVTumPHjpEvXz6CgoLo0KHDfY+ZP38+YWFhtu3Fixcza9Ysxo0bR9asWW37K1asSP78+R+7pgwZMtCsWbN4hbc79bdu3Zp69eoRExPDwYMHmTJlChEREWzZsoVSpUo9dk32slgsDB48OMlat+53b9rzuYmIPEnSOboAEZGUpm3btnG2t2zZQkhIyD377xYeHo6np2e8r+Pi4pKg+gDSpUtHunT6J7xRo0Zxts+dO8esWbNo1KhRgrtoJrYyZcrEuXcqVarEyy+/zJQpU5g6depjnfvmzZukT5/+cUtMVLo3RUT+pW6EIiIJUK1aNZ555hn++OMPqlSpgqenJ++//z4ACxYsoH79+uTIkQM3NzcKFCjA8OHDiYmJiXOOu8ds3el29tlnn/HVV19RoEAB3NzceO6559i+fXuc195vXIzFYqFnz57Mnz+fZ555Bjc3N4oVK8bSpUvvqX/NmjU8++yzuLu7U6BAAaZOnRrvsTbr16+nefPm5M6dGzc3NwICAnjrrbe4devWPe8vQ4YMnD59mkaNGpEhQwayZctGv3797vksrl27RocOHfD29sbHx4f27dtz7dq1R9YSXz/++CNly5bFw8ODzJkz06pVK06ePBnnmEOHDtG0aVP8/Pxwd3cnV65ctGrViuvXrwPm87158ybTp0+3dQ18UIvbw7z44osAHD161LZv69at1KlTB29vbzw9PalatSobN26M87o7358DBw7Qpk0bMmXKxAsvvAD8+1n/888/BAYGkj59enLkyMGwYcOITweW06dP06lTJ3x9fW33zXfffWd7/tatWxQuXJjChQvH+T5fuXIFf39/KlasaPue3n0fPehzW716NRaLhV9++eWeembOnInFYmHz5s33rff333/HYrEwffr0e55btmwZFouFhQsXAnDjxg369OlD3rx5cXNzI3v27NSqVYsdO3Y88nO525o1a7BYLMyZM4ePP/6YXLly4e7uTo0aNTh8+LDd5xORJ59+9SQikkCXL1+mbt26tGrVirZt29q6FE6bNo0MGTLQt29fMmTIwKpVqxg0aBChoaF8+umnjzzvzJkzuXHjBq+99hoWi4XRo0fTpEkT/vnnn0e2hm3YsIHg4GDeeOMNMmbMyIQJE2jatCknTpwgS5YsAOzcuZM6derg7+/P0KFDiYmJYdiwYWTLli1e7/vnn38mPDyc7t27kyVLFrZt28bEiRM5deoUP//8c5xjY2JiCAwMpFy5cnz22WesWLGCMWPGUKBAAbp37w6A1WqlYcOGbNiwgddff50iRYrwyy+/0L59+3jV8ygff/wxH374IS1atKBLly5cvHiRiRMnUqVKFXbu3ImPjw+RkZEEBgYSERFBr1698PPz4/Tp0yxcuJBr167h7e3NDz/8QJcuXXj++efp1q0bAAUKFLC7niNHjgDYvh+rVq2ibt26lC1blsGDB+Pk5ERQUBAvvvgi69ev5/nnn4/z+ubNm1OoUCFGjBgRJ0jFxMRQp04dypcvz+jRo1m6dCmDBw8mOjqaYcOGPbCe8+fPU758eVtYz5YtG0uWLKFz586EhobSp08fPDw8mD59OpUqVeKDDz5g7NixAPTo0YPr168zbdo0nJ2d73v+B31u5cuXJyAggBkzZtC4ceM4r5kxYwYFChSgQoUK9z3ns88+S/78+ZkzZ84998ns2bPJlCkTgYGBALz++uvMnTuXnj17UrRoUS5fvsyGDRs4ePAgZcqUeeDn8jCffPIJTk5O9OvXj+vXrzN69GheeeUVtm7dmqDzicgTzCoiIg/Vo0cP693/XFatWtUKWL/88st7jg8PD79n32uvvWb19PS03r5927avffv21jx58ti2jx49agWsWbJksV65csW2f8GCBVbA+ttvv9n2DR48+J6aAKurq6v18OHDtn27d++2AtaJEyfa9jVo0MDq6elpPX36tG3foUOHrOnSpbvnnPdzv/c3cuRIq8VisR4/fjzO+wOsw4YNi3Ns6dKlrWXLlrVtz58/3wpYR48ebdsXHR1trVy5shWwBgUFPbKmOz799FMrYD169KjVarVajx07ZnV2drZ+/PHHcY7bu3evNV26dLb9O3futALWn3/++aHnT58+vbV9+/bxquXO93Po0KHWixcvWs+dO2dds2aNtXTp0lbAOm/ePGtsbKy1UKFC1sDAQGtsbKztteHh4dZ8+fJZa9WqZdt353veunXre65157Pu1auXbV9sbKy1fv36VldXV+vFixdt+wHr4MGDbdudO3e2+vv7Wy9duhTnnK1atbJ6e3vH+X6/9957VicnJ+u6deusP//8sxWwfv7553Fed79780Gf23vvvWd1c3OzXrt2zbbvwoUL1nTp0sWp8X7ee+89q4uLS5y/KxEREVYfHx9rp06dbPu8vb2tPXr0eOi54mv16tVWwFqkSBFrRESEbf/48eOtgHXv3r2Jch0ReXKoG6GISAK5ubnRsWPHe/Z7eHjYHt+4cYNLly5RuXJlwsPD+fPPPx953pYtW5IpUybbduXKlQH4559/HvnamjVrxmltKVGiBF5eXrbXxsTEsGLFCho1akSOHDlsxxUsWJC6des+8vwQ9/3dvHmTS5cuUbFiRaxWKzt37rzn+Ndffz3OduXKleO8l8WLF5MuXTpbSxeAs7MzvXr1ilc9DxMcHExsbCwtWrTg0qVLti8/Pz8KFSrE6tWrAfD29gZMF7Tw8PDHvu5/DR48mGzZsuHn50e1atU4cuQIo0aNokmTJuzatYtDhw7Rpk0bLl++bKvv5s2b1KhRg3Xr1hEbGxvnfHd/nv/Vs2dP2+M7LVWRkZGsWLHivsdbrVbmzZtHgwYNsFqtcT6jwMBArl+/Hqe73ZAhQyhWrBjt27fnjTfeoGrVqrz55psJ/mzatWtHREQEc+fOte2bPXs20dHRjxwj2bJlS6KioggODrbtW758OdeuXaNly5a2fT4+PmzdupUzZ84kuM67dezYEVdXV9u2PX9HRSRtUTdCEZEEypkzZ5wfuO7Yv38/AwcOZNWqVYSGhsZ57s74n4fJnTt3nO07wevq1at2v/bO6++89sKFC9y6dYuCBQvec9z99t3PiRMnGDRoEL/++us9Nd39/tzd3e/pnvjfegCOHz+Ov78/GTJkiHPc008/Ha96HubQoUNYrVYKFSp03+fvdMvMly8fffv2ZezYscyYMYPKlSvz8ssv07ZtW1sQS6hu3brRvHlznJyc8PHxoVixYrYZKA8dOgTw0C6T169fjxO+8+XLd9/jnJyc7plx8amnngLMeMD7uXjxIteuXeOrr77iq6++uu8xFy5csD12dXXlu+++47nnnsPd3Z2goKDHWlOrcOHCPPfcc8yYMYPOnTsDpgth+fLlH3k/lixZksKFCzN79mzba2fPnk3WrFlt4+IARo8eTfv27QkICKBs2bLUq1ePdu3aPdbslI/zd1RE0haFLRGRBPpvC88d165do2rVqnh5eTFs2DAKFCiAu7s7O3bsoH///ve0UtzPg8a+WOMx0cHjvDY+YmJiqFWrFleuXKF///4ULlyY9OnTc/r0aTp06HDP+3tQPcklNjYWi8XCkiVL7lvLfwPemDFj6NChAwsWLGD58uW8+eabjBw5ki1btpArV64E11CoUCFq1qz5wPoAPv300wdOA393CL3ffZdQd67ftm3bBwa+EiVKxNletmwZALdv3+bQoUMPDH/x1a5dO3r37s2pU6dsU+JPmjQpXq9t2bIlH3/8MZcuXSJjxoz8+uuvtG7dOs5siC1atKBy5cr88ssvLF++nE8//ZRRo0YRHBwc79bcuyX13zMReXIobImIJKI1a9Zw+fJlgoODqVKlim3/f2eec6Ts2bPj7u5+35nT4jOb2t69e/n777+ZPn067dq1s+0PCQlJcE158uRh5cqVhIWFxQkWf/31V4LPeUeBAgWwWq3ky5fP1srzMMWLF6d48eIMHDiQTZs2UalSJb788ks++ugjgMdqxXlQfQBeXl4PDGTxFRsbyz///BPnff79998AD5wGP1u2bGTMmJGYmJh4XX/Pnj0MGzaMjh07smvXLrp06cLevXsf2fr3sM+tVatW9O3bl1mzZnHr1i1cXFzidAN8mJYtWzJ06FDmzZuHr68voaGhtGrV6p7j/P39eeONN3jjjTe4cOECZcqU4eOPP05w2BIRiS+N2RIRSUR3fuP9399wR0ZGMnnyZEeVFIezszM1a9Zk/vz5ccawHD58mCVLlsTr9RD3/VmtVsaPH5/gmurVq0d0dDRTpkyx7YuJiWHixIkJPucdTZo0wdnZmaFDh97T6mC1Wrl8+TIAoaGhREdHx3m+ePHiODk5ERERYduXPn36RJ2SvmzZshQoUIDPPvsszuLMd1y8eNGu8/23RchqtTJp0iRcXFyoUaPGfY93dnamadOmzJs3j3379j30+lFRUXTo0IEcOXIwfvx4pk2bxvnz53nrrbceWdfDPresWbNSt25dfvzxR2bMmEGdOnXiLEj9MEWKFKF48eLMnj2b2bNn4+/vH+eXHDExMfd0bc2ePTs5cuSI8329dOkSf/75Z6KP1xMRUcuWiEgiqlixIpkyZaJ9+/a8+eabWCwWfvjhhxTVvWjIkCEsX76cSpUq0b17d2JiYpg0aRLPPPMMu3bteuhrCxcuTIECBejXrx+nT5/Gy8uLefPmPdZYlQYNGlCpUiUGDBjAsWPHKFq0KMHBwfEa3/YoBQoU4KOPPuK9997j2LFjNGrUiIwZM3L06FF++eUXunXrRr9+/Vi1ahU9e/akefPmPPXUU0RHR/PDDz/YwsgdZcuWZcWKFYwdO5YcOXKQL18+ypUrl+D6nJyc+Oabb6hbty7FihWjY8eO5MyZk9OnT7N69Wq8vLz47bff4nUud3d3li5dSvv27SlXrhxLlixh0aJFvP/++w+d1v+TTz5h9erVlCtXjq5du1K0aFGuXLnCjh07WLFiBVeuXAHgo48+YteuXaxcuZKMGTNSokQJBg0axMCBA2nWrBn16tV74DUe9bm1a9eOZs2aATB8+PB4vd87WrZsyaBBg3B3d6dz5844Of37e+QbN26QK1cumjVrRsmSJcmQIQMrVqxg+/btjBkzxnbcpEmTGDp0KKtXr6ZatWp2XV9E5GEUtkREElGWLFlYuHAhb7/9NgMHDiRTpky0bduWGjVq2Nb9cbSyZcuyZMkS+vXrx4cffkhAQADDhg3j4MGDj5wt0cXFhd9++802nsnd3Z3GjRvTs2dPSpYsmaB6nJyc+PXXX+nTpw8//vgjFouFl19+mTFjxlC6dOkEnfO/BgwYwFNPPcW4ceMYOnQoAAEBAdSuXZuXX34ZMJMtBAYG8ttvv3H69Gk8PT0pWbIkS5YsoXz58rZzjR07lm7dujFw4EBu3bplCzaPo1q1amzevJnhw4czadIkwsLC8PPzo1y5crz22mvxPo+zszNLly6le/fuvPPOO2TMmJHBgwczaNCgh77O19eXbdu2MWzYMIKDg5k8eTJZsmShWLFijBo1CoAdO3YwYsQIevbsSfXq1W2vHTBgAAsWLKBr167s378fHx+f+17jUZ9bgwYNyJQpE7GxsbbvSXy1bNmSgQMHEh4efk/3Q09PT9544w2WL19um5myYMGCTJ48Oc7slyIiScViTUm/bhUREYdp1KgR+/fvt82QJ6lHhw4dmDt37n27IqYG0dHR5MiRgwYNGvDtt986uhwRkUSjMVsiImnQrVu34mwfOnSIxYsXqwuVOMT8+fO5ePFinElXRESeBOpGKCKSBuXPn58OHTqQP39+jh8/zpQpU3B1deXdd991dGmShmzdupU9e/YwfPhwSpcuTdWqVR1dkohIolLYEhFJg+rUqcOsWbM4d+4cbm5uVKhQgREjRjxw8V+RpDBlyhR+/PFHSpUqxbRp0xxdjohIotOYLRERERERkSSgMVsiIiIiIiJJQGFLREREREQkCWjMVjzExsZy5swZMmbMiMVicXQ5IiIiIiLiIFarlRs3bpAjR444C6nfj8JWPJw5c4aAgABHlyEiIiIiIinEyZMnyZUr10OPcWjYGjlyJMHBwfz55594eHhQsWJFRo0axdNPP207plq1aqxduzbO61577TW+/PJL2/aJEyfo3r07q1evJkOGDLRv356RI0eSLt2/b2/NmjX07duX/fv3ExAQwMCBA+nQoUO86syYMSNgPlAvL6/HeMeJIyoqiuXLl1O7dm1cXFwcXY6IXXT/Smqm+1dSM92/kpqlpPs3NDSUgIAAW0Z4GIeGrbVr19KjRw+ee+45oqOjef/996lduzYHDhwgffr0tuO6du3KsGHDbNuenp62xzExMdSvXx8/Pz82bdrE2bNnadeuHS4uLowYMQKAo0ePUr9+fV5//XVmzJjBypUr6dKlC/7+/gQGBj6yzjtdB728vFJM2PL09MTLy8vhN5uIvXT/Smqm+1dSM92/kpqlxPs3PsOLHBq2li5dGmd72rRpZM+enT/++IMqVarY9nt6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2l26dOGLL75gwIABBAUF0bFjRyxpaPpTEREReQJYrTBlCvTpA1FRUKgQzJsHxYs7urIUR2O2HM3ZGcaPN4/v/qH7zvbnn/8btJKYr68vOXLk4J9//qFgwYJxvvLly2c7zsvLi5YtW/L1118ze/Zs5s2bx5UrVwBwcXEhJp5rhPn5+VGwYME4QQtMoNu/fz958+a9p474hJwtW7bcs12kSJH7Hhufax05coS33nrLFkLbt29PbGzsA6/v6up638+gbdu2HD9+nAkTJnDgwAHat2//yPciIiIikmLcvAnt2kGPHiZoNWkCv/+uoPUAClspQZMmMHcu5MwZd3+uXGb//8dOJZehQ4cycuRIJkyYwN9//83evXsJCgpi7NixAIwdO5ZZs2bx559/8vfff/Pzzz/j5+eHj48PYGYkXLlyJefOnePq1asJqqFHjx5cuXKF1q1bs337do4cOcKyZcvo2LFjvILczz//zHfffcfff//N4MGD2bZtGz179kzQtWJiYmjbti2BgYF07NiRoKAg9uzZw5gxYx54/bx587Ju3TpOnz4dZwbFTJky0aRJE9555x1q165Nrly57P9wRERERBzh77+hfHn48UfTEPDZZ+ZnVS8vR1eWYilspRRNmsCxY7B6Ncycaf48ejTZgxaYrm7ffPMNQUFBFC9enKpVqzJt2jRby1bGjBkZPXo0zz77LM899xzHjh1j8eLFtvFjY8aMISQkhICAAEqXLp2gGnLkyMHGjRuJiYmhdu3aFC9enD59+uDj43PvOLX7GDp0KD/99BMlSpTg+++/Z9asWRQtWjRB1/r44485fvw4U6dOBUzXwq+++oqBAweye/fu+55z2LBhHDt2jAIFCtzTate5c2ciIyPp1KmTnZ+KiIiIiIMEB8Ozz8K+feDnB6tWwdtv39szS+KwWK3xXJgpDQsNDcXb25vr16/jdVdyv337NkePHiVfvny4u7snSz0PnSBDsFgs/PLLLzRq1MjRpdzXDz/8wFtvvcWZM2dwdXV1dDk2yXUvR0VFsXjxYurVq4eLi0uSXUckKej+ldRM968kSHQ0vPeeacUCqFwZZs+G/4xrTw4p6f59WDa4mybIEEkm4eHhnD17lk8++YTXXnstRQUtERERkXucPQutWpnZswH69YMRI0BhPd7ULCKSTEaPHk3hwoXx8/Pjvffec3Q5IiIi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SJcuHW3btk3sWkREREQSn9UKAwfCp5+a7SlToHNnx9YkImmC3WErd+7cVKtWjapVq1K9enXy58+fFHWJiIiIJI7hw2HECPN4wgQzOYaISDKwe4KMESNG4O7uzqhRoyhYsCABAQG0bduWr7/+mkOHDiVFjSIiIiIJM3IkDB5sHo8ZYybHEBFJJna3bLVt29bWhfDs2bOsXbuWhQsX8sYbbzxwWngRERGRZPfZZ/D+++bxyJHQt69j6xGRNCdBY7bCw8PZsGEDa9asYfXq1ezcuZNnnnmGatWqJXJ5IiIiIgkwfjy88455PGwYDBjg2HpEJE2yO2xVrFiRnTt3UqRIEapVq8aAAQOoUqUKmTJlSor6REREROwzeTL06WMeDxwIH37o0HJEJO2ye8zWn3/+Sfr06SlcuDCFCxemSJEiCloiIiKSMnz9NfToYR73729atUREHMTusHX58mVWrVpF+fLlWbZsGZUqVSJnzpy0adOGr7/+OilqFBEREXm0adPgtdfM47feMuO0LBaHliQiaZvdYctisVCiRAnefPNN5s6dy5IlS6hVqxY///wzr2sqVREREXGEGTOgUyezplbPnmbmQQUtEXEwu8ds7dixgzVr1rBmzRo2bNjAjRs3KF68OL169aJq1apJUaOIiIjIg82ZA+3amaD12mtmLS0FLRFJAewOW88//zylS5ematWqdO3alSpVquDt7Z0UtYmIiIg8XHAwtGkDsbGmZWvyZAUtEUkx7A5bV65cwcvLKylqEREREYm/336Dli0hJgZefRW++gqc7B4hISKSZOwOW3eC1h9//MHBgwcBKFq0KGXKlEncykREREQeZMkSaNYMoqOhdWsICgJnZ0dXJSISh91h68KFC7Rs2ZK1a9fi4+MDwLVr16hevTo//fQT2bJlS+waRURERP4VEgKNG0NkpAlc33+voCUiKZLdbe29evUiLCyM/fv3c+XKFa5cucK+ffsIDQ3lzTffTIoaRURERIzVq+HllyEiAho2hJkzIZ3dvzsWEUkWdv/rtHTpUlasWEGRIkVs+4oWLcoXX3xB7dq1E7U4EREREZv16+Gll+D2bahfH2bPBhcXR1clIvJAdrdsxcbG4nKff9hcXFyIjY1NlKJERERE4ti8GerVg/BwCAyEuXPBzc3RVYmIPJTdYevFF1+kd+/enDlzxrbv9OnTvPXW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\n"
+          },
+          "metadata": {}
+        }
+      ],
+      "source": [
+        "# Plot training vs. test perplexity against n. The gap between the lines is overfitting.\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "plt.figure(figsize=(10, 6))\n",
+        "plt.plot(range_of_n, train_perplexities, label='Training Perplexity', color='blue', marker='o')\n",
+        "plt.plot(range_of_n, test_perplexities, label='Test Perplexity', color='red', marker='o')\n",
+        "plt.xlabel('n (size of the context window)')\n",
+        "plt.ylabel('Perplexity (lower is better)')\n",
+        "plt.title('Training and Test Perplexity vs. n')\n",
+        "plt.xticks(range_of_n)\n",
+        "plt.legend()\n",
+        "plt.grid(True)\n",
+        "plt.show()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c8d57977",
+      "metadata": {
+        "id": "c8d57977"
+      },
+      "source": [
+        "**Question 5.** Read the plot. Which values of `n` underfit, which overfit, and which is best? What is the gap between the two lines telling you?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "f443afe3",
+      "metadata": {
+        "id": "f443afe3"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "9e8419de",
+      "metadata": {
+        "id": "9e8419de"
+      },
+      "source": [
+        "# Part 8: Follow up Questions and Exercises"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "942b340e",
+      "metadata": {
+        "id": "942b340e"
+      },
+      "source": [
+        "**Exercise 1.** Retrain the models on a *different* genre from the same collection — for example `['austen-emma.txt', 'austen-persuasion.txt', 'austen-sense.txt']` (Jane Austen) or `['shakespeare-hamlet.txt', 'shakespeare-macbeth.txt', 'shakespeare-caesar.txt']`. Generate text from the new trigram. Can you tell the genre from the generated text alone?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 63,
+      "id": "402e41ad",
+      "metadata": {
+        "id": "402e41ad"
+      },
+      "outputs": [],
+      "source": [
+        "# Your code here"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "3ace3414",
+      "metadata": {
+        "id": "3ace3414"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "23826a9d",
+      "metadata": {
+        "id": "23826a9d"
+      },
+      "source": [
+        "**Exercise 2.** Score the sentence `\"once upon a time there was a little boy.\"` with **both** the children's-book model and your new model from Exercise 1. Which model is less perplexed, and why? What does this tell you about what perplexity actually measures?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 64,
+      "id": "87ecb936",
+      "metadata": {
+        "id": "87ecb936"
+      },
+      "outputs": [],
+      "source": [
+        "# Your code here"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "95e3dc52",
+      "metadata": {
+        "id": "95e3dc52"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ZqW-SaXEiva2",
+      "metadata": {
+        "id": "ZqW-SaXEiva2"
+      },
+      "source": [
+        "**Exercise 3.** Rerun the notebook with less training data and more test data. How do the results change?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 65,
+      "id": "D12JVhl6jF3p",
+      "metadata": {
+        "id": "D12JVhl6jF3p"
+      },
+      "outputs": [],
+      "source": [
+        "# Your code here"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "fba36893",
+      "metadata": {
+        "id": "fba36893"
+      },
+      "source": [
+        "**Answer**\n",
+        "\n",
+        "*Provide your answer here*"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3 (ipykernel)",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
