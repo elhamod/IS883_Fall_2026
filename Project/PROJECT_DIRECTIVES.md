@@ -128,7 +128,7 @@ IS883 Project Proposal — Fall 2026
 Team name:              Members (full names):
 
 0. TEAM INFRASTRUCTURE
-   GitHub repository link (if private, add the instructor and TAs as collaborators):
+   GitHub repository link (add the instructor, elhamod, and the TA, samuelbc@bu.edu, as collaborators):
    Project board link (GitHub Projects — §5.7):
    Streamlit app URL (a placeholder app that deploys and says "hello" is fine now):
 
@@ -171,7 +171,7 @@ Team name:              Members (full names):
 
 **What the workshop is.** On Fri Oct 23 the instructor goes round the room and spends a few minutes with each team: where you are, what your plan is, and the technical problem in your way. A few minutes is enough only if your thinking is already written down and has already been read — **so the checkpoint is prepared before class, not at the workshop.**
 
-**Where it goes.** Add a section headed `## Workshop checkpoint` to the `README.md` at the root of your team's repository and fill in the template below. If your repository is private, the instructor and the TAs must already be collaborators (§4.2). **What is graded is your README as of the last commit before the deadline.** The commit history shows when every line was written, so there is no need to tell us you have finished.
+**Where it goes.** Add a section headed `## Workshop checkpoint` to the `README.md` at the root of your team's repository and fill in the template below. The instructor and the TA must already be collaborators (§4.2). **What is graded is your README as of the last commit before the deadline.** The commit history shows when every line was written, so there is no need to tell us you have finished.
 
 **If your team is not attending the workshop,** the deadline is the same. Say so in slot 0, and you will receive written feedback in a private Piazza note by **Mon Oct 26**.
 
@@ -306,6 +306,7 @@ Required in the report (§6.1), and **about a minute of the presentation** — o
 Your syllabus commits this course to an **Agile** approach, and the project is where that happens. The evidence is a **project board** — GitHub Projects is free, integrated with your repository, and enough.
 
 - **Create it before the proposal** and link it there (§4.2, slot 0).
+- **Keep it simple: plain task cards you move by hand** — no GitHub issues and nothing linked to code. Setup in [`GIT_TEAM_WORKFLOW.md`](https://github.com/elhamod/IS883_Fall_2026/blob/main/Project/GIT_TEAM_WORKFLOW.md) step 5.
 - **Every task carries an owner, a start and end date, a status, and a priority.** A board of untouched cards named "build the app" is not a board.
 - **It must show movement over the weeks**, not a single burst. Its history is the picture of how your team actually worked, and it is one of the three things we compare against your contribution table.
 - **It is linked in your workshop checkpoint (§4.3)** and in the report (§6.1). Screenshot it in the appendix.
@@ -384,8 +385,9 @@ Record it from the deployed URL. The recording has to make sense to a room that 
 
 **Your team keeps a GitHub repository.** Streamlit Community Cloud deploys from one, so you will have it whether or not this document required it — and it is one of the three ways we see who wrote what.
 
-- **Create the repository before the proposal** and put its link in the proposal (§4.2). Public or private is your choice — if private, add the instructor and the TAs as collaborators.
+- **Create the repository before the proposal** and put its link in the proposal (§4.2). Public or private is your choice. **Either way, add the instructor (`elhamod`) and the TA (`samuelbc@bu.edu`) as collaborators** — see [`GIT_TEAM_WORKFLOW.md`](https://github.com/elhamod/IS883_Fall_2026/blob/main/Project/GIT_TEAM_WORKFLOW.md) step 2.
 - **Every member commits their own work from their own GitHub account.** One person uploading the whole project at the end defeats the purpose, and a commit history showing a single author invites hard questions in Q&A.
+- **How to do that as a team:** [`Project/GIT_TEAM_WORKFLOW.md`](https://github.com/elhamod/IS883_Fall_2026/blob/main/Project/GIT_TEAM_WORKFLOW.md) walks you through VS Code, branches and pull requests step by step, with the official GitHub and VS Code videos for each step.
 
 **The** `presentation` **tag is the graded artifact.** Before you walk up to present, create a release in your repository:
 
