@@ -187,6 +187,7 @@ Team name:              Members (full names):
    Attending the Oct 23 workshop? (yes / no):
    Project board link (§5.7):
    Streamlit app URL (must load; it does not yet have to do anything):
+   Where your API key lives (name the place, never paste the key — §3.2):
 
 1. THE PROJECT, AS IT STANDS TODAY
    Update these from your proposal — do not copy them across if they have changed.
@@ -525,8 +526,8 @@ Your project grade has three parts:
 
 |  |  | What it means |
 | --- | --- | --- |
-| **Pass** | **10%** | Every slot in the template is answered with something specific to *your* project. The app URL loads. The metric in slot 4 is a number something could actually compute, not an aspiration. Both test inputs in slot 5 have their expected result written down. |
-| **Partial** | **5%** | Written, but thin: slots answered in a sentence that would fit any project, an app URL that does not load, a metric such as *"user satisfaction"* that nothing could compute, or test inputs with no expected result. |
+| **Pass** | **10%** | Every slot in the template is answered with something specific to *your* project. The app URL loads. Slot 0 says where your API key lives, and no key is in your repository. The metric in slot 4 is a number something could actually compute, not an aspiration. Both test inputs in slot 5 have their expected result written down. |
+| **Partial** | **5%** | Written, but thin: slots answered in a sentence that would fit any project, an app URL that does not load, a key location left blank or a key committed to the repository, a metric such as *"user satisfaction"* that nothing could compute, or test inputs with no expected result. |
 | **Fail** | **0%** | Never written, or written with so little content that there is nothing to discuss at your table. |
 
 **How far the build has got is not scored.** An app that deploys and does nothing yet is a **Pass** if the page shows you did the thinking, and so is a checkpoint that says *"retrieval does not work yet, and here is what we have tried."* What is scored is whether you know where you stand and what you will measure. **A late checkpoint is separately penalized under §10**, independently of its outcome, exactly as for the proposal.
