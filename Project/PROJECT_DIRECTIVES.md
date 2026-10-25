@@ -167,7 +167,7 @@ Team name:              Members (full names):
 
 ### 4.3 Stage 3 — the workshop checkpoint, due Thu Oct 22, 11:59 PM
 
-**Written into your repository's `README.md` — there is nothing to submit. Worth 10% of your project grade (§8.1). Due the night before the workshop, whether or not your team attends.**
+**Written into your repository's** `README.md` **— there is nothing to submit. Worth 10% of your project grade (§8.1). Due the night before the workshop, whether or not your team attends.**
 
 **What the workshop is.** On Fri Oct 23 the instructor goes round the room and spends a few minutes with each team: where you are, what your plan is, and the technical problem in your way. A few minutes is enough only if your thinking is already written down and has already been read — **so the checkpoint is prepared before class, not at the workshop.**
 
@@ -314,7 +314,7 @@ Required in the report (§6.1), and **about a minute of the presentation** — o
 Your syllabus commits this course to an **Agile** approach, and the project is where that happens. The evidence is a **project board** — GitHub Projects is free, integrated with your repository, and enough.
 
 - **Create it before the proposal** and link it there (§4.2, slot 0).
-- **Keep it simple: plain task cards you move by hand** — no GitHub issues and nothing linked to code. Setup in [`GIT_TEAM_WORKFLOW.md`](https://github.com/elhamod/IS883_Fall_2026/blob/main/Project/GIT_TEAM_WORKFLOW.md) step 5.
+- **Keep it simple: plain task cards you move by hand** — no GitHub issues and nothing linked to code. Setup in `GIT_TEAM_WORKFLOW.md` step 5.
 - **Every task carries an owner, a start and end date, a status, and a priority.** A board of untouched cards named "build the app" is not a board.
 - **It must show movement over the weeks**, not a single burst. Its history is the picture of how your team actually worked, and it is one of the three things we compare against your contribution table.
 - **It is linked in your workshop checkpoint (§4.3)** and in the report (§6.1). Screenshot it in the appendix.
@@ -393,9 +393,9 @@ Record it from the deployed URL. The recording has to make sense to a room that 
 
 **Your team keeps a GitHub repository.** Streamlit Community Cloud deploys from one, so you will have it whether or not this document required it — and it is one of the three ways we see who wrote what.
 
-- **Create the repository before the proposal** and put its link in the proposal (§4.2). Public or private is your choice. **Either way, add the instructor (`elhamod`) and the TA (`samuelbc@bu.edu`) as collaborators** — see [`GIT_TEAM_WORKFLOW.md`](https://github.com/elhamod/IS883_Fall_2026/blob/main/Project/GIT_TEAM_WORKFLOW.md) step 2.
+- **Create the repository before the proposal** and put its link in the proposal (§4.2). Public or private is your choice. **Either way, add the instructor (**`elhamod`**) and the TA (**`samuelbc@bu.edu`**) as collaborators** — see `GIT_TEAM_WORKFLOW.md` step 2.
 - **Every member commits their own work from their own GitHub account.** One person uploading the whole project at the end defeats the purpose, and a commit history showing a single author invites hard questions in Q&A.
-- **How to do that as a team:** [`Project/GIT_TEAM_WORKFLOW.md`](https://github.com/elhamod/IS883_Fall_2026/blob/main/Project/GIT_TEAM_WORKFLOW.md) walks you through VS Code, branches and pull requests step by step, with the official GitHub and VS Code videos for each step.
+- **How to do that as a team:** `Project/GIT_TEAM_WORKFLOW.md` walks you through VS Code, branches and pull requests step by step, with the official GitHub and VS Code videos for each step.
 
 **The** `presentation` **tag is the graded artifact.** Before you walk up to present, create a release in your repository:
 
@@ -569,7 +569,7 @@ Note the gap at the bottom: a genuine attempt that misses the point still earns 
 | 1 | **Problem, scope, and the case for an LLM** | 10 | Is there a named user with a task worth doing, and does your app address it? Everyone chose their own project, so **the choice is part of the work**: an idea that survives the four tests in §3.1 scores above one that reads like a category. Two things are scored here alongside it — **scope**, because a project cut sensibly and finished beats an ambitious one that half-runs; and **§5.3's argument that this needs a model at all**, cited against how the problem is solved today. |
 | 2 | **Design choices and architecture** | 12 | Why *these* capabilities (§5.1)? Why a tool rather than a longer prompt, why retrieval rather than a stuffed context window, why this model and these parameters? Your architecture diagram (§5.2) is read here, and **it is read against your code** — a diagram that does not match what you built costs more than no diagram. This item is about the **choice**; whether you then built it correctly is item 3. |
 | 3 | **Build quality and correctness** | 12 | Item 2 asks whether you designed sensibly. **This asks whether you then built it correctly.** Do the capabilities actually fire rather than sit there decoratively? Does the app ship with preloaded example inputs (§5.4)? Are the failure paths handled — bad input, unparseable output, API error, cold start? Are keys in secrets and is usage capped (§3.2)? Does the code do what the report says it does? |
-| 4 | **Evaluation — did you measure it, and do you believe your own number?** | 20 | All five elements of §5.5: a metric fixed in your workshop checkpoint, 20+ real test inputs beyond the happy path with expected results recorded in advance, at least one deterministic check, one honest comparison of techniques — repeated at least 5 times per version and costed in tokens — and one named failure. **This is the heaviest item, because an app nobody measured has not been shown to work.** A low number honestly established scores full marks; a high number from a test set curated after the fact scores near zero. |
+| 4 | **Evaluation — did you measure it, and do you believe your own number?** | 20 | All five elements of §5.5: a metric fixed in your workshop checkpoint, 20+ real test inputs beyond the happy path with expected results recorded in adance, at least one deterministic check, one honest comparison of techniques — repeated at least 5 times per version and costed in tokens — and one named failure. **This is the heaviest item, because an app nobody measured has not been shown to work.** A low number honestly established scores full marks; a high number from a test set curated after the fact scores near zero. |
 | 5 | **Financial model and cost analysis** | 10 | All six elements of §5.6: a measured per-interaction cost from your own token counts, a projection at a defensible volume, a break-even or an explicit social case, your assumptions listed, a sensitivity analysis on the assumption that matters most, and the build-versus-buy paragraph. **The assumptions are what we will ask about.** A model that concludes the app cannot pay for itself, and shows why, scores above one that reaches a comfortable ROI on numbers nobody could defend. |
 | 6 | **Live demo** | 5 | Did the app do its job, on a real input, in front of the room, from its deployed URL? A failure costs what it reveals — a team that diagnoses it out loud scores above a team that goes quiet. **The recorded fallback (§6.3) is graded here, not separately:** if the live demo fails, it is what the room sees. |
 | 7 | **Interpretation and communication** | 12 | Do the talk and the report explain the *why*, not just the *what*, to someone who does not know what an embedding is? Did you prioritize the argument over the detail in the 12 minutes you had? Does the report read as a story rather than a checklist? Do the figures carry their finding honestly? |
@@ -591,7 +591,7 @@ The full policy is in the syllabus. For this project specifically — and yes, t
 - **Prohibited: having a Generative AI tool write, draft, expand, rewrite, summarise, or "polish" any prose** for the report or the slides — including a paragraph you then edit, and including a bullet list you then turn into sentences. If the sentence started as the model's, it does not belong in your report.
 - **Permitted: light grammatical correction** — spelling, punctuation, agreement, a clumsy clause straightened out. The kind of thing a spell-checker does. The thinking, the structure, the argument, and the wording must be yours.
 - **Permitted: ideation and coding.** You may use Generative AI to think through approaches, to explain a concept back to you, to debug, and to help write code.
-- **Permitted: spell-checkers.** A spell-checker (such as Word's built-in checker)  needs no disclosure.
+- **Permitted: spell-checkers.** A spell-checker (such as Word's built-in checker) needs no disclosure.
 - **Disclose every use — not only code.** Any use of Generative AI on the project — ideation, explaining a concept, debugging, code — goes in the **Generative AI appendix** of the report (§6.1), as the syllabus requires: the tool and version, how you used it, and links or screenshots of the exchange. **Code a model helped write is also labeled where it sits**, with a comment at the top of the block naming the tool.
 - **You are fully responsible for everything you submit.** AI-generated errors and hallucinations are your errors.
 
