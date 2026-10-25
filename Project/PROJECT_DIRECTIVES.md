@@ -250,6 +250,7 @@ A conversational interface, memory across turns (`st.session_state`), and sensib
 
 - what goes **in**, and what comes **out**;
 - every **stage** in between — where the model is called, where your code runs, where a tool or a retrieval step sits;
+- **which prompt each model call sends** — label every model call on the diagram with its prompt's name, and put the full text of every prompt in a report appendix (§6.1);
 - **where each of your three §5.1 capabilities fires**;
 - what happens on the **failure path** — where an unparseable response or an API error goes.
 
@@ -268,20 +269,26 @@ This is roughly three-quarters of a page in the report (§6.1) and one line in t
 ### 5.4 Sources and the things that break in public
 
 - **Name your sources and keep them in the repository** (or, where they are large or licensed, name exactly where they come from and how to fetch them). A grader must be able to see what your app is reading.
+- **Ship preloaded examples.** Your app must offer a few ready-made example inputs the user can pick with one click — sample syllabi for a course app, sample leases for a lease checker — alongside the option to load their own. A visitor should be able to see what your app does without having an input of their own to hand.
 - **Handle the failure paths.** An empty input, an input outside your app's scope, a model response that does not parse, and an API error are all normal and all will occur while the class is using your app. What the user sees in each case is part of what is graded.
+- **Show the user what is happening while they wait.** If a response takes more than a moment, say whether the app is contacting the model, retrying, running its own calculation, or has timed out. Keep your prompts lean — an app that times out often is frequently sending far more tokens than it needs. If one model keeps timing out, your app may optionally switch to another; **your tests may not** — every run of a comparison (§5.5, item 4) uses the same fixed model, or the comparison is not like for like. Where your answer takes several model calls, consider showing a useful partial result after the first ones, so a timeout costs the user some detail rather than the whole answer.
 - **Develop against two rows, not two thousand.** If your app loops the model over a huge amount of data, develop against a small sample or a couple of toy examples, and widen only once the output parses. This is how you avoid burning your free-tier rate limit on a broken prompt at 4 PM on workshop day.
 
 ### 5.5 Evaluation — required, and the heaviest item on the rubric
+
+> **Updated 2026-10-25, after the workshop checkpoints.** Item 4 is now a **comparison of techniques**, repeated and costed, instead of a single before-and-after number; item 2 now names the kinds of awkward input your test set must include. **Your success metric does not change** — the metric you fixed on Oct 22 is still the one you report against. What changed is how you show that your work moved it.
 
 The syllabus commits you to this, and §8.2 gives it 20 points. **You fix your success metric in your workshop checkpoint (§4.3), due Thu Oct 22, before you change anything, and you are held to it for the rest of the term.**
 
 The final deliverable must contain all five of these:
 
 1. **A success metric, fixed in your workshop checkpoint (§4.3).** One number that says whether your app is doing its job. If you change it afterwards, say so and say why — a changed metric is defensible; a quietly changed metric is not.
-2. **A test set of at least 20 real inputs.** *Real* means inputs a real user would actually give, not twenty variations you wrote because they pass. Include the awkward ones: an empty input, an input outside your app's scope, an input you expect it to get wrong. **Record the expected result before you run anything** — deciding what "correct" was after seeing the output is not a test.
+2. **A test set of at least 20 real inputs.** *Real* means inputs a real user would actually give, not twenty variations you wrote because they pass. **Go beyond the happy path.** Include, at minimum: an empty input; an input outside your app's scope; **the wrong kind of input** (a CV uploaded to a lease checker); **an abusive input** (insults, offensive or harassing content); **a malicious input** (an attempt to make the app ignore its instructions, reveal its prompt, or do something it should not); **an invalid value** (a negative income, a five-year lease); and **a slightly altered version of an example the model may already know**, to tell reasoning apart from recall. **Record the expected result before you run anything** — deciding what "correct" was after seeing the output is not a test.
 3. **At least one deterministic check.** Something a program decides, not a human eye and not another model: was the tool called with the right parameter, does the JSON parse, does the answer contain the required citation, is the number inside the valid range. At least one of your checks must be of this kind.
-4. **One measured before-and-after number.** Pick one change you made — a prompt revision, adding retrieval, a different parameter — and report the metric before and after, on the same test set. This is the only evidence you have that any of your work improved anything.
+4. **At least one comparison of techniques taught in this course — repeated, and costed.** Run two versions of the same step on the same inputs and report your metric for each. **The comparison does not have to use your whole test set** — pick the inputs where the difference matters, and say which ones you picked and why. Comparisons might be: chain-of-thought vs. none, zero-shot vs. few-shot, retrieval vs. the model's own knowledge, one model vs. another. Because a model's output varies from run to run, **run every input in the comparison at least 5 times per version (ideally 10)** and report the rate or the spread, not a single run — one run can be lucky or unlucky. **Report the tokens each version used** next to its metric, and say in a sentence whether the gain is worth the extra cost. Then ask *why* the better version won: did it reason better, or did it get the answer from its training data? This is the only evidence you have that any of your choices improved anything. Inputs outside the comparison may be run once.
 5. **One failure the metric could not catch.** Every metric is blind to something. Name one real failure that your number scores as a pass, and say what you would measure to catch it. **Doing this well scores above reporting a higher number.**
+
+**Your tests do not have to run inside the Streamlit app.** A separate Colab notebook that calls the same prompts and runs the whole test set is allowed, and usually easier. Link it from your repository — and remember that the report must still carry the results (§6.1), because we will not go and run it.
 
 > **A low number honestly measured beats a high number nobody can believe.** Establishing that your app does not work as well as you hoped — with the evidence, a diagnosis, and what it would take to fix — earns full marks on item 4 of the rubric. Quietly narrowing the test set until the number improves earns none.
 
@@ -293,7 +300,7 @@ This is a short section of the written report and **about two minutes of the pre
 
 Required in the report (§6.1), and **about a minute of the presentation** — one number, honestly derived, and the assumption it rests on.
 
-1. **Measured cost per interaction.** Not an estimate: read the token counts your own app reports across your test set and price them at the model's published rate. Show the arithmetic.
+1. **Measured cost per interaction.** Not an estimate: read the token counts your own app reports across your test set and price them at the model's published rate. Show the arithmetic. The per-version token counts from your comparison (§5.5, item 4) belong here too: if the better version costs three times as much, that changes your projection.
 2. **Projected running cost at a stated volume.** Pick a user count and a usage frequency you can defend — *"400 club treasurers, six sessions a semester, nine queries a session"* — and carry it through to a monthly or annual figure. Include anything else the real version would pay for: hosting, storage, a vector database, a paid API tier you would need above the free one.
 3. **The value side, and a break-even.** What does the app save or earn — hours of somebody's time at a stated rate, errors avoided, revenue enabled? At what volume does the value exceed the cost? If your app has no plausible financial case and its value is social rather than commercial, **say that and make the social case explicitly** — that is a legitimate answer, but it has to be argued rather than skipped.
 4. **Your assumptions, stated in a list.** Every number above rests on assumptions. Write them down. A model whose assumptions are hidden cannot be argued with, which is the same as not being useful.
@@ -348,14 +355,14 @@ Follow this structure. The page budgets are guidance, not rules, but they add up
 | **Executive summary** | 0.25 | The problem, what you built, and your headline result — in two paragraphs, for a reader who will read nothing else. Write it last. |
 | **1 · Problem and motivation** | 0.75 | What the problem is, who has it, what they do today, and why it is worth solving. |
 | **2 · Related work, and why an LLM** | 0.75 | §5.3 — two to three cited sources, and the argument that a model is the right tool here. |
-| **3 · Solution design** | 2 | The architecture diagram (§5.2) and its walkthrough; which three capabilities from §5.1 you built and where each fires; the design decisions you would defend and the alternatives you rejected. |
+| **3 · Solution design** | 2 | The architecture diagram (§5.2) and its walkthrough — the flow of execution from input to output, and where Gen AI is used and with which prompt; which three capabilities from §5.1 you built and where each fires; the design decisions you would defend and the alternatives you rejected. |
 | **4 · Implementation** | 1 | What you actually built — model choice, generation parameters, code structure, the technical problems you hit and how you resolved them. |
 | **5 · Evaluation** | 2 | §5.5 — all five elements. Usually the section that earns or loses the report. |
 | **6 · Financial model and cost analysis** | 1.5 | §5.6 — all six elements, with the arithmetic visible. |
 | **7 · Response to feedback** | 0.5 | Required. See below. |
 | **8 · Limitations, and what you would do next** | 0.5 | Required. See below. |
 | **9 · Contribution** | 0.5 | Required. See below. |
-| **Appendices** | no limit | Generative AI appendix (§9) · project board screenshot (§5.7) · secondary figures · full test set · references. |
+| **Appendices** | no limit | Generative AI appendix (§9) · project board screenshot (§5.7) · **the full text of every prompt your app sends (§5.2)** · secondary figures · full test set · references. |
 
 #### The four required sections, in detail
 
@@ -418,7 +425,7 @@ Record it from the deployed URL. The recording has to make sense to a room that 
 
 **The clock is enforced and the cost is stated in advance.** The talk is stopped at **13:00** and the demo at **6:00**. Every minute over costs **10% of your presentation and demo score**, and whatever you had not yet said does not get said. If your team is not ready when called, you go to the end of the session and lose the minutes you wasted from your own time. Rehearse with a timer, out loud, more than once.
 
-**Every member speaks, and each person presents their own work** — not a section somebody else built. A team where one person narrates everything has told us something about how the work was divided.
+**Every member speaks, and every member is responsible for explaining the whole work** — not only the part they built, and not only the person who wrote the code. You develop the project collectively, and you carry equal responsibility for it. A team where one person narrates everything has told us something about how the work was divided.
 
 ### Slots
 
@@ -440,7 +447,7 @@ Twelve minutes is not enough to walk through your project, and it is not suppose
 | --- | --- |
 | **The problem** — who the user is, what they do today, why this is worth building | \~2.5 min |
 | **What you built and why** — the architecture diagram (§5.2), and the two or three design decisions you would defend | \~3.5 min |
-| **Does it work** — your metric, your number, your before-and-after, and the failure your metric misses (§5.5) | \~2 min |
+| **Does it work** — your metric, your number, your comparison and what it cost, and the failure your metric misses (§5.5) | \~2 min |
 | **What it would cost** — one number from your financial model, and the assumption it rests on (§5.6) | \~1 min |
 | **What it means** — what someone could now do differently, and what you would not yet trust it with | \~2 min |
 | *Slack* | \~1 min |
@@ -449,7 +456,7 @@ Twelve minutes is not enough to walk through your project, and it is not suppose
 
 **Deliberately leave out** of the talk: your prompt-engineering history one iteration at a time, every parameter you tried, your file structure, and the code. Those belong in the report, and we will ask about them in Q&A. You may add extra slides after the end of your deck to reference during Q&A only.
 
-**Explain the problem before the solution.** A talk that opens with architecture has lost the room.
+**Explain the problem before the solution.** A talk that opens with architecture has lost the room. If your subject is niche, do not assume the room knows it: spend a minute or two explaining what the problem is, or nobody will follow the solution.
 
 **No jargon, no name-dropping, no fancy words you cannot unpack.** A technical term may be used only if you **define it clearly the first time** it appears. Naming a technique without saying what it does and why you chose it counts against you: *"we used RAG"* is not an explanation. A word you cannot explain plainly when asked costs you more than the simpler word would have.
 
@@ -561,8 +568,8 @@ Note the gap at the bottom: a genuine attempt that misses the point still earns 
 | --- | --- | --- | --- |
 | 1 | **Problem, scope, and the case for an LLM** | 10 | Is there a named user with a task worth doing, and does your app address it? Everyone chose their own project, so **the choice is part of the work**: an idea that survives the four tests in §3.1 scores above one that reads like a category. Two things are scored here alongside it — **scope**, because a project cut sensibly and finished beats an ambitious one that half-runs; and **§5.3's argument that this needs a model at all**, cited against how the problem is solved today. |
 | 2 | **Design choices and architecture** | 12 | Why *these* capabilities (§5.1)? Why a tool rather than a longer prompt, why retrieval rather than a stuffed context window, why this model and these parameters? Your architecture diagram (§5.2) is read here, and **it is read against your code** — a diagram that does not match what you built costs more than no diagram. This item is about the **choice**; whether you then built it correctly is item 3. |
-| 3 | **Build quality and correctness** | 12 | Item 2 asks whether you designed sensibly. **This asks whether you then built it correctly.** Do the capabilities actually fire rather than sit there decoratively? Are the failure paths handled — bad input, unparseable output, API error, cold start? Are keys in secrets and is usage capped (§3.2)? Does the code do what the report says it does? |
-| 4 | **Evaluation — did you measure it, and do you believe your own number?** | 20 | All five elements of §5.5: a metric fixed in your workshop checkpoint, 20+ real test inputs with expected results recorded in advance, at least one deterministic check, one honest before-and-after, and one named failure. **This is the heaviest item, because an app nobody measured has not been shown to work.** A low number honestly established scores full marks; a high number from a test set curated after the fact scores near zero. |
+| 3 | **Build quality and correctness** | 12 | Item 2 asks whether you designed sensibly. **This asks whether you then built it correctly.** Do the capabilities actually fire rather than sit there decoratively? Does the app ship with preloaded example inputs (§5.4)? Are the failure paths handled — bad input, unparseable output, API error, cold start? Are keys in secrets and is usage capped (§3.2)? Does the code do what the report says it does? |
+| 4 | **Evaluation — did you measure it, and do you believe your own number?** | 20 | All five elements of §5.5: a metric fixed in your workshop checkpoint, 20+ real test inputs beyond the happy path with expected results recorded in advance, at least one deterministic check, one honest comparison of techniques — repeated at least 5 times per version and costed in tokens — and one named failure. **This is the heaviest item, because an app nobody measured has not been shown to work.** A low number honestly established scores full marks; a high number from a test set curated after the fact scores near zero. |
 | 5 | **Financial model and cost analysis** | 10 | All six elements of §5.6: a measured per-interaction cost from your own token counts, a projection at a defensible volume, a break-even or an explicit social case, your assumptions listed, a sensitivity analysis on the assumption that matters most, and the build-versus-buy paragraph. **The assumptions are what we will ask about.** A model that concludes the app cannot pay for itself, and shows why, scores above one that reaches a comfortable ROI on numbers nobody could defend. |
 | 6 | **Live demo** | 5 | Did the app do its job, on a real input, in front of the room, from its deployed URL? A failure costs what it reveals — a team that diagnoses it out loud scores above a team that goes quiet. **The recorded fallback (§6.3) is graded here, not separately:** if the live demo fails, it is what the room sees. |
 | 7 | **Interpretation and communication** | 12 | Do the talk and the report explain the *why*, not just the *what*, to someone who does not know what an embedding is? Did you prioritize the argument over the detail in the 12 minutes you had? Does the report read as a story rather than a checklist? Do the figures carry their finding honestly? |
