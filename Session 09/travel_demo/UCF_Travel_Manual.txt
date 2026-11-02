@@ -1,0 +1,1956 @@
+UCF Travel Manual (revised October 2026). Source: https://fa.ucf.edu/wp-content/uploads/sites/2/Travel_Manual.pdf
+
+
+===== Page 1 =====
+UNIVERSITY OF CENTRAL FLORIDA 
+TRAVEL MANUAL 
+Revised: October 2026 
+
+
+===== Page 2 =====
+TABLE OF 
+CONTENTS 
+1.0 - INTRODUCTION ..................................................................................... 5 
+2.0 - TRAVEL CLASS ........................................................................................ 6 
+3.0 - TYPES OF UCF TRAVELERS ...................................................................... 6-7 
+4.0 - SPEND AUTHORIZATIONS ........................................................................ 7 
+4.1 - TYPES OF TRAVEL SPEND AUTHORIZATIONS ............................................... 7-8 
+4.2 - COMPLIMENTARY TRAVEL SPEND AUTHORIZATIONS ........................................ 9 
+5.0 - TRAVEL ARRANGEMENTS ........................................................................ 9 
+5.1 - ONLINE TRAVEL BOOKING ........................................................................... 9 
+5.1.A - ACCESSING THE CONCUR BOOKING TOOL ............................................. 9-10 
+5.1.B - ACCESSING SOUTHWEST BUSINESS BOOKING TOOL .................................... 10 
+5.1.C - ACCESSING AVIS/BUDGET AND ENTERPRISE/NATIONAL ................................ 10 
+5.1.D – ACCESSING BRIGHTLINE BOOKING TOOL ............................................... 10-11 
+5.2 - UNIVERSITY EXPENSE CARD ..................................................................... 11 
+6.0 - TRAVEL EXPENSE REIMBURSEMENT REQUEST ............................................. 11 
+6.1 - GENERAL GUIDELINES FOR TRAVEL REIMBURSEMENT ................................ 11-12 
+6.2 - SUPPLEMENTAL REIMBURSEMENT  ........................................................ 12 
+6.3 - TRIP ITINERARY REQUIREMENT .............................................................. 12-13 
+7.0 - AIRFARE/COMMON CARRIER ................................................................... 13 
+7.1 - UPGRADED AIRLINE TICKETS ..................................................................... 13 
+7.2 - CHANGING OR CANCELING AIRLINE TICKETS ................................................ 14 
+7.3 - AIRLINE RECEIPTS ................................................................................. 14 
+7.4 - ALLOWABLE TRAVEL TIME ......................................................................... 14 
+7.5 - FLIGHT DELAY OR CANCELLATION BY AIRLINE .............................................. 15 
+8.0 - VEHICLE RENTAL ................................................................................... 15 
+8.1 - VEHICLE CLASS ..................................................................................... 15 
+8.2 - LEISURE VEHICLE RENTAL ......................................................................... 16 
+8.3 - COLLISION DAMAGE WAIVER (CDW) ............................................................ 16 
+8.4 - PERSONAL ACCIDENT INSURANCE/ADDITIONAL LIABILITY INSURANCE .............. 16 
+8.5 - ACCIDENTS ......................................................................................... 16 
+
+
+===== Page 3 =====
+TABLE OF 
+CONTENTS
+8.6 - ELIGIBLE VEHICLE RENTER ........................................................................ 17 
+8.7 - USE OF OTHER VECHICLE RENTAL COMPANIES ............................................. 18 
+9.0 - LODGING ............................................................................................. 18 
+9.1 - LODGING WITHIN 50 MILE RULE .................................................................. 18 
+9.2 - NON-CONFERENCE HOTEL IN THE UNITED STATES .................................... 18-19 
+9.3 - CONFERENCE HOTELS ............................................................................ 19 
+9.4 - HOTEL WITHIN THE UNITED STATES TRAVEL EXCEPTIONS ............................ 19 
+10.0 - REGISTRATION FEES ............................................................................. 19 
+11.0 - USE OF PERSONAL VEHICLE ..................................................................... 20 
+11.1 - MILEAGE ALLOWANCE .......................................................................... 20 
+11.2 - COMPUTING MILEAGE ............................................................................ 20 
+11.3 - MILEAGE REIMBURSEMENT FOR MULTIPLE WORK LOCATIONS ....................... 21 
+12.0 -TRAIN ................................................................................................. 22 
+12.1 - ALLOWABLE TRAVEL TIME FOR TRAIN ............................................... 22 
+13.0 - PER DIEM AND MEAL ALLOWANCES ........................................................... 22 
+13.1 - MEAL ALLOWANCE PLUS LODGING ............................................................22 
+13.2 - STRAIGHT PER DIEM ............................................................................... 23 
+13.3 - PAYING A LESSER AMOUNT ...................................................................... 24 
+13.4 - COMBINATION OF METHODS ..................................................................... 24 
+14.0 - REIMBURSABLE INCIDENTAL TRAVEL EXPENSES ......................................... 24 
+14.1 - TAXI/RIDESHARE/BUS/LIMO/SHUTTLE ................................................. 24 
+14.2 - STORAGE AND PARKING FEES .................................................................. 25 
+14.3 - TOLLS ................................................................................................ 25 
+14.4 - COMMUNICATION EXPENSES ................................................................. 25 
+14.5 - TIPS ................................................................................................... 25 
+14.6 - OTHER INCIDENTAL EXPENSES ................................................................. 26 
+14.7 - LOST RECEIPTS ................................................................................... 27 
+15.0 - NON-REIMBURSABLE EXPENSES ............................................................... 27 
+
+
+===== Page 4 =====
+TABLE OF 
+CONTENTS 
+15.1 - NON-REIMBURSABLE COMPLIMENTARY TRAVEL .......................................... 28 
+16.0 - FOREIGN TRAVEL .......................................................................................................... 28 
+16.1 - REGISTERING FOREIGN TRAVEL ................................................................ 28 
+16.2 - FOREIGN TRAVEL WARNINGS ................................................................... 28 
+  16.3.A - FLY AMERICA ACT – GENERAL PRINCIPLES ............................................... 29 
+16.3.B - PERMITTED EXCEPTIONS TO THE FLY AMERICA ACT ................................. 30 
+16.3.C - DOCUMENTING EXCEPTIONS .......................................................... 31-32 
+16.4.A - FOREIGN REIMBURSEMENT RATES – GENERAL PRINCIPLES .................... 32-33 
+16.4.B - CALCULATION OF FOREIGN MEAL ALLOWANCE RATES ........................... 33-34 
+16.5 - FOREIGN RECEIPTS .............................................................................. 34 
+17.0 - TRAVEL WITH SPECIAL CIRCUMSTANCES ................................................... 34 
+17.1 - TRAVEL WITH SPECIAL CIRCUMSTANCES – GENERAL PRINCIPLES ................. 34 
+17.2 - TRAVEL IN EXCESS OF 30 CALENDAR DAYS RULE..................................... 35 
+17.3 - TRAVEL ON A SPONSORED AWARD (RESEARCH, SERVICE OR OTHER) ............ 35 
+17.4 - TRAVEL EXCEPTIONS .......................................................................... 35 
+18.0 - TRAVEL ADVANCES ................................................................................ 36 
+18.1 - TRAVEL ADVANCES – GENERAL TRAVEL CASH ADVANCES ............................ 36 
+18.2 - CASH ADVANCE FUNDED BY SPONSORED RSEARCH (FIELD ADVANCE) ........ 36-37 
+19.0 - DIRECT PAYMENT TO TRAVEL MERCHANT – PREPAYMENT TO MERCHANT ...... 37 
+20.0 - ACCOUNTABLE PLAN ............................................................................. 38 
+20.1 - REASONABLE AMOUNT OF TIME DEFINITION ............................................... 38 
+21.0 – PERSONAL TRAVEL ................................................................................ 38 
+21.1 PERSONAL TRAVEL – GENERAL PRINCIPLES .............................................38-40 
+21.2 TAXABLE PERSONAL TRAVEL ON FOREIGN TRAVEL ....................................... 40 
+APPENDIX .................................................................................................. 41 
+CONTACTS ................................................................................................. 42 
+
+
+===== Page 5 =====
+5 
+1.0 Introduction 
+The intent of the University of Central Florida Travel Manual (UCF Travel Manual) is to 
+familiarize university employees with the travel provisions of Florida Statute §112.061, Florida 
+Administrative Code 69I-42 and UCF policies 3-205.3 and 2-903.3. It is the responsibility of all 
+travelers to familiarize themselves with the UCF Travel Manual to ensure they are following the 
+proper process, whether seeking reimbursement or not, for their travel. The Finance Business 
+Centers and/or the Knights Experience Team (kNEXT) provides guidance to all travelers, both 
+employees and non-employees, of the various travel requirements to ensure proper 
+compliance with all policies. 
+All facets of travel are to be by the most efficient and economical means. Expense Reports are 
+processed by UCF in compliance with Florida laws and the university’s policies and procedures. 
+Receipts and/or additional documentation or justification will be required to support the 
+reimbursement of expenses claimed. Positive or negative adjustments to reimbursement 
+requests may be made, as necessary, to comply with applicable statutes, policies, and 
+procedures. 
+All travel is contingent upon available budget and cost center approval. The travel manual in no 
+way obligates the university to reimburse all allowable expenditures in connection with 
+approved travel. 
+Keys to Success for UCF Travel Reimbursement 
+Step 1 Obtain travel approval prior to the travel dates. This process can be completed via 
+Workday Spend Authorization. The approval should include the justification on why 
+this travel benefits the university. 
+Step 2 
+Familiarize yourself with allowable UCF travel reimbursement in this manual prior to 
+travel. 
+The following are important, typical travel expenses: 
+•
+Airfare: Non-refundable economy ticket only.
+•
+Rental Car: For 1-2 Travelers must select economy/compact size.
+•
+Accommodations: Conference hotel: Conference rate.
+•
+Accommodations: Non-conference hotel within US Only: No more than
+$225 base rate/night.
+•
+Personal Vehicle Usage: $0.445 per mile plus tolls.
+•
+Domestic Meal Allowance: $36 per day, limitations may apply.
+•
+Tips for taxi/shuttle or restaurant meals: No more than 20%, rounded up to
+the nearest dollar.
+Step 3 
+Ensure you have collected all receipts related to the travel. 
+Step 4 
+Submit expense reports with trip details (agenda and schedule) and receipts for 
+reconciliation and reimbursement in a timely manner. 
+Step 5 
+If you need support on understanding travel policies, work with your Finance 
+Business Center and/or the Knights Experience Team (kNEXT) to ensure compliance 
+when making travel arrangements. 
+
+
+===== Page 6 =====
+UCF Travel Manual 
+6 
+2.0 Travel Class 
+Florida Statute §112.061 categorizes travel into three classes: 
+Class A Travel 
+Continuous travel of 24 hours or more away from official headquarters. 
+Class B Travel 
+Continuous travel of less than 24 hours, which involves an 
+overnight absence from official headquarters. 
+Class C Travel 
+Travel for short or day trips where the traveler is not away from 
+their official headquarters overnight. 
+Note: Meals or Straight Per Diem reimbursement is NOT 
+allowable for Class C Travel. 
+3.0 Types of UCF Travelers 
+The traveler class determines how travel reimbursement is processed in Workday. The chart 
+below provides a summary of the traveler setup for each travel class. 
+Type of Traveler 
+Traveler Setup 
+UCF EMPLOYEES 
+(STAFF, FACULTY, STUDENT 
+EMPLOYEE, AND CONTINGENT 
+WORKERS) 
+Worker Profile 
+Student Employee Note: Any student employee whose travel related to their 
+employment role can be processed as “Worker.” 
+STUDENTS, NON-EMPLOYEES 
+(U.S. CITIZENS, PERMANENT 
+RESIDENTS, AND NON-RESIDENTS 
+[NRA]) 
+U.S. Citizens → External Committee Member  
+Permanent Residents → External Committee Member 
+Non-Residents (NRA) → Suppliers 
+NRA NOTE: Under UCF policies 2-901.2, university departments, business centers, 
+and the Knights Experience Team (kNEXT) must request approval from UCF Global 
+for supplier activities and reimbursement on behalf of any non-U.S. person. 
+Any payments on behalf of foreign individuals must be reviewed by UCF Global 
+Employment & Taxation Department to assess withholding tax implications in 
+compliance with U.S. immigration and IRS taxation rules for foreign nationals. 
+This review is part of the business process within Workday and is based on the status 
+of the traveler. 
+PROSPECTIVE EMPLOYEES 
+External Committee Member (Regardless of Citizenship) 
+EXTERNAL PAYEES 
+U.S. Citizens and Permanent Residents: 
+Travel Expense Only → External Committee Member  
+Travel Expenses + Honorarium/Payment for goods & services → Supplier 
+Non-Residents (NRA): 
+Travel Expenses and/or Payment for goods & services → Supplier 
+NRA NOTE: Under UCF policies 2-901.2, university departments, business centers, 
+and the Knights Experience Team (kNEXT) must request approval from UCF Global 
+for supplier activities and reimbursement on behalf of any non-U.S. person. 
+Any payments on behalf of foreign individuals must be reviewed by UCF Global 
+Employment & Taxation Department to assess withholding tax implications in 
+compliance with U.S. immigration and IRS taxation rules for foreign nationals. 
+This review is part of the business process within Workday and is based on the 
+status of the traveler. 
+
+
+===== Page 7 =====
+UCF Travel Manual 
+7 
+ 
+ 
+ 
+3. Types of UCF Travelers (Continued) 
+Note: If you are not sure which traveler type to use, contact the Travel Center of Expertise 
+for clarification at travelfa@ucf.edu . 
+ 
+4.0 Spend Authorizations 
+What is the purpose of a Spend Authorization? 
+ 
+Per Florida Statute §112.061, travel on UCF business must be authorized in advance of 
+travel start date. A Spend Authorization is the university’s formal document for the 
+approval to incur travel expenses and request travel and field advances. Spend 
+Authorizations must be submitted in and fully approved before making commitments to 
+travel or incurring expenses for traveling. 
+ 
+A Spend Authorization should be prepared in the name of the traveler or group leader in 
+case of group travel. A Spend Authorization must include descriptive trip purpose including 
+official conference name or meeting name and benefit to UCF. All anticipated costs 
+associated with the travel should be included. Anticipated costs should be broken out on 
+their corresponding Spend Authorization line. 
+ 
+Only one Spend Authorization should be created per trip with the correct trip start date, trip 
+end date, and business destination(s). Spend Authorizations created in Workday 
+automatically generate an itinerary in Terra Dotta, which provides duty of care aspect for 
+the university to assist our traveler in case of emergency. A combination of Cost Centers, 
+Grants, Gifts, Projects, and Designations may be included on a single Spend Authorization. 
+However, if the Spend Authorization includes a request for an advance, only a single funding 
+source may be used on the Spend Authorization. 
+ 
+State Vehicle Use Spend Authorization Requirements: When using a state vehicle for a 
+day trip and no travel expense will be incurred at all, a spend authorization is not needed. 
+However, if a state vehicle is used for a day trip and there are ANY travel expenses 
+(registration, parking, tolls), a spend authorization will be required. 
+ 
+4.1 Types of Travel Spend Authorizations 
+ 
+Travel type is determined by the destination of business. There are three major types of 
+travel. They include: 
+ 
+• In-state travel – The travel destination is within the State of Florida. 
+• Out-of-state travel – The travel destination is outside the State of Florida but 
+within the United States and its territory. 
+Foreign Travel – The travel is all outside the United States and its territories. 
+
+
+===== Page 8 =====
+UCF Travel Manual 
+8 
+4.1 Types of Travel Spend Authorizations (Continued) 
+Travel type can also be classified by the following items: 
+Travel Classiﬁcation 
+Deﬁnition 
+Blanket Spend Authorization 
+A blanket Spend Authorization may be created when an employee performs 
+numerous trips to the destination or for vicinity travel within the State of 
+Florida. Trips within a blanket Spend Authorization cannot be overnight; 
+therefore lodging, airfare, and domestic meal allowance expense items should 
+not be included on a blanket Spend Authorization. A blanket Spend 
+Authorization may be created for a ﬁscal year, or for a shorter period. 
+Reimbursement for blanket spend authorization must be submitted at least 
+monthly. All blanket Spend Authorizations expire at the end of the ﬁscal year 
+(June 30). 
+Spend Authorizations for 
+Individual Trips 
+A Spend Authorization created for a one-time trip for a single individual. A trip 
+consists of travel from their headquarters to the destination(s) and return to 
+headquarters. 
+Spend Authorizations for 
+Group Travel 
+A Spend Authorization for group travel is created for a one-time trip for two or 
+more individuals traveling at the same time to and from the same location for 
+the same purpose. A Spend Authorization for group travel must be created in 
+the group leader’s name and include a business purpose of group travel. A 
+group leader is responsible for handling all the  travel-related expenses for the 
+group. Only the group leader is eligible to be reimbursed. It is the group 
+leader’s responsibility to make payment to the other members of the group, if 
+necessary. 
+Each attendee should be added to the Spend Authorization using the Attendee 
+field. In addition, a Group Travel Roster Form indicating each traveler’s 
+citizenship information must be attached to a Spend Authorization and 
+Expense Report for ensuring compliance for non-resident alien travelers. The 
+attendees must be added to the Hotel (conference, non-conference, or State 
+of Florida sponsored event), Spend Authorization lines. If the travelers will be 
+changing destinations during the trip, the attendees must be added to any 
+Spend Authorization lines with a different destination. Failing to do so will 
+create inaccurate itineraries in Terra Dotta which can limit the university’s 
+ability to assist travelers in the event of an emergency. 
+
+
+===== Page 9 =====
+UCF Travel Manual 
+9 
+ 
+ 
+4.2 Complimentary Travel Spend Authorization 
+Due to state reporting requirements, a complimentary travel Spend Authorization is 
+required when: 
+• Travel expenses are funded by a third party. 
+• Travel expenses will not be incurred by the university. 
+ 
+A complimentary travel Spend Authorization includes: 
+1. Spend Authorization header sections: enter travel purpose, benefit to the university, 
+and information detailing why no travel expenses are being incurred and the third-party 
+entity incurring those expenses. 
+2. At a minimum, the Spend Authorization lines should include: 
+a. Hotel (conference, non-conference, or State of Florida sponsored event), 
+b. Airfare, and 
+c. Registration. 
+3. For Each Spend Authorization line funded by a third-party enter the amount of $1. 
+4. For supporting documentation, if travel is entirely funded by a third-party, a letter, email, 
+brochure, etc., outlining who and what is funded must be provided on the Spend 
+Authorization. 
+If UCF Expense Card is used in making travel arrangements prior to 3rd party reimbursement, traveler 
+must ensure that a payment from 3rd party is addressed or payable to University of Central Florida. 
+ 
+5.0 Travel Arrangements 
+ 
+5.1 Online Travel Booking 
+UCF has partnered with the following Travel Booking Service Providers to deliver discounted rates and 
+targeted customer service experiences to UCF travelers: 
+• Concur 
+• Southwest Business 
+• AVIS/Budget 
+• Enterprise/National - Sign-in with UCF NID and open “UCF Enterprise Website.url” file. 
+• Brightline Train 
+• Hotel near UCF Campuses – Visit https://procurement.ucf.edu/contracts/ and search for the latest 
+“Hotel Listings” for the most up-to-date UCF rates for local hotels. 
+ 
+ 
+A. Accessing the Concur Booking Tool 
+UCF strongly encourages travelers to utilize Concur, the university’s online travel booking tool, when 
+booking UCF-related travel. The Concur booking tool provides users many advantages: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== Page 10 =====
+UCF Travel Manual 
+10 
+ 
+ 
+Advantages to Using Concur 
+• Allows traveler(s) to arrange all their travel needs from airfare, lodging, and car rental in 
+one place. Automatically uses UCF’s negotiated contracts with Southwest Business, 
+AVIS/Budget and Enterprise/National. 
+• Ensures compliance with the travel provisions of Florida Statute §112.061, Florida 
+Administrative Code 69I-42 and UCF policies 3-205.3 and 2-903.3 
+• Assistance from a dedicated travel agent for any travel needs. 
+• Travelers may include their frequent flyer accounts in their Concur user profile. 
+• In case of emergency or changes in travel plan, a dedicated agent will be able to assist 
+travelers to rebook travel and other accommodation to return home or continue business 
+travel. The fee associated with Concur agent service is an allowable expense. 
+ 
+Accessing the Concur Booking Tool 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+B. Accessing Southwest Business Booking Tool 
+UCF has a corporate contract with Southwest Business. The contract provides discounted airfare and 
+targeted customer services to UCF business travelers along with other general Southwest benefits.. 
+Leisure travel booking is not allowed on Southwest Business. Travelers can access Southwest Business 
+booking tool easily through www.swabiz.com . More details on how to use SWABIZ.com can be accessed 
+at https://fa.ucf.edu/travel-forms-guidelines-manuals/ . 
+Note: Booking through www.southwest.com will NOT offer the discounted contract rates. 
+ 
+C. Accessing AVIS/Budget and Enterprise/National 
+For business car rental with AVIS/Budget and Enterprise/National, a unique billing account number 
+associated with expense card must be established prior to making a reservation. All related forms and 
+instructions can be accessed at https://fa.ucf.edu/travel-forms-guidelines-manuals/ . 
+ 
+D. Accessing Brightline Booking Tool 
+UCF has  a relationship with Brightline to provide exclusive rates for both business and 
+leisure rail travel to all our faculty members, employees, and students.  
+Step 1 
+Access the UCF Financial Affairs website at www.fa.ucf.edu 
+Step 2 
+Click the Book Your Travel via Concur Solutions link as shown below: 
+Step 3 
+Login with your UCF single sign on credentials. 
+Step 4 
+If new to Concur, create the required concur user profile. Instructions for 
+creating a profile can be found at on the Travel FAQ page. 
+ 
+
+
+===== Page 11 =====
+UCF Travel Manual 
+11 
+ 
+ 
+D. Accessing Brightline Booking Tool (Continued) 
+UCF Travelers must create a Brightline account using their University of Central 
+Florida domain email “@ucf.edu”. UCF travelers booking   with their UCF domain name will 
+receive 25% on a SMART fare class ticket. 
+5.2 University Expense Card  
+UCF strongly encourages its employees to utilize UCF Expense Cards for travel-related expenses. 
+Upon approval, a traveler can be issued a UCF billed and paid Expense Card through Bank of 
+America in the traveler’s name to utilize for registration, airfare, hotel, parking, etc. A UCF 
+Expense Card may not be used for personal expenses, including the purchase of travel-related 
+meals. 
+ 
+The University of Central Florida is not liable for payment of State of Florida sales tax, when 
+purchases are made using a UCF Expense Card. 
+ 
+If a UCF Expense Card holder is booking travel on behalf of a traveler, the travel Expense Card 
+transaction is required to be reassigned to the traveler prior to reconciliation on an Expense 
+Report. More detailed information about UCF Expense Cards can be found on the CardPro 
+website. 
+ 
+6.0 Travel Expense Reimbursement Request 
+ 
+6.1 General Guidelines for Travel Reimbursement 
+Reimbursements for travel expenses are requested through an Expense Report. The Expense Report should 
+include all travel-related out-of-pocket expenses and UCF Expense Card transactions. Out-of-pocket expenses 
+only include payments made by cash, check, bank transfer, or credit card. Payments made by loyalty points, 
+reward programs, or frequent flyer programs are not considered reimbursable out-of-pocket expenses. All 
+travel-related out-of-pocket expenses are not reimbursable until after the travel has been completed. 
+Receipt documentation for all travel-related expenses must show proof of payment. 
+ 
+Travel-related UCF Expense Card transactions must be fully reconciled and approved within 20 days 
+of posting in Workday or by the tenth day of the following month, whichever is sooner, via an 
+Expense Report. Travel-related UCF Expense Card transactions incurred prior to travel, such as 
+airfare, registration, etc. must be reconciled on an Expense Report tied to the Spend Authorization 
+prior to travel taking place to ensure compliance with the UCF Purchasing Card Policy. Utilizing the 
+UCF Expense Card will likely result in multiple Expense Reports being submitted and linked to one 
+Spend Authorization for travel. 
+ 
+Per Florida Statute 112.061(10) on Fraudulent Claims, Florida Statutes specifically requires 
+that a traveler must certify or affirm that a claim for reimbursement of travel-related 
+expenses were actually incurred by the traveler. By submitting an Expense Report, the 
+traveler is affirming their compliance with this statute. 
+ 
+Any person who willfully makes and subscribes any such claim which they do not believe to 
+be true and correct as to every material matter, or who willfully aids or assists in, or 
+
+
+===== Page 12 =====
+UCF Travel Manual 
+12 
+ 
+ 
+procures, counsels, or advises the preparation or presentation under the provisions of this 
+section a claim which is fraudulent or false as to any material matter, whether or not such 
+falsity or fraud is with the knowledge or consent of the person authorized or required to 
+present such claim, is guilty of a misdemeanor of the second degree. 
+ 
+6.2 Supplemental Reimbursement 
+If after a reimbursement Expense Report has been paid and Spend Authorization is closed 
+or can no longer be linked to Expense Report, it is discovered that a reimbursement 
+item(s) was omitted, an additional Expense Report may be submitted. The Expense Report 
+should be created from a new Spend Authorization with reference to the original Spend 
+Authorization number based on the following guideline: 
+ 
+If there are travel expenses that are not reconciled from a closed Spend 
+Authorization, a new Spend Authorization (SA) will need to be created when the 
+total expense is more than 20% of the original total SA balance or more than $1,000, 
+whichever is less. 
+ 
+Exceptions creating a new SA is considered on case-by-case basis on two guidelines: 
+ 
+Guideline 1 
+The Spend Authorization was closed due to inability to split credit card 
+transactions to multiple Expense Reports and a card transaction must 
+be assigned on one Expense Report. This results in the related Spend 
+Authorization having a negative balance and thus cannot be linked to 
+any more Expense Reports. The Finance Business Center must provide 
+this explanation in an Expense Report without a new Spend 
+Authorization number. 
+Guideline 2 
+The amount is less than 20% of original Spend Authorization balance 
+or $1,000, whichever is less. 
+ 
+ 
+ 
+ 
+6.3 Trip Itinerary Requirement 
+Any form of trip itinerary must be provided in an Expense Report. Trip itinerary should describe 
+a brief purpose of the trip from when traveler departs from headquarters until traveler returns 
+to headquarters. Multi-purpose trip with personal days must briefly list business purpose of 
+each travel day to support all travel business expenses and clearly distinguish personal days. 
+ 
+ 
+ 
+ 
+ 
+
+
+===== Page 13 =====
+UCF Travel Manual 
+13 
+7.0 Airfare/Common Carrier 
+Travelers are authorized to make their own travel arrangements. Airline tickets must be non-
+refundable economy or coach class. A paid receipt must be submitted, including all reasonable costs 
+associated with economy or coach. Reasonable costs include, but are not limited to, baggage fees, 
+and seat selection fees. 
+7.1 Upgraded Airline Tickets 
+Travelers preferring to secure upgraded accommodations will be required to pay the difference 
+between the non-refundable economy/coach rate and the upgraded rate. A comparable quote of 
+non-refundable economy airfare must be provided to serve as basis for reimbursement. The cost 
+of an upgraded ticket cannot be reimbursed unless justified in detail. 
+•
+First class transportation, or higher, is NOT allowed.
+•
+Business class travel is only acceptable if at least one segment of the flight shown
+on the purchased tickets is nine hours or longer and full-time business activity
+begins within 24 hours of arrival at the destination and/or return to headquarters.
+Cost considerations should be exercised when making reservations and must be approved by the 
+Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please 
+be mindful that not all airlines use the terminology “Business Class.” Business class is deemed to 
+be the class between economy and first class. If a traveler has questions regarding allowable 
+upgrades, they should contact their respective Finance Business Center or Travel Center of Expertise 
+at travelfa@ucf.edu prior to booking the flight. 
+Conferences and Conventions 
+Travelers attending a conference should submit the following 
+documentation along with their Expense Report: registration 
+form, a receipt showing the registration payment and the 
+conference agenda or conference information showing the 
+conference location, conference dates, and what is included 
+in the cost of registration (e.g., meals, lodging etc.). 
+Meetings 
+Travelers attending a meeting should provide a copy of the 
+meeting agenda along with their reimbursement request. If 
+the meeting did not include an agenda, a completed Meeting 
+Information Form must be attached in the attachments tab 
+of the Expense Report. A link to the Meeting Information 
+Form is included in the Appendix. 
+Research Related Trips 
+Travelers going on field research or data collection trip 
+should provide either Meeting Information Form or list a 
+brief itinerary of the research activities performed during 
+travel period. 
+
+
+===== Page 14 =====
+UCF Travel Manual 
+14 
+ 
+ 
+ 
+7.2 Changing or Cancelling Airline Tickets 
+ 
+Once a ticket has been purchased via university funds, it is the responsibility of the Finance 
+Business Center/traveler to check with the airline regarding its policies on flight cancellations or 
+changes. Any costs incurred by UCF for changes to an airline ticket should be justified. If a trip is 
+cancelled, the traveler is to return all unused airline tickets purchased by the university to the 
+Finance Business Center with a memorandum explaining the cancellation of the trip. The traveler 
+should submit both the original and revised ticket itineraries and receipts with their Expense 
+Report, if requesting reimbursement or if paid via an Expense Card. Credits for cancelled flights 
+booked through Concur for business travel will be available in the traveler’s profile. The 
+university may assign credits for cancelled flights to another employee by contacting Concur 
+travel agents. Applicable airline charges will apply. 
+ 
+If a credit issued is associated with a sponsored award, the credit should be tracked by traveler and FBC 
+to ensure it is used to directly benefit the same sponsored award that incurred the original cost. If you 
+plan to use the credit for travel in support of another sponsored award or another university activity, the 
+original travel charge must be removed and transferred to the appropriate funding source that will 
+benefit from the travel. 
+ 
+7.3 Airline Receipts 
+ 
+A copy of the airline ticket itinerary showing the dates and time of arrival and departure, fare class, 
+payment amount and payment method should be attached to the airfare line of the Expense Report. 
+Travelers booking through Concur can easily locate this information in their trip library. Airfare tickets that  
+were purchased by frequent-flyer miles or credit card reward programs are not reimbursable. The 
+university can only reimburse the traveler for actual out-of-pocket costs. 
+ 
+7.4 Allowable Travel Time 
+ 
+• A traveler is allowed up to three hours before a flight and up to two hours after a flight returns 
+as travel time for both domestic and foreign travel as additional travel time to allow for 
+checking/receiving baggage and transiting airport security UCF business should begin the day of 
+or the day following a traveler’s arrival at their destination. The traveler should return to 
+headquarters the day of or the day following the end of business. This travel timeline applies to 
+all modes of transportation. 
+• Any deviation of the allowable travel time or headquarters to business destination must be 
+supported with airfare comparable quote of just the allowable business travel time to show 
+that the airfare selected is more economical. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== Page 15 =====
+UCF Travel Manual 
+15 
+ 
+ 
+ 
+7.5 Flight Delay or Cancellation by Airline 
+ 
+If a traveler’s flight is delayed or canceled by airlines, a memo explaining the situation, 
+delayed/cancellation notice, and updated flight itinerary must be provided in the expense report. 
+Additional meals or lodging due to flight delays or cancelation by airlines are reimbursable with 
+justification and on the grounds that the airline did not compensate for those expenses already. 
+A traveler may purchase a new ticket provided the traveler has made all reasonable efforts to 
+resolve the situation with the airline and if waiting for the next available flight on that airline 
+would inconvenience the traveler. A memo explaining the reason for the additional cost should 
+accompany the reimbursement request. 
+ 
+8.0 Vehicle Rental 
+The state of Florida has a contract with Avis/Budget. Avis/Budget provides discounted rates for both in-state 
+and out-of-state vehicle rentals. The university has also a contract with Enterprise/National to provide 
+travelers with greater flexibility. Enterprise/National’s out-of-state rentals are comparable with the 
+Avis/Budget out-of-state rates. When booking business travel through Concur, travelers will only be provided 
+with Avis, Budget, Enterprise, and National options, assuming that they are available at the rental location. 
+Travelers will automatically be provided with the negotiated rates when booking a rental car with Avis, 
+Budget, Enterprise or National through the Concur website. For more information regarding vehicle rental 
+booking guideline and reservation website, please visit https://fa.ucf.edu/travel-payables-useful-links/ 
+ 
+ 
+8.1 Vehicle Class 
+ 
+Under normal travel conditions, the vehicle sizes listed below should be used. If there is a 
+deviation from the size charge, a justification must be provided on the applicable Expense 
+Line on the Expense Report. In absence of clarification, vehicle rental rate may be capped at 
+the contracted rate with AVIS/Budget and Enterprise/Nationals in accordance with the 
+vehicle size per traveler listed in this table. 
+ 
+Vehicle Class 
+Number of Travelers 
+Economy or Compact 
+1-2 
+Intermediate 
+3-4 
+Full Size 
+5 
+Minivan 
+5-7 
+Regular Van 
+8+ 
+ 
+ 
+
+
+===== Page 16 =====
+UCF Travel Manual 
+16 
+ 
+ 
+ 
+ 
+ 
+8.2 Leisure Vehicle Rental 
+ 
+Only UCF employees aged 25 and older may rent vehicles for personal or leisure use using the 
+Avis/Budget or Enterprise/National contracted rates. Leisure rentals by employees do not include 
+collision damage waiver insurance. Leisure traveler may accept insurance coverage if desired. UCF 
+employees must have their employee ID available to show the Avis/Budget or Enterprise/National 
+representative at the time of rental. The rental of vehicles for personal use can either be done 
+through Concur or using the personal rental code. Instructions on how to book personal rentals can 
+be found on the travel website https://fa.ucf.edu/travel-forms-guidelines-manuals/. 
+ 
+Note: The university will not pay for any leisure rentals. 
+ 
+ 
+8.3 Collision Damage Waiver (CDW) 
+ 
+A traveler will not be reimbursed for accepting CDW when using the state of Florida Avis/Budget or 
+Enterprise/National contract, as this coverage is included in the contract. When circumstances require the 
+use of another rental car agency, CDW should be accepted if the coverage is not already included in the rental 
+agreement. When renting vehicles from Avis/Budget or Enterprise/National, outside the United States, the 
+traveler should accept CDW when available. 
+ 
+ 
+8.4 Personal Accident Insurance (PAI)/Additional Liability Insurance (ALI) 
+ 
+A traveler will not be reimbursed for additional insurance as insurance coverage is already included in the 
+Avis/Budget and Enterprise/National contract. 
+ 
+ 
+8.5 Accidents 
+ 
+The state of Florida Avis/Budget and Enterprise/National rental contract includes 100% coverage for all 
+collision damage to vehicles. If you are in an accident, promptly take the following steps: 
+ 
+Step 1 
+Report the accident to the rental vendor. 
+Step 2 
+Obtain a police report. Note: This is a required step. 
+Step 3 
+Advise the traveler’s UCF department and supervisor, and email Travel 
+Center of Expertise at travelfa@ucf.edu. 
+Step 4 
+Report the incident through the Office of Risk and Safety website. 
+ 
+
+
+===== Page 17 =====
+UCF Travel Manual 
+17 
+8.6 Eligible Vehicle Renter 
+Renter Type 
+Description 
+For AVIS / Budget State Contract 
+•
+If a driver of the vehicle is under the age of 25,
+but over 18, the individual must be the renter
+and the rental must be paid with a UCF Expense
+Card through assigned unique billing number
+with corresponding rental company.
+•
+Per the State contract with AVIS/Budget, renters
+can be 18 years of age or older but must be
+employed by the university (on university
+payroll) or a student traveling on behalf of
+official university business.
+•
+A person under the age of 18 is not allowed to
+rent a car regardless of employment with UCF.
+For Enterprise/National UCF 
+Contract 
+•
+If a driver of the vehicle is under the age of 25,
+but 21 and older, the individual must be the
+renter and the rental must be paid with a UCF
+Expense Card through assigned unique billing
+number with corresponding rental company.
+•
+A person under the age of 21 is not allowed to
+rent a car regardless of employment with UCF.
+A student renting under Registered Student Organizations (RSOs)’s activity is NOT eligible to utilize both 
+AVIS/Budget & Enterprise/ Nationals negotiated contract. RSO activity is not considered official university 
+business. 
+
+
+===== Page 18 =====
+UCF Travel Manual 
+18 
+8.7 Use of Other Vehicle Rental Companies 
+The Avis/Budget and Enterprise/National contract does not prohibit the use of other rental 
+vehicle companies. Collision damage waiver insurance should be purchased when vehicles are 
+rented from a company other than Avis/Budget or Enterprise/National. 
+Use of Other Vehicle Rental Companies other than Avis/Budget and Enterprise/National is allowable 
+when at least one of the following conditions apply: 
+1. Other vehicle rental companies offer a lower total rate, inclusive of primary insurance coverage.
+2. When Avis/Budget or Enterprise/National do not have vehicles available for rental at the time and
+location required to conduct business.
+3. The time/distance to the nearest Avis/Budget or Enterprise/National location is not cost effective or
+practical in conducting efficient UCF business.
+4. When Avis/Budget or Enterprise/National do not have a location at the traveler’s destination,
+commonly in foreign countries.
+UCF requires justification be provided on the Expense Report in Workday if an agency other 
+than Avis/Budget or Enterprise/National is used domestically. Additionally, documentation 
+showing that Avis/Budget or Enterprise/National did not have vehicles available, comparison 
+rates, or information regarding the impracticality of the Avis/Budget or Enterprise/National location 
+must be attached to the Expense Line of the Expense Report. It is recommended that this approval 
+is sought prior to booking. 
+9.0 Lodging 
+9.1 Lodging Within 50 Mile Rule 
+A traveler may not claim reimbursement for meals or lodging for overnight travel within 50 miles of the 
+traveler’s headquarters or residence, whichever is closer to the traveler’s destination, unless approved by the 
+vice president of the employee’s business unit or Provost for faculty staff. Provost approval can be obtained 
+by selecting the corresponding Hotel Accommodations Within 50 Miles of Headquarters or Home box on the 
+spend authorization.
+9.2 Non-conference hotel in the United States 
+Lodging expenses qualify for reimbursement at a single-occupancy rate and must be substantiated by 
+itemized paid receipts. Personal expenses such as food, mini bar, etc. on lodging receipt is not a reimbursable 
+expense. Reimbursements are paid based on actual lodging and meal allowance. 
+A lodging limit of a base rate of $225.00 per night (not including taxes and fees) applies to cities within the 
+United States for hotel, Airbnb, and VRBO accommodation, unless a conference hotel is used. When booking 
+through Concur, travelers will receive a warning if they attempt to book a hotel with a base rate more than 
+$225.00 per night. 
+
+
+===== Page 19 =====
+UCF Travel Manual 
+19 
+ 
+ 
+ 
+9.2 Non-conference hotel in the United States (Continued) 
+ 
+Pursuant to Florida Bill 2502, for Fiscal Year 2025-2026 Section 85, costs for lodging associated 
+with a meeting, conference, or convention organized or sponsored in whole or in part by a state 
+agency or the judicial branch may not exceed $225.00 per day. An employee may expend their own 
+funds for any lodging expenses more than $225.00 per day. For this purpose, a meeting does not 
+include travel activities for conducting an audit, examination, inspection, or investigation or travel 
+activities related to a litigation or emergency response. 
+ 
+9.3 Conference Hotels 
+ 
+Conference hotels (not pursuant to Florida Bill 2502) are not subject to the $225.00 per night limit. 
+Conference hotel is defined as a hotel in which a conference organizer has pre-negotiated room block during 
+the conference period. It is the traveler and travel arranger’s responsibility to provide supporting document 
+that the hotel is part of the conference hotel. If a conference hotel is offering a conference rate or if a 
+conference code is needed for booking, it is not recommended that the reservation be made via Concur. To 
+allow for easier booking of conference hotels, the Travel Center of Expertise recommends that these 
+reservations are made through the conference booking site. 
+ 
+9.4 Hotel Within The United States Travel Exceptions 
+ 
+If a non-conference hotel is booked at a rate of more than the $225.00 per night base rate limit, a justification 
+must be provided for the reimbursement more than the base rate to be processed. In addition to the 
+justification, the traveler must provide at least 3 quotes for other hotels in the area. Failure to do so will 
+result in the reimbursement being limited to the base rate of $225.00 per night. Acceptable documentation 
+includes screen shots of the rates for other hotels in the area. Exceptions cannot be made if this information 
+is not provided. 
+ 
+Exceptions are not allowed for hotels for State of Florida Sponsored Events that exceed $225.00 per 
+night. 
+ 
+10. Registration Fees 
+Registration fee for conference or workshop attendant is allowable travel reimbursement. Traveler must 
+provide registration receipt showing payment method, amount, and additional supporting document of what 
+is included in the cost of registration (e.g., meals, lodging etc.). For conference registrations that do not 
+include travel (e.g., webinars), the expense item “Education & Training Services” should be used. 
+ 
+Luncheons, awards ceremonies, or banquets that are included or optional in the registration fee are allowable 
+expenses if they support the traveler’s business activities and benefit the university. 
+ 
+Travelers may NOT claim meals (Breakfast, Lunches, Dinner, or Banquet) and/or lodging expenses that are 
+included in the registration fee, even if the traveler decides not to eat the meals. Dietary needs should be 
+addressed with the conference at the time of registration. The traveler should confirm with the conference 
+that alternative meals will be provided. 
+
+
+===== Page 20 =====
+UCF Travel Manual 
+20 
+11.0 Use of Personal Vehicle 
+The cost of operation, maintenance and ownership of a personal vehicle is the responsibility of 
+the traveler. The university is not authorized to reimburse a traveler for repairs or other related 
+costs incurred while traveling on official business. A traveler may not claim a reimbursement for 
+transportation expenses when the traveler is transported by another individual. A traveler cannot 
+claim mileage from the traveler’s home to their place of employment. 
+11.1 Mileage Allowance 
+Travelers using a personal vehicle are authorized to be reimbursed at a rate of $0.445 per mile plus tolls. 
+A map showing mileage from point of origin to point of business destination must be provided for mileage 
+allowance calculation. All travel connected with the official business of the university must be by the most 
+direct and economical route available. Reimbursement for mileage must be submitted at least monthly for 
+blanket spend authorization. It is not permissible to pay for gas to be put into a traveler’s personal vehicle. 
+If a traveler chooses to drive rather than fly, the amount of the reimbursement is limited to the amount it 
+would have cost to fly, in accordance with Florida Statute 112.061. Supporting documentation must be 
+attached to the Expense Report showing the comparable transportation costs. 
+11.2 Computing Mileage 
+When a traveler leaves from their residence to travel to a work assignment other than their official 
+headquarters, or to the airport, mileage may be reimbursable based on the circumstances of the trip. For 
+departures Monday through Friday before 7:00 a.m., mileage may be claimed from the traveler’s 
+residence to the assignment or airport. For return travel after 6:00 p.m. Monday through Friday, mileage 
+may be claimed back to the traveler’s residence.
+At all other times during the regular workday, reimbursable mileage should be calculated from the 
+traveler’s official headquarters or from the traveler’s residence, whichever distance is less. If travel occurs 
+on a weekend or university holiday, mileage should be based on the actual mileage to or from the 
+traveler’s residence.
+If a family member drives the traveler to the airport in a personal vehicle, round-trip mileage and tolls 
+from the traveler’s residence to the airport may be reimbursed. However, if someone other than a family 
+member voluntarily drives the traveler to the airport, the traveler is not eligible for reimbursement for 
+mileage or tolls.
+This section applies to travel involving a residence, airport, or temporary work assignment, and does not 
+apply to routine travel between UCF campuses during the workday.
+
+
+===== Page 21 =====
+UCF Travel Manual 
+21 
+11.3 Mileage Reimbursement for multiple work locations 
+Location 
+Description 
+Example 
+Temporary Work 
+Location 
+A temporary work location is a place 
+where your work assignment is 
+realistically expected to, and does in 
+fact last, one year or less. If an 
+employee is assigned to a temporary 
+work location while still having a 
+regular place of business, travel 
+expenses between the employee’s 
+home and the temporary work location 
+and travel expenses between their 
+regular work location and the 
+temporary work location are 
+reimbursable. Travel 
+expenses between the temporary and 
+regular work location are not 
+reimbursable if a university vehicle is 
+used. 
+An employee’s regular work 
+location is at the UCF main campus. 
+The employee is temporarily 
+working at the downtown campus 
+for a month to assist with the 
+establishment of a new program. 
+The employee’s travel expenses 
+between home and the downtown 
+campus are reimbursable to the 
+extent that the  travel from home 
+to downtown is greater than travel 
+from home to main campus. Travel 
+between main campus and 
+downtown is reimbursable. 
+Secondary Work 
+Location 
+If an employee regularly works at two 
+locations in one day, the transportation 
+expenses incurred to get from one 
+workplace to another are reimbursable. 
+However, expenses incurred by the 
+employee to travel to or from their 
+home to their secondary work location 
+are not reimbursable. Travel expenses 
+between the regular and secondary 
+location are not reimbursable if a 
+university vehicle is used. 
+An employee regularly works three 
+days a week at the UCF main 
+campus and two days a week at the 
+UCF downtown campus. The 
+employee may be required to 
+travel to meetings at the 
+downtown campus on days that 
+they are at the main campus. The 
+transportation expenses incurred 
+for travel between UCF main 
+campus and UCF downtown 
+campus are reimbursable. 
+However, transportation expenses 
+to and from the employee’s home 
+to either campus are not 
+reimbursable. 
+Travel Between 
+UCF Campuses 
+A department may reimburse for 
+mileage to and from an employee’s 
+primary work location and another UCF 
+campus where the employee has a 
+meeting or other temporary duties. A 
+department may not reimburse for 
+mileage between any Orlando UCF 
+campus and the traveler’s home, 
+regardless of the time at which the 
+duties end at the UCF campus where 
+the meeting is being held. Mileage is 
+not reimbursable if a university vehicle 
+is used. 
+An employee’s main work location 
+is UCF main campus. The employee 
+has a meeting from 4:00 p.m.-5:00 
+p.m. at UCF Downtown campus.
+The employee uses their personal
+vehicle and drives home from the
+meeting. The department may
+reimburse for mileage between
+UCF main campus and UCF
+Downtown. The employee is not
+eligible for mileage reimbursement
+from UCF Downtown to their
+home.
+
+
+===== Page 22 =====
+UCF Travel Manual 
+22 
+ 
+ 
+ 
+12.0 Train 
+ 
+Train tickets must be non-refundable economy or lowest travel class. A paid receipt must be 
+submitted, including all reasonable costs associated with the train ticket. Reasonable costs include, 
+but are not limited to, baggage fees, shuttles, and parking. 
+ 
+For Brightline service within Florida, SMART ticket is the lowest travel class and is the only allowable 
+reimbursement fare class. 
+ 
+12.1 Allowable Travel Time for Train 
+• A traveler is allowed up to one hour before a train departure time and up to one hour after a train 
+arrival time as additional travel time for claiming meal allowance and per diem. This only applies 
+to Train travel for the first official business departure day and business return day. A train itinerary 
+should be provided to verify such information. 
+• UCF business should begin the day of or the day following a traveler’s arrival at their destination. The 
+traveler should return to headquarters the day of or the day following the end of business. This travel 
+timeline applies to all modes of transportation. 
+• Any deviation of the allowable travel time or headquarters to business destination must be 
+supported with comparable quote of just the allowable business travel time to show that the train 
+schedule selected is more economical. 
+ 
+ 
+13.0 Per Diem and Meal Allowances 
+ 
+For a traveler to be paid per diem or meal allowances, travel must be overnight. Day trip meals are not 
+reimbursable. UCF does not reimburse meal allowance or per diem by actual receipt amount. A traveler may 
+choose whether to be reimbursed using a meal allowance plus the cost of lodging or a straight per diem. 
+ 
+13.1 Meal Allowance Plus Lodging 
+ 
+This method is used to reimburse travelers who claim the actual cost of lodging plus the meal allowance. 
+The maximum domestic meal allowance is $36 per day ($6 breakfast, $11 lunch & $19 dinner). The cost of the 
+hotel will be reimbursed if the hotel rate policies have been followed. A receipt must be provided for the 
+hotel; however, a receipt is not required for the meals. The meal allowance is based on the following 
+schedule: 
+ 
+Meal Type 
+Meal Allowance 
+Amount 
+Day of Departure 
+Day of Return 
+Breakfast 
+$6 
+When travel begins before 6AM 
+When travel ends after 8AM 
+Lunch 
+$11 
+When travel begins before 12PM 
+When travel ends after 2PM 
+Dinner 
+$19 
+When travel begins before 6PM 
+When travel ends after 8PM 
+ 
+Continental breakfast is a meal and must be deducted from reimbursable meals if provided as part of a 
+registration fee or included in the lodging cost paid by UCF. Meals provided by an airline need not be 
+deducted. 
+ 
+ 
+
+
+===== Page 23 =====
+UCF Travel Manual 
+23 
+ 
+ 
+ 
+13.2 Straight Per Diem 
+ 
+This method provides for a flat $80 per day rate to cover the cost of meals and lodging. Neither 
+meal nor lodging receipts are required under this method. Straight Per Diem cannot be claimed in 
+conjunction with any actual lodging or meal claims for the same day of a trip. Per diem is the 
+subsistence allowance that a traveler is authorized to receive when traveling within the United 
+States or Puerto Rico. The calculation is based on four quarters of the day, providing $20 for each 
+quarter. The quarter periods used are as follows: 
+ 
+Quarter 
+Time Frame 
+Quarter 1 
+12:00 a.m. (midnight) to 6:00 a.m. 
+Quarter 2 
+6:00 a.m. to 12:00 p.m. (noon) 
+Quarter 3 
+12:00 p.m. (noon) to 6:00 p.m. 
+Quarter 4 
+6:00 p.m. to 12:00 a.m. (midnight) 
+ 
+ 
+ 
+If traveler is requesting straight per diem when a third party is covering meals, the straight per diem is 
+deducted by meal allowance rate listed in Meal Allowance Plus Lodging method above. 
+ 
+Example: A traveler is claiming a per diem on 2 full days of the conference when the conference 
+provided lunch on both days. Traveler is eligible of straight per diem up to $80 – $11 = $69 per day. 
+ 
+
+
+===== Page 24 =====
+UCF Travel Manual 
+24 
+ 
+ 
+ 
+13.3 Paying a Lesser Amount 
+ 
+If a traveler claims less than the full meal allowance or per diem authorized by Florida 
+Statute 112.061(6), the traveler is required to attach to their Expense Report a statement of 
+understanding regarding their entitlement to the full meal allowance provided by law that notes 
+they have voluntarily chosen to claim a lesser amount. 
+ 
+If a meal allowance for group travelers is less than the allowable per diem rate is reimbursed to the 
+travelers, the following statement should be attached to the Expense Report and signed and dated by 
+the group leader. 
+ 
+“…The Group has been notified that while each individual is entitled to the full meal allowance 
+provided by law, they have volunteered to receive a lesser amount…” 
+ 
+13.4 Combination of Methods 
+ 
+If a traveler chooses to claim reimbursement for actual lodging at a single occupancy rate plus meals for some 
+periods and straight per diem for other periods on the same trip, the traveler may only change methods on a 
+travel-day basis (midnight-to-midnight). The choice of per diem or lodging plus meals for each day of the trip is 
+the option of the traveler and contingent upon available budget and cost center approval. 
+ 
+14.0 Reimbursable Incidental Travel Expenses 
+ 
+Travelers may be reimbursed for the following expenses that are incurred in addition to authorized meals and 
+lodging or straight per diem. Receipts must be attached to the Expense Report. Receipts must clearly label 
+the transaction amount, date of transaction and payment method. 
+ 
+14.1 Taxi/Rideshare/Bus/Limo/Shuttle 
+ 
+Item 
+Policy 
+Receipts for taxi, rideshare, 
+bus, limo and shuttle 
+Required for taxi, rideshare, bus, limo and shuttle 
+charges over $25. 
+Gratuities on taxi, rideshare, 
+bus, limo and shuttle 
+May only be reimbursed up to 20% of the fare, rounded 
+up to the nearest dollar. 
+Taxi, rideshare, bus, limo, and 
+shuttle rides under $25 without 
+receipt 
+These reimbursements are inclusive of gratuities. 
+Lost taxi / shuttle receipts* 
+Reimbursement is allowable up to no more than four 
+rides per entire trip maximum of $25 each ride or $100 
+total per entire duration of travel. 
+ 
+*Excessive lost receipts for taxi reimbursement on multiple travels from the same traveler will 
+prompt further investigation and denial of future lost-receipt taxi reimbursement. 
+
+
+===== Page 25 =====
+UCF Travel Manual 
+25 
+ 
+ 
+ 
+ 
+14.2 Storage and Parking Fees 
+ 
+Receipts are required for storage or parking fees more than $25. 
+ 
+14.3 Tolls 
+ 
+Receipts are required for tolls of more than $25. A toll calculation from the tolling authority’s website 
+is acceptable for tolls under $25. A toll calculator that generates a tolls estimator from point of origin 
+to point of business destination must be provided for reimbursement. 
+ 
+14.4 Communication Expenses 
+ 
+A statement that any communication expense being claimed, including Internet service or international 
+phone, was for university business should be provided on the Expense Report. Communication expenses 
+incurred to contact the traveler’s family or other non-business purposes are not eligible for reimbursement. 
+ 
+14.5 Tips 
+ 
+Reasonable tips and gratuities may be reimbursed as follows: 
+ 
+• Actual tips paid to a taxi/bus/limo/rideshare/shuttle service may not exceed 20% of the fare, rounded 
+up to the next dollar. Receipts are required for any transportation expense more than $25, including 
+tip. Tips need to be itemized on the expense line in Workday. 
+• Actual tips paid in association with special event restaurant meals/catering may not exceed 20% of 
+the total, rounded up to the next dollar. Tips need to be itemized on the expense line in Workday. 
+Gratuities that are more than 20% that are added by the restaurant/caterer may be reimbursed. 
+• Actual gratuity paid for mandatory valet parking, which was necessary in the performance of business, 
+is not to exceed $1 per occurrence. 
+• Actual portage charges paid, not to exceed $1 per bag or $5 per occurrence. 
+ 
+ 
+ 
+ 
+
+
+===== Page 26 =====
+UCF Travel Manual 
+26 
+ 
+ 
+ 
+14.6 Other Incidental Expenses 
+ 
+The following incidental travel expenses may be reimbursed upon submitting a receipt. 
+ 
+Item 
+Additional Information 
+Laundry and Press 
+When official business is more than seven days, and 
+such expenses are necessarily incurred to complete 
+official business portion of the trip. 
+Passport and Visa Fees 
+When required for travel on official business. 
+Fees for Traveler’s Checks and 
+Currency Exchange Fees 
+Actual fees charged to purchase traveler’s 
+checks/exchange currency for foreign travel expenses 
+that are part of official business. 
+Maps 
+Actual cost of maps necessary for conducting official 
+business. 
+Gasoline 
+Gasoline purchases for rental or university vehicles 
+when voyager card was not available. 
+Medical Test 
+Medical test required by external party such as 
+airline, destination country, conference in the case 
+that without such test, traveler will be prohibited 
+from traveling or attending. 
+Miscellaneous 
+Purchases of goods or services that are necessary for 
+official business.  
+ 
+Any expense not listed above must be provided with a business reason. Reimbursement on miscellaneous also 
+depends on consideration of cost center managers, kNEXT and Travel Center of Expertise.
+
+
+===== Page 27 =====
+UCF Travel Manual 
+27 
+ 
+ 
+ 
+14.7 Lost Receipts 
+ 
+A. Lost Receipts for out-of-pocket expenses – If the required receipt is not available, the 
+traveler should attach a signed statement to the corresponding Expense Line of their Expense 
+Report certifying that the expense was incurred and could provide redacted credit card 
+statement. The statement and supporting document must contain the following details: 
+ 
+• Description of items purchased 
+• Purpose of the item 
+• The date incurred 
+• The amount 
+ 
+Note: Reimbursement without a receipt is not guaranteed. 
+ 
+B. Lost Receipts for UCF expense card transaction – For transaction that was paid by UCF expense card and 
+the receipt was not available, traveler or expense cardholder must complete and signed Receipt 
+Replacement  Form and attach it to the expense line for supporting document. 
+ 
+15.0 Non-reimbursable Expenses 
+ 
+The following are examples of travel expenses that are strictly not reimbursable: 
+ 
+• Personal travel insurance including travel 
+protection plan when purchasing airfare. 
+• Rental car insurance options when using 
+Avis/Budget or Enterprise/National 
+domestically. 
+• Personal expenses (including personal 
+phone calls or gas for a personal vehicle or 
+any expense related to personal time). 
+• Mileage between home and official place 
+of work. 
+• Parking fines 
+• Traffic violation tickets 
+• Any form of room services including 
+beverages and food. 
+• Movie rentals 
+• Alcoholic beverages 
+• Loss or damage to personal items 
+• Pet care 
+• Childcare 
+• Spouse/family related charges. 
+• Tips for hotel cleaning staff 
+• Payments made by frequent flyer and other 
+similar reward programs. 
+
+
+===== Page 28 =====
+UCF Travel Manual 
+28 
+15.1 Non-reimbursable Complimentary Travel 
+Travelers are not authorized to be reimbursed by the university for any expenses that were 
+provided by another source, reimbursed by a third party or which were included as part of a 
+registration fee. 
+Example: A traveler is not allowed to request reimbursement on meals and lodging that are 
+already covered by registration fee to the conference. 
+16.0 Foreign Travel 
+16.1 Registering Foreign Travel 
+When traveling outside the United States, you must secure approval through the Travel Approval Petition 
+(TAP) process prior to initiating any travel d Additionally, a Travel Safety Registration is required for each 
+trip with the UCF Travel Registry through UCF Global. Accident and sickness insurance is provided by the 
+university to all faculty and staff traveling abroad on university business. However, this coverage is not 
+effective until a trip is registered. This insurance provides emergency medical; evacuations for medical, 
+military, or political unrest and natural disasters; repatriation and accidental death and dismemberment 
+benefits. Additional information regarding travel insurance can be found at the website for the UCF  
+Compliance, Ethics, and Risk Office. It is recommended that traveler submit their TAP with UCF Global at least 
+10 business days before creating a spend authorization to allow sufficient time for the request to be screened 
+and approved by the Export Control Office. 
+When registering a trip, all travel destinations should be included in your itinerary. This includes destinations 
+that are for personal travel and not reimbursable as university business. Coverage may be provided by the 
+travel accident and insurance policy. 
+Example: An employee attends a conference in Germany and decides to stay an additional five days to 
+vacation in France. Although travel in France is not reimbursable since it is personal in nature, the 
+employee may still have coverage under the travel insurance policy for the personal deviation. 
+16.2 Foreign Travel Warnings 
+When traveling to a foreign country, it is of the utmost importance that the traveler be aware of the U.S. 
+Department of State travel warnings by calling the hotline for American travelers at 888-408-4747. It is 
+recommended that the travelers know the location of the U.S. Embassy and U.S. Consulate General Offices. 
+Travel is not allowed, under any circumstances, to areas that the U.S. Department of State considers a 
+“terrorist state.” For current information regarding travel advisories, travelers should visit the U.S. 
+Department of State’s Travel Advisory website. 
+
+
+===== Page 29 =====
+UCF Travel Manual 
+29 
+ 
+ 
+ 
+16.3 Fly America Act 
+ 
+A. General Principle 
+ 
+Travelers (or their designees) and the Principal Investigator (PI) of the award funded by federal 
+award/grant must comply with the Fly America Act (41 CFR 301-10.131 through 301-10.143) to use 
+US flag carrier or US flag carrier service provided under a code-share agreement for travel, except 
+under specific situations. For full detail of Fly America Act, please visit https://www.gsa.gov/policy- 
+regulations/policy/travel-management-policy/fly-america-act 
+ 
+It is the responsibility of the traveler (or their designee), the PI and their departmental business office to: 
+• Identify the source(s) of funds supporting the travel, determine the methodology of expense 
+allocation, and determine whether one or more allocated source is a federally sponsored award. 
+• Review the terms and conditions of the applicable award notice, award document, program 
+announcement, and/or sponsor specific requirements to determine if any travel restrictions apply 
+prior to making any travel arrangements; and 
+• Book air travel in accordance with this procedure, any applicable travel restrictions, and the Fly 
+America Act or Open Skies Agreement. 
+• The cost of travel subject to the Fly America Act that does not adhere to this regulation will be borne 
+by the Principal Investigator’s cost center or will be moved to a suitable non-federal funding source. 
+ 
+ 
+Concur Booking Information/Advantage: In Concur, Fly America Compliant flights are designated with a 
+picture of a shield with a check mark. 
+ 
+ 
+It’s highly recommended that federal-grant traveler to use Concur 
+in booking airfare so that compliance to Fly America Act can be 
+followed easily. 
+
+
+===== Page 30 =====
+UCF Travel Manual 
+30 
+B. Permitted Exceptions to the Fly America Act
+There are some circumstances where it’s not reasonable to use a U.S. flag air carrier, and 
+federal-grant traveler can make an exception to the Fly America Act. These are: 
+1. When a U.S. air carrier is not available.
+2. When using a U.S. carrier service would extend the travel time by 24 hours or more.
+3. When a U.S. carrier does not offer a nonstop or direct flight between origin and destination,
+and using a U.S. carrier:
+•
+Increases the number of aircraft changes outside the United States by two or more
+•
+Extends travel time by six hours or more; or
+•
+Requires a connecting time of four hours or more at an overseas interchange point.
+4. When the flight time from origin to destination is less than three hours and using a U.S. flag carrier
+doubles the flight time.
+5. When there is an applicable Open Skies Agreement in effect that meets the requirements of the Fly
+America Act. An Exception Form shall be submitted when an Open Skies Agreements exist.
+The exceptions provided by the Open Skies Agreements for government-funded travel
+do not apply if your transportation is funded by the Department of Defense (DOD).
+Ticket cost and convenience are 
+NOT exceptions to the Fly America Act. 
+
+
+===== Page 31 =====
+UCF Travel Manual 
+31 
+C. Documenting Exceptions
+Any deviation from the Fly America Act must be documented in Airfare line of spend 
+authorization and expense report. To document a Fly America exception, including under an 
+Open Sky Agreement, you must include the following information in your travel reimbursement: 
+1. Complete the UCF Fly America Act Exception Form (available from the Office of Research),
+indicating the reason for the exemption and attach it to expense report. The Fly America
+Exception Form can be found on the Office of Research’s website or for the most current
+information about Fly America Act compliance please reach out to the Office of Research Award
+Management via email at osp@ucf.edu
+2. If foreign travel has been completed prior to submission of a Spend Authorization, which deviates
+from university requirements, the Office of Research reviewer will verify Fly America Act
+requirements at the Spend Authorization review state. Justification for late Spend Authorization
+submission shall be provided under the “Justification” field of the Spend Authorization record and
+enter airline name under the “Airfare” expense line. If it is determined that Fly America Act
+requirements applies, the following supporting documentation must be attached to the Spend
+Authorization record:
+a. Copy of airfare ticket
+b. Fly America Act Exception Form (if/as applicable)
+c. A proposed itinerary of the trip from a travel agent or online travel service (i. e. Concur,
+Travelocity, or Expedia) to the Spend Authorization and Expense Report.
+d. The search results performed at the time of booking from an online travel service that
+document all available flights and the existence of the Fly America exception identified on
+the Fly America exception form.
+3. If a Fly America Act review was not completed at the time of Spend Authorization review stage, it
+will be completed at the time of Expense Report submission. If all foreign travel legs were not
+conducted using a US certified air carrier, Fly America Act requirements will apply, unless the
+non-US air carrier holds a Code Share Agreement with the US certified air carrier and pertinent
+code is assigned under the airfare ticket. Attach supporting documentation listed under above
+section Clause 2. a), b), c) and d), to all destinations involved on the foreign travel. must be
+attached to the Expense Report.
+
+
+===== Page 32 =====
+UCF Travel Manual 
+32 
+C. Documenting Exceptions (Continued)
+Approval should be obtained prior to booking travel. The Cost Center Manager, Grant Manager, 
+Cost Center Sponsored Programs Coordinator and Award Contract Owner (Grants) Workday 
+security roles will review and verify exceptions via the Spend Authorization review process. 
+Failure to comply with UCF Fly America Act requirements will result in the expenses being disallowed 
+from the federally funded sponsored grant. 
+Expense Reports that contain an airfare expense line and include a federal grant worktag will include 
+instructions at the top of the Expense Report generated by the Workday system when routed to the Cost 
+Center Sponsored Programs Coordinator, and Cost Center Manager, to ensure that the Fly America Act 
+requirements are met and documented as applicable, prior to the record’s routing through the Workflow. 
+The Award Contract Owner (Grants) security role will verify compliance with Fly America Act. 
+16.4 Foreign Reimbursement Rates 
+A. General Principles
+State of Florida laws and university policies described in this manual apply equally to travelers visiting foreign 
+countries, except for the rate authorized for meals and lodging. The state of Florida authorizes the same rate 
+that is established by the Federal Government for foreign travel. These rates are updated on the first of every 
+month. This information can be obtained from the U.S. Department of State’s Foreign Per Diem website. This 
+site includes the maximum lodging reimbursement rates as well the allowable meal per diem rates. The 
+maximum lodging foreign rate is including all taxes and service fee already. Since the state of Florida allows 
+for the payment of incidental expenses in addition to the payment of per diem for meals, the amount 
+established by the Federal Government as incidental expenses should be deducted from the per diem for 
+meals and incidental expenses (MI&E) to arrive at the university’s allowable foreign rate since Florida Statute 
+allows for the reimbursement of incidental expenses. A breakdown of foreign meals and incidentals can also 
+be found at the State Department’s website. 
+Foreign Per Diem Example: Travel Location – London, UK 
+Meals & Incidental Expenses (M&IE) Details 
+Lodging 
+$299.00 
+Breakfast 
+$27.00 
+Meals & Incidental Expenses (M&IE) 
+$183.00 
+Lunch 
+$46.00 
+Federal Maximum Rate 
+$482.00 
+Dinner 
+$73.00 
+Incidentals 
+$37.00 
+Total $183.00 
+UCF Allowable Per 
+Diem for Meals 
+$146.00 
+
+
+===== Page 33 =====
+UCF Travel Manual 
+33 
+ 
+ 
+ 
+16.4 Foreign Reimbursement Rates (Continued) 
+A. General Principles (Continued) 
+Travelers may be reimbursed for either: 
+1. The actual lodging with receipt and foreign meal allowance OR 
+2. The straight per diem cost of $80. 
+ 
+Two methods of reimbursement, state per diem and foreign allowances cannot be claimed on the same 
+travel day. Actual hotel expenses may not exceed the federal foreign per diem rate for that location, 
+unless staying at a conference hotel. A conference hotel booked using the conference rate will be 
+reimbursed at an actual cost up to 300% above the prevailing foreign per diem lodging amount provided by 
+the State Department. The actual daily rate for a conference hotel must be supported by the conference 
+documentation and included in the Expense Report. Any rate more than the published conference hotel rates 
+will not be reimbursed. Itemized paid lodging receipts must be provided. All meals, while in foreign locations, 
+will be reimbursed at the rate applicable to those locations. 
+ 
+If unique circumstances require that the nightly rate exceed the published U.S. Department of State rate, 
+additional business justification must be provided in the expense report. Exception on foreign lodging rate is 
+considered on a case-by-case basis. 
+ 
+B. Calculation of Foreign Meal Allowance Rates 
+ 
+UCF Travel has prepared an Excel worksheet to assist the traveler and financial business center in calculating 
+the allowable foreign meal and maximum lodging rate in each period and location. These worksheets can be 
+found at UCF Travel Website: Forms, Guidelines and Manuals. Travelers must complete the foreign per diem 
+worksheet for the applicable month(s) of travel. If a traveler needs a worksheet outside of the months 
+posted, the traveler should contact the Travel Center of Expertise at travelfa@ucf.edu. A completed foreign 
+per diem worksheet should be attached to the Foreign Meal Allowance expense line on the Expense Report. 
+ 
+Rates for foreign travel should not begin until the date and time of arrival in a foreign country from the 
+United States and should terminate on the date and time of departure from a foreign country to the United 
+States. 
+ 
+When a traveler is traveling from one foreign location to another within a meal period, reimbursement 
+should be calculated at the applicable rate where the traveler departed from. As a reminder, meal periods 
+are as follows: 
+ 
+Meal 
+Time Frame 
+Breakfast 
+6:00 to 8:00 a.m. 
+Lunch 
+12:00 to 2:00 p.m. 
+Dinner 
+6:00 to 8:00 p.m. 
+ 
+Note: Travelers should track the time of departure and return to ensure  
+that meals are reimbursed at the appropriate rates. 
+
+
+===== Page 34 =====
+UCF Travel Manual 
+34 
+ 
+ 
+ 
+B. Calculation of Foreign Meal Allowance Rates (Continued) 
+Example: 
+A traveler must attend a conference in Berlin, Germany, from February 5-8. The conference 
+provided one banquet dinner on February 7 and no other meal. Traveler’s flight itinerary is as 
+follows: 
+ 
+Departure 
+Feb 3 Orlando 8:30 PM – London (LGW) 10:40 AM on Feb 4 
+Feb 4 London (LGW) 4:00 PM – Berlin 7:00 PM 
+Return 
+Feb 9 Berlin 6:30 AM – London (LGW) 7:30 AM 
+Feb 9 London 10:30 AM -Orlando 6:30 PM 
+ 
+Traveler is eligible for the following foreign meals: 
+ 
+Date 
+Breakfast 
+Lunch 
+Dinner 
+Feb 3: UCF Travel Day 
+Not applicable 
+Not applicable 
+US Dinner 
+Feb 4: UCF Travel Day 
+US Breakfast 
+London Lunch 
+Berlin Dinner 
+Feb 5: Conference Day 
+Berlin Breakfast 
+Berlin Lunch 
+Berlin Dinner 
+Feb 6: Conference Day 
+Berlin Breakfast 
+Berlin Lunch 
+Berlin Dinner 
+Feb 7: Conference Day 
+Berlin Breakfast 
+Berlin Lunch 
+Not applicable 
+Feb 8: Conference Day 
+Berlin Breakfast 
+Berlin Lunch 
+Berlin Dinner 
+Feb 9: UCF Travel Day 
+Berlin Breakfast 
+US Lunch 
+US Dinner 
+ 
+16.5 Foreign Receipts 
+ 
+Receipts issued in a foreign currency should show a computation converting the amount into U.S. dollars. All 
+claims on the Expense Report must be submitted in U.S. dollars. When converting foreign transactions into 
+U.S. dollars, the conversion date should be the same as the transaction date. Foreign currency conversions 
+should be obtained from the Oanda currency converter website and attached to the Expense Report. If a 
+currency conversion was done on the credit card the charge was made on, that can be included in lieu of an 
+Oanda calculation. 
+ 
+17.0 Travel with Special Circumstances 
+ 
+17.1 General Principles 
+ 
+Travel under the following circumstances require additional levels of approval. The traveler should contact 
+the Travel Center of Expertise for additional information (email travelfa@ucf.edu ). 
+• An emergency 
+• A traveler becomes sick or injured while on university business 
+• A traveler requires a reasonable accommodation(s) under the American with Disabilities (ADA).  A letter 
+with ADA accommodation must be provided in the expense report.  
+
+
+===== Page 35 =====
+35 
+UCF Travel Manual 
+17.0 Travel with Special Circumstances (Continued) 
+17.2 Travel in Excess of 30 Calendar Days Rule 
+Employee travel for more than thirty (30) days to a single location requires approval from the 
+provost or appropriate vice president. Provost approval can be obtained by selecting the 
+corresponding travel type for travel greater than 30 days on the spend authorization.
+17.3 Travel on a Sponsored Award (Research, Service or Other) 
+In addition to UCF’s standard travel policy, if these costs are charged directly to a sponsored award, 
+documentation must justify BOTH items below: 
+1. The participation is necessary for the award.
+2. The costs are reasonable and consistent with the federal or non-federal entity’s travel policy.
+When assigning travel costs to a sponsored award, verify the type of sponsor (federal, private, state & local 
+government, foundation, etc.) and apply the sponsor’s travel terms and conditions accordingly. Federal 
+sponsors require the university to meet Uniform Guidance travel regulation 2 CFR, 200.474(b) and specific 
+agency (NSF, NIH, DoD, DoE, NASA, etc.) travel terms and conditions. 
+17.4 Travel Exceptions 
+Exceptions to this policy require prior approval by the Travel Center of Expertise and maybe in consultation 
+with the Provost’s Office, UCF Global, Officer of the Institution Equity (OIE) or the Office of Enterprise Risk 
+and Insurance, as appropriate. Approved exceptions must be documented in writing and included with the 
+corresponding expense report. 
+Travelers should not request per diem for meals that are provided by a conference or event organizer. If a 
+traveler is unable to accept a provided meal based on dietary or religious purposes, they should first work 
+with the event organizer to obtain an acceptable alternative. If no suitable accommodation is available, the 
+traveler may request per diem for that meal, if documentation is submitted demonstrating that an 
+alternative meal from the conference was not available
+Traveler or the designee making travel arrangements, must document the justification for not following state 
+and university travel guidelines and obtain the approval prior to making travel arrangement. Examples of 
+appropriate supporting documentation are: 
+•
+Written business reasons and justification,
+•
+Screen shots of available travel options at the time of booking,
+•
+University regulations permit exceptions for medical reasons, on a case-by-case basis. A memo of
+approval from the UCF Office of Institutional Equity (OIE) should be attached to the Expense Report.
+Failure to provide supporting documents with the exception justification will result in a denial of the 
+exception. 
+
+
+===== Page 36 =====
+UCF Travel Manual 
+36 
+ 
+ 
+ 
+18.0 Travel Advances 
+ 
+18.1 General Travel Cash Advances 
+ 
+General travel cash advances are funded by any source other than grant, award, or research. Only 
+UCF employees can request travel advances. The following conditions are required to process a 
+travel advance: 
+• The travel period must be for a duration of five or more days. 
+• Travel Cash Advance is only allowed on meals and lodging expenses. 
+• The advance may not exceed 80% of the estimated meals and lodging expenses that will ultimately 
+be reimbursed to the traveler. 
+• A traveler may not have more than one travel advance outstanding at any time. 
+• An advance request must be submitted through a spend authorization in Workday at least 21 
+calendar days prior to the trip start date. 
+• An Expense Report is required to be completed within ten (10) business days after the end of the trip, 
+per Florida Administrative Code- 69I-42.005. 
+• If the advanced funds are more than the total expenses of the travel, the excess should be deposited 
+with the Cashier’s Office by the Finance Business Center within ten (10) business days of the trip’s end 
+date. Refer to the Workday training on returning cash advances. 
+ 
+To request for general Travel Advance, Traveler and FBC must provide the following documentation in Spend 
+Authorization: 
+1. Completed and attached Application for Advance on Travel Expense (in the appendix). 
+2. Conference agenda, brief trip itinerary listing period, location and business purpose. 
+3. Calculation breakdown of the advance amount requested per meals and lodging of business 
+destination. 
+ 
+ 
+18.2 Cash Advance Funded by Sponsored Research (Field Advance) 
+ 
+In accordance with Florida Statute 1004.22 (12), field advances can be obtained by a Principal Investigator (PI) 
+to perform research at a remote site that is so far removed from the university as to render normal 
+purchasing and payroll functions ineffective. A field advance form approved by the provost, or the provost’s 
+designee and a power of attorney from the PI are required to receive a Field Advance. Any special 
+circumstances, such as incremental disbursement of the advance, should be included in the memorandum of 
+approval for the advance. The memorandum of approval for the advance must be attached to the Spend 
+Authorization. 
+
+
+===== Page 37 =====
+UCF Travel Manual 
+37 
+ 
+ 
+ 
+18.2 Cash Advance Funded by Sponsored Research (Field Advance) - Continued 
+ 
+The total amount of the advance is to be reconciled within ten (10) business days of return to 
+UCF from the remote site or within ten business days of the end of the activity requiring an 
+advance. A second advance will not be issued until the previous advance has been settled and 
+reconciled by the PI. Receipts should be maintained and submitted for any currency exchanges 
+along with supported USD conversion. 
+ 
+To request for Field Advance, Traveler and Finance Business Center (FBC) must provide all of the 
+following documentation in Spend Authorization: 
+ 
+1. Completed and attached Approval of Field Advance for Sponsored Research Agreements (Signed by 
+Provost) 
+2. Brief trip itinerary listing period, location, and business purpose. 
+3. Calculation breakdown of the advance requested (Field Advance budget breakdown) 
+4. Field Research / Project Summary 
+ 
+ 
+19.0 Direct Payment to Travel Merchant without using university expense card 
+(Prepayment to Merchant) 
+ 
+Any travel merchant requires a prepayment in other forms of payment such as direct bank transfer, check or 
+wire transfer, a travel merchant must first be set up as UCF Supplier to receive direct payments. A spend 
+authorization needs to be in place for the traveler and trip expenses prior to processing any direct payment 
+to a merchant. 
+ 
+To directly process payment to travel merchant, traveler or FBC must complete the following: 
+1. Verify that travel merchant is set up in UCF’s supplier database or initiate the supplier creation 
+process. 
+2. Create spend authorization for traveler. 
+3. The traveler must submit a Supplier Invoice Request in Workday or Finance Business Center must 
+submit a non-purchase order supplier invoice at least three (3) weeks prior to the due date of the 
+transaction for processing time. At a minimum, the supplier invoice must contain all following 
+information: 
+ 
+a.  Reference a Spend Authorization number in the Memo field on the Supplier Invoice 
+b. A copy of the invoice should be attached to the Supplier Invoice Request or Supplier 
+Invoice in Workday. 
+c. A trip brochure, conference website or agenda must be attached for additional 
+supporting document. 
+
+
+===== Page 38 =====
+UCF Travel Manual 
+38 
+ 
+ 
+ 
+20.0 Accountable Plan 
+In recognition of the Internal Revenue Code requirements of an accountable plan, all 
+payments of allowances, advances or reimbursements will be reviewed for all the following 
+criteria: 
+• Business connection to UCF. 
+• Adequate substantiation of expenses within a reasonable amount of time; and 
+• Requirement to return amounts paid in excess of expenses. 
+ 
+20.1 Reasonable Amount of Time Definition 
+ 
+• For advances – Substantiation must be provided 30 days prior to the start of travel or when 
+an expense is paid or incurred, whichever is earlier. 
+• For reimbursement – Substantiation must be provided for reimbursement no later than 60 days after 
+the end of travel or when an expense is paid or incurred, whichever is later. 
+• Any return of excess advances or reimbursements must occur no later than 120 days after the end of 
+travel or when an expense is paid or incurred, whichever is later. Disbursement recipients must return 
+to UCF any amount paid in excess of the expenses substantiated within ten business days after the end 
+of travel or when the expense is paid or incurred, whichever is later. Amounts not returned are subject 
+to withholding from employee’s paychecks. If for any reason the amounts are not fully returned within 
+120 days, they will be considered paid under a nonaccountable plan. 
+If any advance, allowance or reimbursement does not meet all three criteria listed above, the payment will 
+be considered under a nonaccountable plan. Nonaccountable plan payments are considered income and 
+subject to taxation. For additional information, please read the Formalization of the University’s Accountable  
+Plan. 
+ 
+21.0 Personal Travel 
+ 
+21.1 General Principles 
+ 
+At times, travelers extend their travel beyond the period required to complete official university business. 
+Travelers are not authorized to be reimbursed for expenses incurred beyond the time required to complete 
+the official business of the university. UCF business should begin the day of or the day following the traveler’s 
+arrival at their business destination. 
+
+
+===== Page 39 =====
+UCF Travel Manual 
+39 
+ 
+ 
+Traveler goes on state time at 2:30 p.m. the day prior to the conference. 
+ 
+21.0 Personal Travel (Continued) 
+ 
+21.1 General Principles (Continued) 
+ 
+The Expense Report should include a statement documenting the dates and time that the 
+traveler was on and off state-time to properly determine appropriate meals and lodging allowance 
+for business purpose from personal purpose. If the airfare includes locations and additional days 
+other than where official business was conducted, a comparable airfare quote just for business days 
+and business destination must be provided. UCF will only reimburse up to the business-day-only airfare. 
+Traveler should reimburse the university for the personal portion of the airfare if it was paid for using 
+university funds. Personal portions of expenses may be documented on the Expense Report in Workday 
+and reduce the traveler’s reimbursement. 
+ 
+Example 
+A traveler arrived two days prior to the conference. Therefore, the traveler must go off state time when 
+the flight lands and will, therefore, not be reimbursed for expenses incurred prior to going back on state 
+time. The traveler will go back on state time at the same time the day prior to the conference. 
+ 
+ 
+Date 
+Description 
+Expense Requested 
+Reimbursable Expense 
+9/10/23 
+Arrive at airport at 
+9:10 a.m. & arrives at 
+destination at 2:30 p.m. 
+$250 airfare, $30 meal 
+allowance, $200 hotel 
+$250 airfare, $11 meal 
+allowance, $0 hotel 
+9/10/23 
+Traveler goes off state time at 2:30 p.m. when flight lands 
+Date 
+Description 
+Expense Requested 
+Reimbursable Expense 
+9/11/23 
+Traveler goes on state time at 2:30 p.m. the day prior to the conference. 
+9/11/23 
+$36 meal allowance 
+$200 hotel 
+$19 meal allowance 
+$200 hotel 
+9/12/23 
+Conference Starts 
+$36 meal allowance 
+$200 hotel 
+$36 meal allowance 
+$200 hotel 
+9/13/23 
+$36 meal allowance 
+$200 hotel 
+$36 meal allowance 
+$200 hotel 
+9/14/23 
+Conference Ends. Flight 
+departs at 2:00p.m. Traveler 
+returns home at 6:00 p.m. 
+$17 meal allowance 
+$17 meal allowance 
+Total 
+$1,205.00 
+$969.00 
+
+
+===== Page 40 =====
+UCF Travel Manual 
+40 
+ 
+ 
+ 
+21.0 Personal Travel (Continued) 
+ 
+21.1 General Principles (Continued) 
+ 
+Expenses incurred while back on state time are reimbursable, unless paid for by a third party. 
+If the traveler arrives at a destination more than one day before official university business or 
+returned to headquarters more than one day after the conclusion of official university business, 
+airfare quotes must be included in the Expense Report documenting the cost of airfare if booked 
+for arrival one day prior to university business and return one day after university business. 
+ 
+21.2 Taxable Personal Travel on Foreign Travel 
+ 
+UCF employee and Arecibo researcher (contingent worker) should be mindful that under IRS Regulation 
+1.162-2 or IRC §274, if the personal portion of the travel is determined to be more than a minimal amount, a 
+portion or all the travel costs could be taxable to the traveler. A business purpose for personal days must be 
+substantiated with supporting documents. 
+ 
+Personal travel can be taxable: 
+• If a traveler has more than seven personal days on an international trip (i.e. at least eight personal 
+days), a completed copy of the Taxable Personal Travel Form must be submitted with the travel 
+expense report. 
+ 
+The Taxable Personal Travel Form allows for an analysis of the taxability of personal travel expenses. A link 
+to the form is provided in the appendix. The Finance Business Center should update the travel type to 
+“Foreign Needs COE Review.” This will route the Expense Report to Financial Affairs for reimbursement and 
+tax review. 
+
+
+===== Page 41 =====
+UCF Travel Manual 
+41 
+Appendix 
+Title 
+Resource 
+Form 41-907 Meeting Information 
+Form 
+https://fa.ucf.edu/wp- 
+content/uploads/sites/2/Meeting-Information- 
+Form.pdf 
+Group Travel Roster 
+https://fa.ucf.edu/wp- 
+content/uploads/sites/2/Group-Travel-Roster-of- 
+Travelers.pdf 
+Application for Advance on Travel 
+Expense Form 
+https://fa.ucf.edu/wp- 
+content/uploads/sites/2/Application-for-Advance- 
+on-Travel-Expenses.pdf 
+Form 41-978 Approval of Field 
+Advance for Sponsored Research 
+Agreements Form 
+https://fa.ucf.edu/wp-content/uploads/sites/2/41- 
+978.pdf
+Fly America Act Exception Form 
+Taxable Personal Travel Calculation 
+https://fa.ucf.edu/wp- 
+content/uploads/sites/2/Taxable_Personal_Travel_F 
+orm_092023.xlsx 
+Foreign Per Diem Calculation 
+https://fa.ucf.edu/travel-forms-guidelines-manuals/ 
+https://www.research.ucf.edu/wp-content/uploads/
+sites/56/2023/10/cg_FlyAmericaActExceptionForm.pdf
+
+
+===== Page 42 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Contact Us 
+ 
+ 
+ 
+ 
+Message 
+ 
+travelfa@ucf.edu  
+Website 
+www.reallygreatsite.com 
+Address 
+3544 Perseus Loop, #160975 
+Orlando, Florida  32816-0975 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+42 
+https://fa.ucf.edu/travel-forms-guidelines-manuals/  

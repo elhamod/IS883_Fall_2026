@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "google/gemini-3.1-flash-lite",
+  "mcp": {
+    "hotels": {
+      "type": "remote",
+      "url": "https://mcp.hasdata.com/mcp?apis=google_travel_hotels",
+      "enabled": true,
+      "oauth": false,
+      "headers": {
+        "x-api-key": "{env:HASDATA_API_KEY}"
+      }
+    }
+  }
+}
